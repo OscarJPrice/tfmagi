@@ -1,0 +1,98 @@
+﻿tfmagi_new_form_infant = {
+    age = 0
+	faith = root.faith
+	culture = root.culture 
+    diplomacy = { value = root.diplomacy add = -10 }
+	stewardship = { value = root.stewardship add = -10 }
+	intrigue = { value = root.intrigue add = -10 }
+	learning = { value = root.learning add = -10 }
+	martial = { value = root.martial add = -10 }
+    prowess = { value = root.prowess add = -10 }
+    random_traits = no
+
+    after_creation = {
+
+        change_first_name = { template_character = root } 
+
+        this = { save_scope_as = cloned_character }
+
+        root = {
+            remove_inherited_descendent_traits_effect = yes
+        }
+
+        copy_inheritable_appearance_from = root
+
+        set_father = root
+        set_mother = root
+
+        copy_only_positive_gene_traits = { SOURCE = root }
+        copy_only_negative_gene_traits = { SOURCE = root }
+        copy_only_personality_traits = { SOURCE = root }
+        copy_only_commander_traits = { SOURCE = root }
+        copy_only_inherited_descendant_traits = { SOURCE = root } #not working
+
+
+        tfmagi_clone_quarter_vanilla_lifestyle_perks = yes
+
+        root = {            
+            every_claim = {
+                scope:cloned_character = {
+                    add_pressed_claim = prev
+                }
+            }
+            every_held_title = {
+                scope:cloned_character = {
+                    add_pressed_claim = prev
+                }
+            }
+        }
+    }
+}
+
+tfmagi_new_form_youth = {
+    age = 16
+	faith = root.faith
+	culture = root.culture 
+    diplomacy = { value = root.diplomacy add = -10 }
+	stewardship = { value = root.stewardship add = -10 }
+	intrigue = { value = root.intrigue add = -10 }
+	learning = { value = root.learning add = -10 }
+	martial = { value = root.martial add = -10 }
+    prowess = { value = root.prowess add = -10 }
+    random_traits = no
+
+    after_creation = {
+
+        change_first_name = { template_character = root } 
+
+        this = { save_scope_as = cloned_character }
+        copy_inheritable_appearance_from = root 
+        
+        set_father = root
+        set_mother = root
+
+        copy_only_positive_gene_traits = { SOURCE = root }
+        copy_only_negative_gene_traits = { SOURCE = root }
+        copy_only_personality_traits = { SOURCE = root }
+        copy_only_commander_traits = { SOURCE = root }
+        copy_only_inherited_descendant_traits = { SOURCE = root } #not working
+        copy_only_education_traits = { SOURCE = root }
+
+
+        tfmagi_clone_quarter_vanilla_lifestyle_perks = yes
+
+        root = {            
+            every_claim = {
+                scope:cloned_character = {
+                    add_pressed_claim = prev
+                }
+            }
+            every_held_title = {
+                scope:cloned_character = {
+                    add_pressed_claim = prev
+                }
+            }
+        }
+        tfmagi_clone_quarter_vanilla_lifestyle_perks = yes
+    }
+}

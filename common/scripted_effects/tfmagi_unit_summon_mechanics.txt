@@ -1,0 +1,167 @@
+﻿
+tfmagi_maa_spawn_maa_archmages_temp_summons = {
+	#scope should be army hopefully
+
+	$ARMY$ = { save_scope_as = army}
+	scope:army.army_owner = { save_scope_as = owner}
+	scope:army = {
+
+		set_variable = { name = tfmagi_maa_bucket_01 value = 0 } 
+		set_variable = { name = tfmagi_maa_bucket_02 value = 0 } 
+		set_variable = { name = tfmagi_maa_bucket_03 value = 0 } 
+		set_variable = { name = tfmagi_maa_bucket_04 value = 0 } 
+
+		every_army_maa_regiment = {
+			limit = { is_maa_type = tfmagi_maa_archmages }
+			while = {
+				count = maa_size
+
+				while = {
+					count = 1 #balance
+					scope:army = {
+						random_list = {
+							20 = { change_variable = { name = tfmagi_maa_bucket_01 add = 1} }  
+							20 = { change_variable = { name = tfmagi_maa_bucket_02 add = 1} }  
+							20 = { change_variable = { name = tfmagi_maa_bucket_03 add = 1} }  
+							20 = { change_variable = { name = tfmagi_maa_bucket_04 add = 1} }  
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+	scope:owner = {
+		if = {
+			limit = { scope:army.var:tfmagi_maa_bucket_01 > 0 } 
+			spawn_army = {
+				men_at_arms = {
+					type = tfmagi_summoned_golem_heat
+					stacks = { value = scope:army.var:tfmagi_maa_bucket_01 } 
+				}
+				inheritable = no
+				uses_supply = yes
+				location = scope:army.location
+				name = tfmagi_maa_archmage_summoned_force
+			}
+		}
+		if = {
+			limit = { scope:army.var:tfmagi_maa_bucket_02 > 0 } 
+			spawn_army = {
+				men_at_arms = {
+					type = tfmagi_summoned_golem_solid
+					stacks = { value = scope:army.var:tfmagi_maa_bucket_02 } 
+				}
+				inheritable = no
+				uses_supply = yes
+				location = scope:army.location
+				name = tfmagi_maa_archmage_summoned_force
+			}
+		}
+		if = {
+			limit = { scope:army.var:tfmagi_maa_bucket_03 > 0 } 
+			spawn_army = {
+				men_at_arms = {
+					type = tfmagi_summoned_golem_cold
+					stacks = { value = scope:army.var:tfmagi_maa_bucket_03 } 
+				}
+				inheritable = no
+				uses_supply = yes
+				location = scope:army.location
+				name = tfmagi_maa_archmage_summoned_force
+			}
+		}
+		if = {
+			limit = { scope:army.var:tfmagi_maa_bucket_04 > 0 } 
+			spawn_army = {
+				men_at_arms = {
+					type = tfmagi_summoned_infernal_warriors
+					stacks = { value = scope:army.var:tfmagi_maa_bucket_04 } 
+				}
+				inheritable = no
+				uses_supply = yes
+				location = scope:army.location
+				name = tfmagi_maa_archmage_summoned_force
+			}
+		}
+	}
+	scope:army = {
+		remove_variable = tfmagi_maa_bucket_01
+		remove_variable = tfmagi_maa_bucket_02
+		remove_variable = tfmagi_maa_bucket_03
+		remove_variable = tfmagi_maa_bucket_04
+	}
+}
+
+tfmagi_maa_spawn_defensive_golems_temp_summons = {
+	$ARMY$ = { save_scope_as = army }
+	scope:army.location = { save_scope_as = p_location }
+	scope:army.army_owner = {
+		if = {
+			limit = {
+				any_sub_realm_county = {
+					this = scope:p_location.county
+				}
+			}
+			random_list = {
+				33 = {
+					spawn_army = {
+						men_at_arms = {
+							type = tfmagi_summoned_golem_solid
+							stacks = { value = $NUMBER$ } 
+						}
+						inheritable = no
+						uses_supply = yes
+						location = scope:army.location
+						name = tfmagi_maa_defensive_summoned_force
+					}
+				}
+				33 = {
+					spawn_army = {
+						men_at_arms = {
+							type = tfmagi_summoned_golem_cold
+							stacks = { value = $NUMBER$ } 
+						}
+						inheritable = no
+						uses_supply = yes
+						location = scope:army.location
+						name = tfmagi_maa_defensive_summoned_force
+					}
+				}
+				33 = {
+					spawn_army = {
+						men_at_arms = {
+							type = tfmagi_summoned_golem_heat
+							stacks = { value = $NUMBER$ } 
+						}
+						inheritable = no
+						uses_supply = yes
+						location = scope:army.location
+						name = tfmagi_maa_defensive_summoned_force
+					}
+				}
+			}
+		}
+	}
+}
+
+tfmagi_delete_maa_archmages_temp_summons = {
+	#hopefully called in scope army
+	every_army = {
+		limit = { is_army_in_combat = no }
+		every_army_maa_regiment = {
+			limit = { 
+				OR = {
+					is_maa_type = tfmagi_summoned_golem_heat
+					is_maa_type = tfmagi_summoned_golem_solid
+					is_maa_type = tfmagi_summoned_golem_cold
+					is_maa_type = tfmagi_summoned_infernal_warriors
+				}
+			} 
+			destroy_maa_regiment = yes
+		}
+	}
+
+}

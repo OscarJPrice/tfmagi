@@ -1,0 +1,21 @@
+﻿tfmagi_mage_planar_teleport_travel_option = {
+	is_shown = {
+        has_character_modifier = tfmagi_mage_planar_teleport_travel_modifier
+	}
+
+	is_valid = {        
+        has_character_modifier = tfmagi_mage_planar_teleport_travel_modifier
+	}
+	
+	travel_modifier = {
+		travel_speed = 2000
+	}
+	
+	on_applied_effect = {
+		custom_tooltip = adventurers_scout_for_talent_option.tt
+	}
+	
+	ai_will_do = {
+		value = 100
+	}
+}

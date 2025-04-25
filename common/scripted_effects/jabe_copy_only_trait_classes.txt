@@ -1,0 +1,423 @@
+﻿# By Jabe
+# For use when mods have traits you can't plan for
+
+copy_only_positive_gene_traits = {
+    $SOURCE$ = { save_scope_as = src }
+    this = { save_scope_as = dst }
+
+    scope:dst = {
+
+        every_character_trait = {
+            this = { save_scope_as = trait_scope }
+            scope:dst = {
+                add_to_variable_list = {
+                    name = prior_traits
+                    target = scope:trait_scope
+                }
+                remove_trait = scope:trait_scope
+            }
+        }
+
+        copy_traits = scope:src
+ 
+        set_variable = {
+            name = running_count_of_good_genetic_traits
+            value = scope:src.num_of_good_genetic_traits
+        }
+ 
+        every_character_trait = {
+            this = { save_scope_as = trait_scope }
+            scope:dst = {
+                remove_trait = prev # upon the removal of a good genetic trait...
+            }
+            if = {
+                limit = {
+                    #this inequality is the key to the whole thing - 
+                    #when the running count of good genetic traits is greater 
+                    #than the number of good genetic traits, we know we have removed a good trait
+                    scope:dst = {
+                        num_of_good_genetic_traits < var:running_count_of_good_genetic_traits
+                    }
+                }
+
+                scope:dst = {
+                    #make a note of the trait that was removed (so we can add it back later)
+                    add_to_variable_list = {
+                        name = filtered_positive_traits
+                        target = scope:trait_scope
+                    }
+                    #decrement the running count of good genetic traits
+                    set_variable = {
+                        name = running_count_of_good_genetic_traits
+                        value = {
+                            value = var:running_count_of_good_genetic_traits
+                            add = -1
+                        }
+                    }
+                }
+            }
+        }
+
+        # There are now no traits left to remove, so we can add the positive traits
+        # and add back prior traits
+
+        every_in_list = {
+            variable = prior_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = prior_traits
+
+        every_in_list = {
+            variable = filtered_positive_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = filtered_positive_traits
+    }
+}
+
+copy_only_negative_gene_traits = {
+    $SOURCE$ = { save_scope_as = src }
+    this = { save_scope_as = dst }
+
+    scope:dst = {
+
+        every_character_trait = {
+            this = { save_scope_as = trait_scope }
+            scope:dst = {
+                add_to_variable_list = {
+                    name = prior_traits
+                    target = scope:trait_scope
+                }
+                remove_trait = scope:trait_scope
+            }
+        }
+
+        copy_traits = scope:src
+ 
+        set_variable = {
+            name = running_count_of_bad_genetic_traits
+            value = scope:src.num_of_bad_genetic_traits
+        }
+ 
+        every_character_trait = {
+            this = { save_scope_as = trait_scope }
+            scope:dst = {
+                remove_trait = prev 
+            }
+            if = {
+                limit = {
+                    scope:dst = {
+                        num_of_bad_genetic_traits < var:running_count_of_bad_genetic_traits
+                    }
+                }
+
+                scope:dst = {
+                    add_to_variable_list = {
+                        name = filtered_negative_traits
+                        target = scope:trait_scope
+                    }
+                    set_variable = {
+                        name = running_count_of_bad_genetic_traits
+                        value = {
+                            value = var:running_count_of_bad_genetic_traits
+                            add = -1
+                        }
+                    }
+                }
+            }
+        }
+
+        every_in_list = {
+            variable = prior_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = prior_traits
+
+        every_in_list = {
+            variable = filtered_negative_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = filtered_negative_traits
+    }
+}
+
+copy_only_personality_traits = {
+    $SOURCE$ = { save_scope_as = src }
+    this = { save_scope_as = dst }
+
+    scope:dst = {
+
+        every_character_trait = {
+            this = { save_scope_as = trait_scope }
+            scope:dst = {
+                add_to_variable_list = {
+                    name = prior_traits
+                    target = scope:trait_scope
+                }
+                remove_trait = scope:trait_scope
+            }
+        }
+
+        copy_traits = scope:src
+ 
+        set_variable = {
+            name = running_count_of_personality_traits
+            value = scope:src.number_of_personality_traits
+        }
+ 
+        every_character_trait = {
+            this = { save_scope_as = trait_scope }
+            scope:dst = {
+                remove_trait = prev
+            }
+            if = {
+                limit = {
+                    scope:dst = {
+                        number_of_personality_traits < var:running_count_of_personality_traits
+                    }
+                }
+
+                scope:dst = {
+                    add_to_variable_list = {
+                        name = filtered_personality_traits
+                        target = scope:trait_scope
+                    }
+                    set_variable = {
+                        name = running_count_of_personality_traits
+                        value = {
+                            value = var:running_count_of_personality_traits
+                            add = -1
+                        }
+                    }
+                }
+            }
+        }
+
+        every_in_list = {
+            variable = prior_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = prior_traits
+
+        every_in_list = {
+            variable = filtered_personality_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = filtered_personality_traits
+    }
+}
+
+# Create a dummy list or some traits, keep it, make a copy, remove commander 
+# traits, then add the ones that were removed and remove the ones that remain
+# simultaneously
+copy_only_commander_traits = {
+    $SOURCE$ = { save_scope_as = src }
+    this = { save_scope_as = dst }
+
+    scope:dst = {
+
+        every_character_trait = {
+            this = { save_scope_as = trait_scope }
+            scope:dst = {
+                add_to_variable_list = {
+                    name = prior_traits
+                    target = scope:trait_scope
+                }
+                remove_trait = scope:trait_scope
+            }
+        }
+
+        copy_traits = scope:src
+ 
+        set_variable = {
+            name = running_count_of_commander_traits
+            value = scope:src.number_of_commander_traits
+        }
+ 
+        every_character_trait = {
+            this = { save_scope_as = trait_scope }
+            scope:dst = {
+                remove_trait = prev
+            }
+            if = {
+                limit = {
+                    scope:dst = {
+                        number_of_commander_traits < var:running_count_of_commander_traits
+                    }
+                }
+
+                scope:dst = {
+                    add_to_variable_list = {
+                        name = filtered_commander_traits
+                        target = scope:trait_scope
+                    }
+                    set_variable = {
+                        name = running_count_of_commander_traits
+                        value = {
+                            value = var:running_count_of_commander_traits
+                            add = -1
+                        }
+                    }
+                }
+            }
+        }
+
+        every_in_list = {
+            variable = prior_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = prior_traits
+
+        every_in_list = {
+            variable = filtered_commander_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = filtered_commander_traits
+    }
+}
+
+copy_only_inherited_descendant_traits = {
+    $SOURCE$ = { save_scope_as = src }
+    this = { save_scope_as = dst }
+
+    scope:dst = {
+
+        every_character_trait = {
+            this = { save_scope_as = trait_scope }
+            scope:dst = {
+                add_to_variable_list = {
+                    name = prior_traits
+                    target = scope:trait_scope
+                }
+                remove_trait = scope:trait_scope
+            }
+        }
+
+        copy_traits = scope:src
+        remove_inherited_descendent_traits_effect = yes
+        scope:src = {
+            every_character_trait = {
+                this = { save_scope_as = trait_scope }
+                if = {
+                    limit = {
+                        scope:dst = {
+                            any_character_trait = {
+                                this = scope:trait_scope
+                            }
+                        }
+                    }
+                    scope:dst = {
+                        remove_trait = scope:trait_scope
+                    }
+                }
+                else = {
+                    scope:dst = {
+                        add_to_variable_list = {
+                            name = filtered_descendant_traits
+                            target = scope:trait_scope
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        every_in_list = {
+            variable = prior_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = prior_traits
+
+        every_in_list = {
+            variable = filtered_descendant_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = filtered_descendant_traits
+    }
+}
+
+copy_only_education_traits = {
+    $SOURCE$ = { save_scope_as = src }
+    this = { save_scope_as = dst }
+
+    scope:dst = {
+        every_character_trait = {
+            this = { save_scope_as = trait_scope }
+            scope:dst = {
+                add_to_variable_list = {
+                    name = prior_traits
+                    target = scope:trait_scope
+                }
+                remove_trait = scope:trait_scope
+            }
+        }
+
+        copy_traits = scope:src
+        remove_any_education_traits_effect = yes
+ 
+        scope:src = {
+            every_character_trait = {
+                this = { save_scope_as = trait_scope }
+                if = {
+                    limit = {
+                        scope:dst = {
+                            any_character_trait = {
+                                this = scope:trait_scope
+                            }
+                        }
+                    }
+                    scope:dst = {
+                        remove_trait = scope:trait_scope
+                    }
+                }
+                else = {
+                    scope:dst = {
+                        add_to_variable_list = {
+                            name = filtered_education_traits
+                            target = scope:trait_scope
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        every_in_list = {
+            variable = prior_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = prior_traits
+
+        every_in_list = {
+            variable = filtered_education_traits
+            scope:dst = {
+                add_trait = prev
+            }
+        }
+        clear_variable_list = filtered_education_traits
+    }
+}
+
+# could make something out of this: remove_inherited_descendent_traits_effect = yes

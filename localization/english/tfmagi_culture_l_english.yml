@@ -1,0 +1,35 @@
+﻿l_english:
+ tfmagi_heritage_selchus_name: "Selchean"
+ tfmagi_heritage_selchus_collective_noun: "Selcheans"
+
+ tfmagi_sartan: "Sartan"
+ tfmagi_sartan_prefix: "Sarta"
+ tfmagi_language_sartan_name: "Sartan"
+ tfmagi_sartan_collective_noun: "Sartans"
+
+ tradition_tfmagi_voracious_adventurers_name: "Questing Adventurers"
+ tradition_tfmagi_voracious_adventurers_desc: "A culture of discovery thrives in these lands, where every child dreams of venturing out to find fortune in uncharted territories."
+ culture_parameter_unlock_tfmagi_veteran_adventurers: "Can recruit [GetMaA('tfmagi_veteran_adventurers').GetName] as [men_at_arms|e]"
+
+ tradition_tfmagi_imperial_yoke_name: "Imperial Yoke"
+ tradition_tfmagi_imperial_yoke_desc: "The remnants of the imperial structure that once governed this [culture|E] persist in many aspects of its current legal, administrative, and military practices."
+ culture_parameter_unlock_tfmagi_ceitii: "Can recruit [GetMaA('tfmagi_ceitii').GetName] as [men_at_arms|e]"
+ #culture_parameter_unlock_imperial_buildings: "May construct several upgradeable [special_buildings|E] by [decision|E], depending on [primary_title|E] [title_tier|E]"
+
+ tradition_tfmagi_cosmopolitan_tolerance_name: "Cosmopolitan Tolerance"
+ tradition_tfmagi_cosmopolitan_tolerance_desc: "Recent experience in governance has demonstrated that stable governance of diverse populations requires certain approaches for cultural coexistence. After all, if the taxes are paid, who are we to complain?"
+ culture_parameter_tfmagi_can_undertake_minority_investments: "Enables [decision|E] to invest in non-primary [culture|E] [counties|E], spending [gold|E] for [cultural_acceptance|E] and [development_growth|E]"
+
+ tradition_tfmagi_mages_name: "Mages"
+ tradition_tfmagi_mages_desc: "These deific beings are not workers of the subtle arts. They work great feats of destruction, contruction, and restoration."
+ culture_parameter_learn_to_be_mage: "Enables [decision|E] to gain the [GetTrait( 'tfmagi_mage' ).GetName( GetNullCharacter )] [trait|E]"
+
+ tradition_tfmagi_magic_society_name: "Magic Society"
+ tradition_tfmagi_magic_society_desc: "This society incorporates magic into the mundane aspects of life, creating vibrant hubs of architecture and prosperity."
+ culture_parameter_tfmagi_get_more_random_innovations: "Gains access to a number of [innovations|E] on game start"
+ culture_parameter_tfmagi_get_mage_maa: "Can recruit [GetMaA('tfmagi_maa_mages_01').GetName] as [men_at_arms|e]"
+ culture_parameter_tfmagi_get_mage_maa_2: "Can recruit [GetMaA('tfmagi_maa_mages_02').GetName] as [men_at_arms|e] if [GetModifier( 'prestige_level_4' ).GetNameWithTooltip|L] or with the [GetBuilding('tfmagi_magic_academy_01').GetName] [duchy_building|E]"
+ culture_parameter_tfmagi_get_mage_maa_3: "Can recruit [GetMaA('tfmagi_maa_archmages').GetName] as [men_at_arms|e] with the [GetBuilding('tfmagi_magic_academy_02').GetName] [duchy_building|E]"
+ culture_parameter_tfmagi_get_magic_society_special_buildings: "Unlocks the [GetBuilding('tfmagi_magic_academy_01').GetName] and [GetBuilding('tfmagi_magic_defenses_01').GetName] [duchy_buildings|E]"
+ culture_parameter_tfmagi_children_randomly_become_mages: "On reaching adolescence, [children|e] of this [culture|e] have a chance to gain the [GetTrait('tfmagi_mage').GetName( GetNullCharacter )] [trait|e]"
+

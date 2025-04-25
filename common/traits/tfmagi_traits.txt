@@ -1,0 +1,172 @@
+﻿tfmagi_mage = {
+	category = lifestyle
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = tfmagi_mage
+						track = tfmagi_mage_mastery
+						value >= 100
+					}
+				}
+				desc = tfmagi_mage_5
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = tfmagi_mage
+						track = tfmagi_mage_mastery
+						value >= 75
+					}
+				}
+				desc = tfmagi_mage_4
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = tfmagi_mage
+						track = tfmagi_mage_mastery
+						value >= 50
+					}
+				}
+				desc = tfmagi_mage_3
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = tfmagi_mage
+						track = tfmagi_mage_mastery
+						value >= 25
+					}
+				}
+				desc = tfmagi_mage_2
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = tfmagi_mage
+						track = tfmagi_mage_mastery
+						value >= 0
+					}
+				}
+				desc = tfmagi_mage_1
+			}
+			desc = tfmagi_mage_2
+		}
+	}
+	tfmagi_mage_mana_monthly_base_max_combat_roll = 0.2
+	tracks = {
+		tfmagi_mage_elemental = {
+			tfmagi_mage_elemental_01 = {
+				tfmagi_enable_mage_augment_self_decision_cancel_negative_supply = yes
+			}
+			tfmagi_mage_elemental_02 = {
+				tfmagi_mage_remote_harm_with_fire_cancel_negative_supply = yes
+			}
+			tfmagi_mage_elemental_03 = {
+				tfmagi_mage_call_calamity_cancel_negative_supply = yes
+			}
+			tfmagi_mage_elemental_04 = {
+				tfmagi_mage_call_calamity_improve_cancel_negative_supply = yes
+			}
+		}
+		tfmagi_mage_alteration = {
+			tfmagi_mage_alteration_01 = {
+				tfmagi_mage_lead_to_gold_cancel_negative_supply = yes
+				tfmagi_mage_basic_alchemy_cancel_negative_supply = yes
+			}
+			tfmagi_mage_alteration_02 = { 
+				tfmagi_mage_mend_flesh_cancel_negative_supply = yes
+			}
+			tfmagi_mage_alteration_03 = {
+				tfmagi_mage_genetic_trait_improve_cancel_negative_supply = yes
+			}
+			tfmagi_mage_alteration_04 = {
+				tfmagi_mage_immortal_elixir_cancel_negative_supply = yes
+			}
+		}
+		tfmagi_mage_conjuration = {
+			tfmagi_mage_conjuration_01 = {
+				tfmagi_mage_aid_construction_cancel_negative_supply = yes
+			}
+			tfmagi_mage_conjuration_02 = {
+				tfmagi_mage_artificer_cancel_negative_supply = yes
+			}
+			tfmagi_mage_conjuration_03 = {
+				tfmagi_mage_golems_cancel_negative_supply = yes
+			}
+			tfmagi_mage_conjuration_04 = {
+				tfmagi_mage_erect_fortifications_cancel_negative_supply = yes
+			}
+		}
+		# tfmagi_divination = {
+
+		# }
+		tfmagi_mage_planar = {
+			tfmagi_mage_planar_01 = {
+				tfmagi_mage_planar_sift_through_the_void_cancel_negative_supply = yes
+			}
+			tfmagi_mage_planar_02 = {
+				tfmagi_mage_planar_teleport_armies_cancel_negative_supply = yes
+			}
+			tfmagi_mage_planar_03 = {
+				tfmagi_mage_planar_establish_demiplane_cancel_negative_supply = yes
+			}
+			tfmagi_mage_planar_04 = {
+				tfmagi_mage_planar_ascend_cancel_negative_supply = yes
+			}
+			tfmagi_mage_planar_05 = {
+				tfmagi_mage_planar_angelic_legion_cancel_negative_supply = yes
+			}
+		}
+		tfmagi_mage_mastery = {
+			tfmagi_mage_mastery_01 = {
+				life_expectancy = 5 
+				prowess = 5
+				tfmagi_mage_mana_cost_multiplier_attrition_mult = tfmagi_mana_cost_multiplier_small
+			}
+			tfmagi_mage_mastery_02 = { 
+				life_expectancy = 10 
+				prowess = 7
+				tfmagi_mage_mana_cost_multiplier_attrition_mult = tfmagi_mana_cost_multiplier_small
+			}
+			tfmagi_mage_mastery_03 = { 
+				life_expectancy = 15 
+				prowess = 9
+				tfmagi_mage_mana_cost_multiplier_attrition_mult = tfmagi_mana_cost_multiplier_small
+			}
+			tfmagi_mage_mastery_04 = { 
+				life_expectancy = 20 
+				prowess = 10
+				tfmagi_mage_mana_cost_multiplier_attrition_mult = tfmagi_mana_cost_multiplier_medium
+			}
+		}
+		tfmagi_mage_mana = {
+			tfmagi_mage_mana_01 = {
+				stress_gain_mult = -0.04
+			}
+			tfmagi_mage_mana_02 = {
+				stress_gain_mult = -0.04 
+			}
+			tfmagi_mage_mana_03 = {
+				stress_gain_mult = -0.04 
+			}
+		}
+	}
+}
+
+tfmagi_ordained_blood = {
+	category = fame
+	ruler_designer_cost = -4400
+	life_expectancy = 15
+	monthly_lifestyle_xp_gain_mult = 0.3
+	inherit_chance = 100
+	inherit_from_real_father = yes
+}
+

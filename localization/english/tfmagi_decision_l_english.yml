@@ -1,0 +1,27 @@
+﻿l_english:
+ tfmagi_gather_force_decision: "Raise a Great Force"
+ tfmagi_gather_force_decision_desc: "Mercenaries, knights, vagabonds... many amongst the [ROOT.Char.GetCulture.GetCollectiveNounNoTooltip] grow restless; eager for action. I need only call, and they will answer."
+ tfmagi_gather_force_decision_tooltip: "A moderately large army of [special_troops|E] depending on your [culture|E] is raised. The following will affect the size of the army you will receive:\n$EFFECT_LIST_BULLET$ Your [prestige_level|E] is at least [GetModifier( 'prestige_level_4' ).GetNameWithTooltip|L]\n$EFFECT_LIST_BULLET$ Your [prestige_level|E] is at least [GetModifier( 'prestige_level_5' ).GetNameWithTooltip|L]\n$EFFECT_LIST_BULLET$ You have the [GetTrait('conqueror').GetName( GetNullCharacter )] [trait|E]\n$EFFECT_LIST_BULLET$ You have the [GetModifier('ai_extreme_conqueror_modifier').GetNameWithTooltip] [modifier|E]"
+ tfmagi_gather_force_decision_confirm: "To me!"
+
+ tfmagi_assimilate_decision: "Naturalize to this world"
+ tfmagi_assimilate_decision_desc: "Our survival hinges upon a difficult but necessary truth - we must find ways to adopt certain customs of the [ROOT.Char.GetCapitalLocation.GetCounty.GetCulture.GetCollectiveNounNoTooltip]."
+ tfmagi_assimilate_decision_tooltip: "A new [culture|E] will be diverged from [GetPlayer.GetCulture.GetName].\n$EFFECT_LIST_BULLET$ [GetCultureTradition('tradition_tfmagi_foreign_invaders').GetName] will be replaced with [GetCultureTradition('tradition_tfmagi_cosmopolitan_tolerance').GetName]\n$EFFECT_LIST_BULLET$ Learn the [GetPlayer.GetCurrentLocation.GetCounty.GetCulture.GetLanguage.GetName] [language|E]\n$EFFECT_LIST_BULLET$ Your new [culture|E] starts with a #emp large#! amount of [cultural_acceptance|E] with [GetPlayer.GetCurrentLocation.GetCounty.GetCulture.GetName], and two of its [traditions|E]"
+ tfmagi_assimilate_decision_confirm: "We'll call this progress."
+
+
+ tfmagi_minority_investments_decision: "Celebrate the Realm's Cultures"
+ tfmagi_minority_investments_decision_desc: "A few well-placed gestures and investments by the [ROOT.Char.GetCulture.GetCollectiveNounNoTooltip] towards the other peoples of my realm should ensure their continued... contentment."
+ tfmagi_minority_investments_decision_tooltip: "All non primary [culture|E] counties gain #positive_value 25#! [development_growth|E]"
+ tfmagi_minority_investments_decision_confirm: "A small price for peace"
+
+ tfmagi_esotericism_exeurgy_summon_force_decision: "Summon Infernal Forces"
+ tfmagi_esotericism_exeurgy_summon_force_decision_desc: "By reaching out to alien realms, I can summon strange warriors of unparalleled brutality."
+ tfmagi_esotericism_exeurgy_summon_force_decision_tooltip: "Gain an army of [GetMaA('tfmagi_infernal_warriors').GetName] [special_troops|E]."
+ tfmagi_esotericism_exeurgy_summon_force_decision_confirm: "Arise."
+ tfmagi_SUMMON_ARMY_CHOOSE_OPTION: "Choose Force"
+ tfmagi_summon_medium_loc: "A Moderate Force"
+ tfmagi_summon_medium_tooltip: "Gain a medium sized army of [GetMaA('tfmagi_infernal_warriors').GetName]."
+ tfmagi_summon_large_loc: "A Large Force"
+ tfmagi_summon_large_tooltip: "Gain a large army of [GetMaA('tfmagi_infernal_warriors').GetName]"
+

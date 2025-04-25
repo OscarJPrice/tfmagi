@@ -1,0 +1,19 @@
+﻿tfmagi_language_sartan = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = tfmagi_language_sartan
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = tfmagi_language_sartan }
+			multiply = 10
+		}
+	}
+	
+	color = {
+		0.95 0.95 0.39
+	}
+}

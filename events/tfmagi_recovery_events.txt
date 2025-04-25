@@ -1,0 +1,30 @@
+﻿namespace = tfmagi_game_recovery_events
+
+tfmagi_game_recovery_events.1 = {
+    type = character_event
+	title = tfmagi_game_recovery_events.1.t
+	desc = tfmagi_game_recovery_events.1.desc
+
+    theme = wanderer_journey_focus
+
+    left_portrait = {
+        character = root
+        animation = disbelief
+    }
+    
+    option = {
+        name = tfmagi_game_recovery_events.1.a
+        flavor = tfmagi_game_recovery_events.1.a.flavor
+
+        create_landless_adventurer_title_effect = {
+            REASON = flag:voluntary
+            FLAVOR_CHAR = root
+        }
+        
+    }
+
+    option = {
+        name = tfmagi_game_recovery_events.1.b
+        flavor = tfmagi_game_recovery_events.1.b.flavor
+    }
+}

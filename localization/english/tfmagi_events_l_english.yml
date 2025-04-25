@@ -1,0 +1,40 @@
+﻿l_english:
+ tfmagi_events.1.t: "Raise a Great Force"
+ tfmagi_events.1.desc: "We [ROOT.Char.GetCulture.GetCollectiveNounNoTooltip] are not prone to idleness. The fires of industry burn bright in the breast of those young and old. These spoiling warriors crave purpose, and I am positioned to provide just such a thing. \n\nMany will flock to my banners. \n\nFew will dare eschew my name.\n\nThe [ROOT.Char.GetCulture.GetCollectiveNounNoTooltip] call out, and house [ROOT.Char.GetHouse.GetName] answers!"
+ tfmagi_events.1.a: "Gather the brave."
+ tfmagi_events.1.a.flavor: "Gain an [army|E] of [special_troops|E]"
+
+ 
+ tfmagi_events.2.t: "[ROOT.Char.GetCulture.GetName] Assimilation"
+ tfmagi_events.2.desc: "Our survival hinges upon a difficult but necessary truth - we must find ways to adopt certain customs of the [ROOT.Char.GetCapitalLocation.GetCounty.GetCulture.GetCollectiveNounNoTooltip]. While our traditions have served us well, holding too rigidly to the old ways risks our very existence. These people possess vital knowledge that we cannot afford to ignore, from their methods of cultivation to their systems of governance. Though their practices may seem foreign to our eyes, we must recognize that selective adaptation of their ways offers our best path forward. This is not about surrendering who we are, but about ensuring our people's continued survival. The time has come to set aside pride and embrace the changes needed to preserve our future."
+ tfmagi_events.2.a: "Time for a new normal..."
+ tfmagi_events.2.a.flavor: "Adopt a new [culture|E]"
+
+
+ tfmagi_events.3.t: "Summon the Extant Banners"
+ tfmagi_events.3.desc: "Call upon those vassals who serve me on other planes, to rally these forces against my enemies on this one."
+ tfmagi_events.3.a: "Together we march."
+ tfmagi_events.3.a.flavor: "Gain an [army|E] of [special_troops|E]"
+
+ tfmagi_spell_events.1.t: "The Ritual"
+ tfmagi_spell_events.1.desc: "The final reagents are in place. The necessary geometries aligned. The catalyst burns with potential, and the formulae resonate with purpose. Should the inevitable come, these preparations will anchor essence to intent - a bridge between terminus and continuation. The cost is measured in currencies beyond mortal understanding, and the outcome... indeterminate. But certainty of oblivion pales against even the slimmest thread of possibility. \n\nAll that remains to be decided is the form I shall take.\n\n#emp You will keep [commander_traits|E], [personality_traits|E], [congenital_traits|E], and a quarter of your [perks|E]."
+ tfmagi_spell_events.1.a: "An Infant"
+ tfmagi_spell_events.1.a.flavor: "Take on the body of an infant, a pristine mind, to be molded once more.\n#emp If your realm does not contain a playable [county|E], you will take on the body of a youth.#!"
+ tfmagi_spell_events.1.b: "A Youth"
+ tfmagi_spell_events.1.b.flavor: "A youthful body, capable of bearing my education.\nYou will keep all [education_traits|E]"
+ tfmagi_spell_events.1.c: "An Infant"
+ tfmagi_spell_events.1.c.flavor: "Take on the body of an infant, a pristine mind, to be molded once more."
+
+ tfmagi_spell_events.2.t: "The Conveyance"
+ tfmagi_spell_events.2.desc: "I have met my end. My body lies before me, unmoving. The pull of my fate grows stronger, to drag me beyond. Yet, I can feel it. Another path. It was an uncertain thing, but now there can be no doubt. I can live once more.\n\n#emp A heretofor unknown [bastard|E] with an uncanny resemblance to you will make an entrance into the world.#!#T THIS IS YOU#!"
+ tfmagi_spell_events.2.a: "Once more, from the top"
+ tfmagi_spell_events.2.a.flavor: "Let death try to claim what is already promised elsewhere."
+ tfmagi_spell_events.2.b: "Perhaps it is simply... my time"
+ tfmagi_spell_events.2.b.flavor: "Surrender to the call of what lies beyond life."
+
+ tfmagi_game_recovery_events.1.t: "Destitution"
+ tfmagi_game_recovery_events.1.desc: "Somehow, for reasons beyond you, you are [unlanded|E], something which should #emp not#! have happened."
+ tfmagi_game_recovery_events.1.a: "Become an [adventurer|E]"
+ tfmagi_game_recovery_events.1.a.flavor: "Become an [adventurer|e] to escape poverty."
+ tfmagi_game_recovery_events.1.b: "#R Do nothing#!"
+ tfmagi_game_recovery_events.1.b.flavor: "I hope you know what you're doing."

@@ -1,0 +1,295 @@
+﻿add_tfmagi_mage_trait = {
+    add_trait = tfmagi_mage
+    add_to_global_variable_list = {
+        name = tfmagi_mage_global_list
+        target = this
+    }
+    set_variable = {
+        name = tfmagi_mage_target
+        value = this
+    }
+}
+
+remove_tfmagi_mage_quicken_modifiers = {
+    remove_character_modifier = tfmagi_mage_quicken_modifier_01
+    remove_character_modifier = tfmagi_mage_quicken_modifier_02
+    remove_character_modifier = tfmagi_mage_quicken_modifier_03
+    remove_character_modifier = tfmagi_mage_quicken_modifier_04
+    remove_character_modifier = tfmagi_mage_quicken_modifier_05
+}
+
+remove_tfmagi_mage_strengthen_modifiers = {
+    remove_character_modifier = tfmagi_mage_strengthen_modifier_01
+    remove_character_modifier = tfmagi_mage_strengthen_modifier_02
+    remove_character_modifier = tfmagi_mage_strengthen_modifier_03
+    remove_character_modifier = tfmagi_mage_strengthen_modifier_04
+    remove_character_modifier = tfmagi_mage_strengthen_modifier_05
+}
+
+remove_tfmagi_mage_acuity_modifiers = {
+    remove_character_modifier = tfmagi_mage_acuity_modifier_01
+    remove_character_modifier = tfmagi_mage_acuity_modifier_02
+    remove_character_modifier = tfmagi_mage_acuity_modifier_03
+    remove_character_modifier = tfmagi_mage_acuity_modifier_04
+    remove_character_modifier = tfmagi_mage_acuity_modifier_05
+}
+
+add_tfmagi_mage_quicken_modifier = {
+    if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_04
+            }
+        }
+        add_character_modifier = tfmagi_mage_quicken_modifier_05
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_03
+            }
+        }
+        add_character_modifier = tfmagi_mage_quicken_modifier_04
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_02
+            }
+        }
+        add_character_modifier = tfmagi_mage_quicken_modifier_03
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_01
+            }
+        }
+        add_character_modifier = tfmagi_mage_quicken_modifier_02
+    }
+    else = {
+        add_character_modifier = tfmagi_mage_quicken_modifier_01
+    }
+}
+
+add_tfmagi_mage_strengthen_modifier = {
+    if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_04
+            }
+        }
+        add_character_modifier = tfmagi_mage_strengthen_modifier_05
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_03
+            }
+        }
+        add_character_modifier = tfmagi_mage_strengthen_modifier_04
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_02
+            }
+        }
+        add_character_modifier = tfmagi_mage_strengthen_modifier_03
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_01
+            }
+        }
+        add_character_modifier = tfmagi_mage_strengthen_modifier_02
+    }
+    else = {
+        add_character_modifier = tfmagi_mage_strengthen_modifier_01
+    }
+}
+
+add_tfmagi_mage_acuity_modifier = {
+    if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_04
+            }
+        }
+        add_character_modifier = tfmagi_mage_acuity_modifier_05
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_03
+            }
+        }
+        add_character_modifier = tfmagi_mage_acuity_modifier_04
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_02
+            }
+        }
+        add_character_modifier = tfmagi_mage_acuity_modifier_03
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_01
+            }
+        }
+        add_character_modifier = tfmagi_mage_acuity_modifier_02
+    }
+    else = {
+        add_character_modifier = tfmagi_mage_acuity_modifier_01
+    }
+}
+
+add_tfmagi_mage_planar_teleport_modifier = {
+    if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_04
+            }
+        }
+        add_character_modifier = {
+            modifier = $TP_MODIFIER$ 
+            days = 75
+        }
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_planar
+                value >= tfmagi_mage_mastery_03
+            }
+        }
+        add_character_modifier = {
+            modifier = $TP_MODIFIER$ 
+            days = 60
+        }
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_planar
+                value >= tfmagi_mage_mastery_02
+            }
+        }
+        add_character_modifier = {
+            modifier = $TP_MODIFIER$ 
+            days = 45
+        }
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_planar
+                value >= tfmagi_mage_mastery_01
+            }
+        }
+        add_character_modifier = {
+            modifier = $TP_MODIFIER$ 
+            days = 30
+        }
+    }
+    else = {
+        add_character_modifier = {
+            modifier = $TP_MODIFIER$ 
+            days = 15
+        }
+    }
+}
+
+create_tfmagi_mage_golems_army = {
+    if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_04
+            }
+        }
+
+        custom_tooltip = tfmagi_mage_golems_tt_03
+        hidden_effect = {
+            spawn_army = {
+                men_at_arms = {
+                    type = $TYPE$
+                    stacks = 3
+                }
+                inheritable = no
+                uses_supply = no
+                location = this.location
+                name = tfmagi_golem_army_name_plural
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_02
+            }
+        }
+        custom_tooltip = tfmagi_mage_golems_tt_02
+        hidden_effect = {
+            spawn_army = {
+                men_at_arms = {
+                    type = $TYPE$
+                    stacks = 2
+                }
+                inheritable = no
+                uses_supply = no
+                location = this.location
+                name = tfmagi_golem_army_name_plural
+            }
+        }
+    }
+    else = {
+        custom_tooltip = tfmagi_mage_golems_tt_01
+        spawn_army = {
+            men_at_arms = {
+                type = $TYPE$
+                stacks = 1
+            }
+            inheritable = no
+            uses_supply = no
+            location = this.location
+            name = tfmagi_golem_army_name
+        }
+    }
+}

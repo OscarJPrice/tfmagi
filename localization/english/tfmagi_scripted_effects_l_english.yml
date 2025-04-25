@@ -1,0 +1,32 @@
+﻿l_english:
+
+ ##armies
+
+ tfmagi_expeditionary_army_name_minor: "Gathered Column"
+ tfmagi_expeditionary_army_name_intermediate: "Gathered Banner"
+ tfmagi_expeditionary_army_name_major: "Gathered Warband"
+ tfmagi_expeditionary_army_name_apocalyptic: "Great Host"
+ tfmagi_expeditionary_army_name_armageddon: "Hammer of the Empire"
+
+ tfmagi_maa_spawn_effect_minor_desc: "Raises a small army of [special_troops|E] comprising [men_at_arms|E] and [levies|E]."
+ tfmagi_maa_spawn_effect_intermediate_desc: "Raises an army of [special_troops|E] comprising [men_at_arms|E] and [levies|E]."
+ tfmagi_maa_spawn_effect_major_desc: "Raises a large army of [special_troops|E] comprising [men_at_arms|E] and [levies|E]."
+ tfmagi_maa_spawn_effect_apocalyptic_desc: "Raises a massive army of [special_troops|E] comprising [men_at_arms|E] and [levies|E]."
+ tfmagi_maa_spawn_effect_armageddon_desc: "Put the Great Khan to shame. Raises a impossibly large army of [special_troops|E] comprising [men_at_arms|E] and [levies|E]. Generations of young futures stolen for your army."
+
+
+ tfmagi_infernal_band: "Infernal Warband"
+ tfmagi_infernal_legion: "Infernal Legion"
+ tfmagi_maa_spawn_infernal_band_effect_desc: "Raises a medium sized army of [GetMaA('tfmagi_infernal_warriors').GetName] [special_troops|E]."
+ tfmagi_maa_spawn_infernal_legion_effect_desc: "Raises a large army of [GetMaA('tfmagi_infernal_warriors').GetName] [special_troops|E]."
+
+ ##golem
+ tfmagi_golem_army_name: "Conjured Golem"
+ tfmagi_golem_army_name_plural: "Conjured Golems"
+ tfmagi_mage_golems_tt_01: "Gain an army of #l 5#! golems"
+ tfmagi_mage_golems_tt_02: "Gain an army of #l 10#! golems"
+ tfmagi_mage_golems_tt_03: "Gain an army of #l 15#! golems"
+
+ tfmagi_maa_archmage_summoned_force: "Archmage Summons"
+ tfmagi_maa_defensive_summoned_force: "Defensive Summons"
+ 

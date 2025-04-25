@@ -1,0 +1,178 @@
+﻿tfmagi_mana_gain_monthly_amount_small = 0.1
+tfmagi_mana_gain_monthly_amount_medium = 0.2
+
+tfmagi_mana_gain_monthly_amount = {
+    value = 0
+    if = {
+        limit = { has_trait = tfmagi_mage }
+        add = tfmagi_mana_gain_monthly_amount_medium
+    }
+}
+
+tfmagi_mana_cost_multiplier_small = -0.1
+tfmagi_mana_cost_multiplier_medium = -0.2
+tfmagi_mana_cost_multiplier = {
+    value = 1
+    if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_04
+            }
+        }
+        add = tfmagi_mana_cost_multiplier_medium
+    }
+    if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_01
+            }
+        }
+        add = tfmagi_mana_cost_multiplier_small
+    }
+    if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_01
+            }
+        }
+        add = tfmagi_mana_cost_multiplier_small
+    }
+    if = {
+        limit = {
+            has_trait_xp = {
+                trait = tfmagi_mage
+                track = tfmagi_mage_mastery
+                value >= tfmagi_mage_mastery_01
+            }
+        }
+        add = tfmagi_mana_cost_multiplier_small
+    }
+}
+
+tfmagi_mana_cost_01 = {
+    value = -3
+    multiply = tfmagi_mana_cost_multiplier
+}
+
+tfmagi_mana_cost_02 = { 
+    value = -9
+    multiply = tfmagi_mana_cost_multiplier
+} 
+
+tfmagi_mana_cost_03 = {
+    value = -18
+    multiply = tfmagi_mana_cost_multiplier
+}
+
+tfmagi_mana_cost_04 = {
+    value = -30
+    multiply = tfmagi_mana_cost_multiplier
+}
+
+tfmagi_mana_cost_05 = {
+    value = -50
+    multiply = tfmagi_mana_cost_multiplier
+}
+
+tfmagi_mana_cost_06 = {
+    value = -70
+    multiply = tfmagi_mana_cost_multiplier
+}
+
+tfmagi_mana_cost_07 = {
+    value = -100
+    multiply = tfmagi_mana_cost_multiplier
+}
+
+
+tfmagi_mana_cost_monthly_small = { value = -0.5 }
+
+tfmagi_total_mana_cost_monthly = {
+    add = 0
+    if = { limit = { has_any_mage_quicken_modifier = yes } 
+        add = tfmagi_mana_cost_monthly_small
+    }
+    if = { limit = { has_any_mage_strengthen_modifier = yes } 
+        add = tfmagi_mana_cost_monthly_small
+    }
+    if = { limit = { has_any_mage_acuity_modifier = yes } 
+        add = tfmagi_mana_cost_monthly_small
+    }
+}
+
+tfmagi_xp_gain_monthly = 0.1
+
+tfmagi_xp_gain_small = 1.5
+tfmagi_xp_gain_medium = 3
+tfmagi_xp_gain_large = 4.5
+
+tfmagi_mage_elemental_01 = 5
+tfmagi_mage_elemental_02 = 20
+tfmagi_mage_elemental_03 = 60
+tfmagi_mage_elemental_04 = 100
+
+tfmagi_mage_alteration_01 = 5
+tfmagi_mage_alteration_02 = 30
+tfmagi_mage_alteration_03 = 65
+tfmagi_mage_alteration_04 = 100
+
+tfmagi_mage_conjuration_01 = 10
+tfmagi_mage_conjuration_02 = 30
+tfmagi_mage_conjuration_03 = 40
+tfmagi_mage_conjuration_04 = 80
+tfmagi_mage_conjuration_duration = {
+    value = 90
+    if = {
+        limit = { has_trait_xp = { 
+            trait = tfmagi_mage 
+            track = tfmagi_mage_mastery 
+            value >= tfmagi_mage_mastery_01 
+        } }
+        add = 30
+    }
+    if = {
+        limit = { has_trait_xp = { 
+            trait = tfmagi_mage 
+            track = tfmagi_mage_mastery 
+            value >= tfmagi_mage_mastery_02 
+        } }
+        add = 30
+    }
+    if = {
+        limit = { has_trait_xp = { 
+            trait = tfmagi_mage 
+            track = tfmagi_mage_mastery 
+            value >= tfmagi_mage_mastery_03
+        } }
+        add = 30
+    }
+    if = {
+        limit = { has_trait_xp = { 
+            trait = tfmagi_mage 
+            track = tfmagi_mage_mastery 
+            value >= tfmagi_mage_mastery_04
+        } }
+        add = 30
+    }
+}
+
+tfmagi_mage_planar_01 = 20
+tfmagi_mage_planar_02 = 40
+tfmagi_mage_planar_03 = 60
+tfmagi_mage_planar_04 = 80
+tfmagi_mage_planar_05 = 100
+
+tfmagi_mage_mastery_01 = 25
+tfmagi_mage_mastery_02 = 50
+tfmagi_mage_mastery_03 = 75
+tfmagi_mage_mastery_04 = 100
+
+tfmagi_mage_mana_01 = 30
+tfmagi_mage_mana_02 = 60
+tfmagi_mage_mana_03 = 100

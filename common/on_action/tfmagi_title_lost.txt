@@ -1,0 +1,19 @@
+﻿
+tfmagi_recover_from_unlanded = {
+    effect = {
+        if = {
+            limit = {
+                is_ai = no
+                is_landed = no
+            }
+            trigger_event = tfmagi_game_recovery_events.1
+        }
+      
+    }
+}
+
+on_title_lost = {
+    on_actions = {
+        tfmagi_recover_from_unlanded
+    }
+}

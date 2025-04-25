@@ -1,0 +1,14 @@
+﻿l_english:
+ building_type_tfmagi_magic_academy_01: "Magic Academy"
+ building_type_tfmagi_magic_academy_01_desc: "An institution of magic and learning, where many who aspire to the arcane arts congregate in learning and discovery to advance the arcane sciences."
+ building_tfmagi_magic_academy_01: "Magic Schools"
+ building_tfmagi_magic_academy_01_desc: "Schools serving local scholars and mages. Enables recruitment of [GetMaA('tfmagi_maa_mages_02').GetName] [men_at_arms|e]"
+ building_tfmagi_magic_academy_02: "Magical Colleges"
+ building_tfmagi_magic_academy_02_desc: "A collection of colleges serving to deepen the studies of the realm's scholars and mages. Enables recruitment of [GetMaA('tfmagi_maa_archmages').GetName] [men_at_arms|e]"
+ 
+ building_type_tfmagi_magic_defenses_01: "Arcane Defenses"
+ building_type_tfmagi_magic_defenses_01_desc: "Arcane traps, fortified bastions, and mage sentinels are scattered throughout the region, making any offensive maneuver a perilous undertaking."
+ building_tfmagi_magic_defenses_01: "Central Hold"
+ building_tfmagi_magic_defenses_01_desc: "This structure forms the backbone of regional defense. It is a command center, arcane anchor, and rallying point for defenders alike."
+ building_tfmagi_magic_defenses_02: "War Tower"
+ building_tfmagi_magic_defenses_02_desc: "More than a mere watchtower, this arcane bastion threatens would-be invaders with devastating saturation bombardments and serves as a focal point for coordinated magical and non-magical retaliation."

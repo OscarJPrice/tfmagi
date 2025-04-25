@@ -1,0 +1,66 @@
+﻿
+tfmagi_traits_start_register = {
+	effect = {
+		every_living_character = {
+			if = {
+				limit = {
+					has_trait = tfmagi_mage
+				}
+				add_to_global_variable_list = {
+					name = tfmagi_mage_global_list
+					target = this
+				}
+				set_variable = {
+					name = tfmagi_mage_target
+					value = this
+				}
+			}
+		}
+	}
+}
+
+tfmagi_mages_ongoing = {
+	effect = {
+		every_in_global_list = {
+			variable = tfmagi_mages_global_list
+			if = {
+				limit = {
+					OR = {
+						is_alive = no
+						NOT = {
+							has_trait = tfmagi_mage
+						}
+					}
+				}
+				remove_list_global_variable = {
+					name = tfmagi_mages_global_list
+					target = THIS
+				}
+			}
+			else = {
+				add_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value = tfmagi_mana_gain_monthly_amount
+				}
+			}
+			
+		}
+	}
+}
+
+tfmagi_traits_recursive_monthly = {
+	on_actions = {
+		tfmagi_mages_ongoing
+		
+		delay = { months = 1 }
+		tfmagi_traits_recursive_monthly
+	}
+}
+
+on_game_start_after_lobby = {
+	on_actions = {
+		tfmagi_traits_start_register
+		tfmagi_traits_recursive_monthly
+	}
+}

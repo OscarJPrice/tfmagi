@@ -1,0 +1,34 @@
+﻿#PER: The folks over at Witchcraft can be found at https://steamcommunity.com/sharedfiles/filedetails/?id=2837844350
+#and are the ones who made this workaround possible. Thank you for your hard work!
+#This fell horror is what is required of you if you want to display a ": yes" or a ": -50%" in a trait track 
+# color is not necessary, despite what cktiger might say
+
+#mage 
+
+tfmagi_mage_mana_cost_multiplier = {}
+tfmagi_mage_mana_monthly_base = {}
+
+tfmagi_enable_mage_augment_self_decision = {}
+tfmagi_mage_remote_harm_with_fire = {}
+tfmagi_mage_call_calamity = {}
+tfmagi_mage_call_calamity_improve = {}
+
+tfmagi_mage_basic_alchemy = {}
+tfmagi_mage_lead_to_gold = {} 
+tfmagi_mage_mend_flesh = {}
+tfmagi_mage_genetic_trait_improve = {}
+tfmagi_mage_immortal_elixir = {}
+
+tfmagi_mage_erect_fortifications = {}
+tfmagi_mage_golems = {}
+tfmagi_mage_aid_construction = {}
+tfmagi_mage_artificer = {}
+			
+tfmagi_mage_planar_sift_through_the_void = {}
+tfmagi_mage_planar_teleport_armies = {}
+tfmagi_mage_planar_establish_demiplane = {}
+tfmagi_mage_planar_angelic_legion = {}
+tfmagi_mage_planar_ascend = {}
+
+tfmagi_summoned_golems_in_battle = {}
+tfmagi_mage_planar_enables_teleport_travel_option = {}

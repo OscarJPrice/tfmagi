@@ -1,0 +1,20 @@
+﻿
+copy_non_trait_stats = {
+    $SOURCE$ = { save_scope_as = src }
+    THIS = { save_scope_as = dst }
+
+    every_character_trait = {
+        this = { save_scope_as = trait_scope }
+        scope:dst = {
+            add_to_variable_list = {
+                name = prior_traits
+                target = scope:trait_scope
+            }
+            remove_trait = scope:trait_scope
+        }
+    }
+
+    every_character_modifier = {
+
+    }
+}

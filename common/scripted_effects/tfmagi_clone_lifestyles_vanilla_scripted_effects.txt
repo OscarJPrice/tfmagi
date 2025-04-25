@@ -1,0 +1,3806 @@
+﻿#generated on 2024-12-16
+
+tfmagi_clone_all_lifestyle_perks = {
+    if = {
+        limit = {
+            root = {
+                has_perk = ducal_conquest_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = ducal_conquest_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = forced_vassalage_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = forced_vassalage_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = adaptive_traditions_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = adaptive_traditions_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = flexible_truces_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = flexible_truces_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = defensive_negotiations_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = defensive_negotiations_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = embassies_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = embassies_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = accomplished_forger_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = accomplished_forger_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = diplomat_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = diplomat_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = inspiring_rule_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = inspiring_rule_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = firm_hand_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = firm_hand_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = praetorian_guard_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = praetorian_guard_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = true_ruler_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = true_ruler_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = writing_history_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = writing_history_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = a_life_of_glory_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = a_life_of_glory_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = dignitas_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = dignitas_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = august_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = august_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = confidants_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = confidants_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = flatterer_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = flatterer_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = friendly_counsel_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = friendly_counsel_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = familial_familiar_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = familial_familiar_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = groomed_to_rule_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = groomed_to_rule_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = thicker_than_water_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = thicker_than_water_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = sound_foundations_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = sound_foundations_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = family_man_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = family_man_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = digging_for_dirt_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = digging_for_dirt_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = kidnapper_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = kidnapper_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = court_of_shadows_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = court_of_shadows_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = prepared_for_anything_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = prepared_for_anything_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = swift_execution_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = swift_execution_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = a_job_done_right_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = a_job_done_right_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = twice_schemed_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = twice_schemed_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = schemer_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = schemer_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = unshackled_lust_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = unshackled_lust_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = subtle_desire_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = subtle_desire_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = mortal_adoration_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = mortal_adoration_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = enticing_opportunity_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = enticing_opportunity_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = home_advantage_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = home_advantage_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = graceful_recovery_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = graceful_recovery_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = smooth_operator_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = smooth_operator_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = seducer_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = seducer_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = divine_retribution_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = divine_retribution_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = dreadful_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = dreadful_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = thriving_in_chaos_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = thriving_in_chaos_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = malice_implicit_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = malice_implicit_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = fear_tax_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = fear_tax_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = forever_infamous_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = forever_infamous_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = prison_feudal_complex_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = prison_feudal_complex_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = torturer_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = torturer_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = anatomical_studies_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = anatomical_studies_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = carefree_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = carefree_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = mental_resilience_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = mental_resilience_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = restraint_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = restraint_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = know_thyself_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = know_thyself_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = wash_your_hands_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = wash_your_hands_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = iron_constitution_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = iron_constitution_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = healthy_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = healthy_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = whole_of_body_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = whole_of_body_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = pedagogy_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = pedagogy_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = open_minded_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = open_minded_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = apostate_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = apostate_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = scientific_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = scientific_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = planned_cultivation_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = planned_cultivation_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = scholarly_circles_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = scholarly_circles_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = learn_on_the_job_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = learn_on_the_job_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = sanctioned_loopholes_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = sanctioned_loopholes_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = scholar_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = scholar_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = zealous_proselytizer_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = zealous_proselytizer_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = religious_icon_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = religious_icon_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = prophet_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = prophet_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = clerical_justifications_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = clerical_justifications_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = church_and_state_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = church_and_state_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = radiant_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = radiant_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = defender_of_the_faith_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = defender_of_the_faith_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = theologian_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = theologian_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = parthian_tactics_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = parthian_tactics_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = envelopment_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = envelopment_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = organized_retreat_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = organized_retreat_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = hit_and_run_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = hit_and_run_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = engineered_for_destruction_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = engineered_for_destruction_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = living_off_the_land_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = living_off_the_land_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = sappers_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = sappers_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = strategist_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = strategist_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = a_mans_home_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = a_mans_home_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = enduring_hardships_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = enduring_hardships_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = prepared_conscription_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = prepared_conscription_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = strict_organization_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = strict_organization_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = hard_rule_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = hard_rule_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = soldiers_of_lesser_fortune_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = soldiers_of_lesser_fortune_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = absolute_control_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = absolute_control_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = overseer_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = overseer_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = courtship_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = courtship_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = promising_prospects_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = promising_prospects_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = loyalty_and_respect_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = loyalty_and_respect_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = chivalric_dominance_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = chivalric_dominance_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = never_back_down_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = never_back_down_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = kingsguard_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = kingsguard_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = peacemaker_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = peacemaker_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = gallant_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = gallant_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = golden_obligations_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = golden_obligations_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = heregeld_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = heregeld_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = detailed_ledgers_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = detailed_ledgers_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = war_profiteer_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = war_profiteer_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = fearful_troops_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = fearful_troops_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = it_is_my_domain_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = it_is_my_domain_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = golden_aplomb_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = golden_aplomb_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = at_any_cost_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = at_any_cost_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = avaricious_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = avaricious_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = tax_man_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = tax_man_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = defensive_measures_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = defensive_measures_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = organized_muster_rolls_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = organized_muster_rolls_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = cutting_corners_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = cutting_corners_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = professional_workforce_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = professional_workforce_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = centralization_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = centralization_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = popular_figurehead_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = popular_figurehead_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = divided_attention_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = divided_attention_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = architect_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = architect_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = meritocracy_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = meritocracy_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = chains_of_loyalty_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = chains_of_loyalty_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = likable_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = likable_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = positions_of_power_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = positions_of_power_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = large_levies_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = large_levies_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = soon_forgiven_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = soon_forgiven_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = toe_the_line_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = toe_the_line_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = honored_to_serve_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = honored_to_serve_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = administrator_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = administrator_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = mustering_the_troops_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = mustering_the_troops_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = local_inspection_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = local_inspection_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = know_your_land_know_your_people_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = know_your_land_know_your_people_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = no_stone_unturned_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = no_stone_unturned_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = travel_logs_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = travel_logs_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = local_arbitration_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = local_arbitration_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = realm_charts_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = realm_charts_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = personal_touch_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = personal_touch_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = surveyor_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = surveyor_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = well_prepared_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = well_prepared_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = roaming_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = roaming_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = far_and_wide_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = far_and_wide_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = just_one_more_hill_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = just_one_more_hill_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = of_the_people_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = of_the_people_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = local_hero_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = local_hero_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = travel_companion_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = travel_companion_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = the_home_away_from_home_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = the_home_away_from_home_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = wayfarer_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = wayfarer_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = power_at_home_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = power_at_home_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = mercenary_contacts_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = mercenary_contacts_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = journey_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = journey_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = been_there_done_that_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = been_there_done_that_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = finally_there_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = finally_there_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = souvenirs_aplenty_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = souvenirs_aplenty_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = gracious_host_impeccable_guest_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = gracious_host_impeccable_guest_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = journey_planner_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = journey_planner_perk
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = voyager_perk
+            }
+        }
+        scope:cloned_character = {
+            add_perk = voyager_perk
+        }
+    }
+}
+tfmagi_clone_quarter_vanilla_lifestyle_perks = {
+    if = {
+        limit = {
+            root = {
+                has_perk = ducal_conquest_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = ducal_conquest_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = forced_vassalage_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = forced_vassalage_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = adaptive_traditions_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = adaptive_traditions_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = flexible_truces_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = flexible_truces_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = defensive_negotiations_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = defensive_negotiations_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = embassies_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = embassies_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = accomplished_forger_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = accomplished_forger_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = diplomat_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = diplomat_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = inspiring_rule_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = inspiring_rule_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = firm_hand_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = firm_hand_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = praetorian_guard_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = praetorian_guard_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = true_ruler_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = true_ruler_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = writing_history_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = writing_history_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = a_life_of_glory_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = a_life_of_glory_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = dignitas_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = dignitas_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = august_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = august_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = confidants_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = confidants_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = flatterer_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = flatterer_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = friendly_counsel_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = friendly_counsel_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = familial_familiar_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = familial_familiar_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = groomed_to_rule_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = groomed_to_rule_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = thicker_than_water_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = thicker_than_water_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = sound_foundations_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = sound_foundations_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = family_man_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = family_man_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = digging_for_dirt_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = digging_for_dirt_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = kidnapper_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = kidnapper_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = court_of_shadows_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = court_of_shadows_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = prepared_for_anything_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = prepared_for_anything_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = swift_execution_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = swift_execution_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = a_job_done_right_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = a_job_done_right_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = twice_schemed_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = twice_schemed_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = schemer_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = schemer_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = unshackled_lust_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = unshackled_lust_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = subtle_desire_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = subtle_desire_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = mortal_adoration_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = mortal_adoration_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = enticing_opportunity_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = enticing_opportunity_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = home_advantage_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = home_advantage_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = graceful_recovery_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = graceful_recovery_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = smooth_operator_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = smooth_operator_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = seducer_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = seducer_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = divine_retribution_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = divine_retribution_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = dreadful_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = dreadful_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = thriving_in_chaos_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = thriving_in_chaos_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = malice_implicit_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = malice_implicit_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = fear_tax_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = fear_tax_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = forever_infamous_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = forever_infamous_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = prison_feudal_complex_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = prison_feudal_complex_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = torturer_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = torturer_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = anatomical_studies_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = anatomical_studies_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = carefree_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = carefree_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = mental_resilience_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = mental_resilience_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = restraint_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = restraint_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = know_thyself_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = know_thyself_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = wash_your_hands_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = wash_your_hands_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = iron_constitution_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = iron_constitution_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = healthy_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = healthy_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = whole_of_body_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = whole_of_body_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = pedagogy_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = pedagogy_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = open_minded_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = open_minded_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = apostate_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = apostate_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = scientific_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = scientific_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = planned_cultivation_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = planned_cultivation_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = scholarly_circles_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = scholarly_circles_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = learn_on_the_job_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = learn_on_the_job_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = sanctioned_loopholes_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = sanctioned_loopholes_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = scholar_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = scholar_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = zealous_proselytizer_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = zealous_proselytizer_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = religious_icon_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = religious_icon_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = prophet_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = prophet_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = clerical_justifications_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = clerical_justifications_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = church_and_state_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = church_and_state_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = radiant_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = radiant_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = defender_of_the_faith_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = defender_of_the_faith_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = theologian_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = theologian_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = parthian_tactics_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = parthian_tactics_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = envelopment_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = envelopment_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = organized_retreat_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = organized_retreat_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = hit_and_run_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = hit_and_run_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = engineered_for_destruction_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = engineered_for_destruction_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = living_off_the_land_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = living_off_the_land_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = sappers_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = sappers_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = strategist_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = strategist_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = a_mans_home_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = a_mans_home_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = enduring_hardships_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = enduring_hardships_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = prepared_conscription_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = prepared_conscription_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = strict_organization_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = strict_organization_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = hard_rule_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = hard_rule_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = soldiers_of_lesser_fortune_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = soldiers_of_lesser_fortune_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = absolute_control_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = absolute_control_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = overseer_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = overseer_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = courtship_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = courtship_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = promising_prospects_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = promising_prospects_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = loyalty_and_respect_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = loyalty_and_respect_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = chivalric_dominance_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = chivalric_dominance_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = never_back_down_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = never_back_down_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = kingsguard_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = kingsguard_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = peacemaker_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = peacemaker_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = gallant_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = gallant_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = golden_obligations_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = golden_obligations_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = heregeld_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = heregeld_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = detailed_ledgers_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = detailed_ledgers_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = war_profiteer_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = war_profiteer_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = fearful_troops_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = fearful_troops_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = it_is_my_domain_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = it_is_my_domain_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = golden_aplomb_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = golden_aplomb_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = at_any_cost_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = at_any_cost_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = avaricious_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = avaricious_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = tax_man_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = tax_man_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = defensive_measures_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = defensive_measures_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = organized_muster_rolls_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = organized_muster_rolls_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = cutting_corners_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = cutting_corners_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = professional_workforce_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = professional_workforce_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = centralization_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = centralization_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = popular_figurehead_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = popular_figurehead_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = divided_attention_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = divided_attention_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = architect_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = architect_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = meritocracy_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = meritocracy_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = chains_of_loyalty_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = chains_of_loyalty_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = likable_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = likable_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = positions_of_power_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = positions_of_power_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = large_levies_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = large_levies_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = soon_forgiven_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = soon_forgiven_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = toe_the_line_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = toe_the_line_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = honored_to_serve_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = honored_to_serve_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = administrator_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = administrator_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = mustering_the_troops_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = mustering_the_troops_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = local_inspection_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = local_inspection_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = know_your_land_know_your_people_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = know_your_land_know_your_people_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = no_stone_unturned_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = no_stone_unturned_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = travel_logs_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = travel_logs_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = local_arbitration_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = local_arbitration_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = realm_charts_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = realm_charts_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = personal_touch_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = personal_touch_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = surveyor_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = surveyor_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = well_prepared_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = well_prepared_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = roaming_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = roaming_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = far_and_wide_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = far_and_wide_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = just_one_more_hill_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = just_one_more_hill_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = of_the_people_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = of_the_people_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = local_hero_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = local_hero_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = travel_companion_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = travel_companion_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = the_home_away_from_home_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = the_home_away_from_home_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = wayfarer_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = wayfarer_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = power_at_home_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = power_at_home_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = mercenary_contacts_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = mercenary_contacts_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = journey_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = journey_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = been_there_done_that_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = been_there_done_that_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = finally_there_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = finally_there_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = souvenirs_aplenty_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = souvenirs_aplenty_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = gracious_host_impeccable_guest_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = gracious_host_impeccable_guest_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = journey_planner_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = journey_planner_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+    if = {
+        limit = {
+            root = {
+                has_perk = voyager_perk
+            }
+        }
+        scope:cloned_character = {
+            random_list = {
+                1 = {
+                    add_perk = voyager_perk
+                }
+                3 = {} # nothing
+            }
+        }
+    }
+}

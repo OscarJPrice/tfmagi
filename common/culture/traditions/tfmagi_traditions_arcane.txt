@@ -1,0 +1,45 @@
+﻿tradition_tfmagi_mages = {
+    category = regional
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = tfmagi_pondering_orb.dds
+	}	
+	is_shown = {
+		always = yes
+	}
+	can_pick = {
+        PREV = {
+            OR = {
+                any_vassal_or_below = {
+                    count >= 3
+                    primary_title.tier >= tier_county
+                    culture.has_cultural_tradition = tradition_tfmagi_mages
+                }
+                liege ?= {
+                    culture.has_cultural_tradition = tradition_tfmagi_mages
+                }
+            
+                any_vassal_or_below = {
+                    count >= 15
+                    has_trait = scholar
+                }
+            }
+        }
+    }
+
+    parameters = {
+        learn_to_be_mage = yes
+        calm_trait_more_common = yes
+        pensive_trait_more_common = yes
+        introverted_trait_bonuses = yes 
+		tfmagi_get_mage_maa = yes
+        wanderers_gain_extra_economic_skills = yes
+		wanderers_learn_languages = yes
+    }
+
+    character_modifier = {
+		learning_per_piety_level = 2       
+
+    }
+}

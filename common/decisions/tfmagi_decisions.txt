@@ -1,0 +1,66 @@
+﻿tfmagi_minority_investments_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_conciliation.dds" }
+	desc = tfmagi_minority_investments_decision_desc
+	decision_group_type = tfmagi_decisions
+	selection_tooltip = tfmagi_minority_investments_decision_tooltip
+	is_shown = {
+		culture = {
+			has_cultural_parameter = tfmagi_can_undertake_minority_investments
+		}
+		is_landed = yes
+	}
+
+	effect = {
+		custom_tooltip = tfmagi_minority_investments_decision_tooltip
+		save_scope_as = active_character
+		hidden_effect = {
+			every_realm_county = {
+				limit = {
+					NOT = {
+						culture = scope:active_character.culture
+					}
+				}
+				change_development_progress_with_overflow = 25
+			}
+		}
+		every_culture_global = {
+			limit = {
+				NOT = {
+					this = scope:active_character.culture
+				}
+			}
+			save_scope_as = other_culture
+			if = {
+				limit = {
+					scope:active_character = {
+						any_realm_county = {
+							culture = scope:other_culture
+						}
+					}
+				}
+				change_cultural_acceptance = {
+					target = scope:active_character.culture
+					value = 10
+				}
+			}
+		}
+	}
+
+	cost = {
+		gold = {
+			value = 200
+			add = {
+				value = realm_size
+				multiply = 3
+			}
+		}
+	}
+
+	cooldown = { years = 15 }
+
+	ai_check_interval = 32
+	
+	ai_will_do = {
+		base = 100
+	}
+}

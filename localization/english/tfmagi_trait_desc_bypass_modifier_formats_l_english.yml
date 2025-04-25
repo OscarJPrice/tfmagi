@@ -1,0 +1,27 @@
+﻿l_english:
+ tfmagi_enable_mage_augment_self_decision_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_elemental_bodily_imbuement_decision').GetName] [decision|e]"
+ tfmagi_mage_remote_harm_with_fire_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_elemental_remote_fire_attack_decision').GetName] [decision|e]"
+ tfmagi_mage_call_calamity_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_elemental_call_impactor_decision').GetName], [GetDecisionWithKey('tfmagi_elemental_seismic_calamity_decision').GetName], and [GetDecisionWithKey('tfmagi_elemental_winter_summon_decision').GetName] [decisions|e]"
+ tfmagi_mage_call_calamity_improve_cancel_negative_supply: "Enables an additional option for the [GetDecisionWithKey('tfmagi_elemental_call_impactor_decision').GetName], [GetDecisionWithKey('tfmagi_elemental_seismic_calamity_decision').GetName], and [GetDecisionWithKey('tfmagi_elemental_winter_summon_decision').GetName] [decisions|e]"
+ 
+ tfmagi_mage_basic_alchemy_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_alteration_basic_alchemy_decision').GetName] [decision|e]"
+ tfmagi_mage_lead_to_gold_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_alteration_lead_to_gold_decision').GetName] [decision|e]" 
+ tfmagi_mage_genetic_trait_improve_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_alteration_genome_decision').GetName] [decision|e]"
+ tfmagi_mage_mend_flesh_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_alteration_mend_flesh_decision').GetName] [decision|e]"
+ tfmagi_mage_immortal_elixir_cancel_negative_supply: "Enables the #emp Elixir of#! #g Immortality#! option for the [GetDecisionWithKey('tfmagi_mage_alteration_basic_alchemy_decision').GetName] [decision|e]"
+ 
+ tfmagi_mage_aid_construction_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_conjuration_aid_construction_decision').GetName] [decision|e]"
+ tfmagi_mage_artificer_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_create_item_decision').GetName] [decision|e]"
+ tfmagi_mage_golems_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_conjuration_golem_decision').GetName] [decision|e]"
+ tfmagi_mage_erect_fortifications_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_conjuration_create_fortifications_decision').GetName] [decision|e]"
+ 			
+ tfmagi_mage_planar_sift_through_the_void_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_planar_sift_through_the_void_decision').GetName] [decision|e]"
+ tfmagi_mage_planar_teleport_armies_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_planar_teleport_decision').GetName] [decision|e]"
+ tfmagi_mage_planar_establish_demiplane_cancel_negative_supply: ""
+ tfmagi_mage_planar_ascend_cancel_negative_supply: ""
+ tfmagi_mage_planar_angelic_legion_cancel_negative_supply: ""
+  
+ tfmagi_mage_planar_enables_teleport_travel_option_cancel_negative_supply: "Enables the [GetTravelOption('tfmagi_mage_planar_teleport_travel_option').GetName] [travel_option|e]"
+ tfmagi_summoned_golems_in_battle_supply_limit: "#I Golem#! [men_at_arms|e] gained on entering [battle|e] in [province]"
+ tfmagi_mage_mana_cost_multiplier_attrition_mult: "[tfmagi_spell|E] mana cost"
+ tfmagi_mage_mana_monthly_base_max_combat_roll: "Monthly [GetTrait( 'tfmagi_mage' ).GetTraitTrackByKey( 'tfmagi_mage_mana' ).GetName] gain"

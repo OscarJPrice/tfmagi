@@ -1,0 +1,34 @@
+﻿
+tfmagi_sartan = {
+
+	color = {
+		0.7 0.21 0.88
+	}
+
+	ethos = ethos_stoic
+	heritage = tfmagi_heritage_selchus
+	language = tfmagi_language_sartan
+	martial_custom = martial_custom_equal
+
+	name_list = tfmagi_name_list_sartan
+
+	traditions = {
+		tradition_tfmagi_magic_society
+		tradition_tfmagi_mages
+		tradition_tfmagi_voracious_adventurers
+		tradition_tfmagi_cosmopolitan_tolerance
+	}
+
+	coa_gfx = { byzantine_group_coa_gfx }
+	building_gfx = { iberian_building_gfx }
+	clothing_gfx = { west_slavic_clothing_gfx northern_clothing_gfx iberian_muslim_clothing_gfx}
+	unit_gfx = { eastern_unit_gfx }
+
+
+	ethnicities = {
+		85 = caucasian_blond
+		5 = caucasian_ginger
+		15 = caucasian_brown_hair
+		15 = caucasian_dark_hair
+	}	
+}

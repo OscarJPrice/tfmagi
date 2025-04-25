@@ -1,0 +1,131 @@
+﻿
+# # Not great code, but it works. Hopefully.
+
+
+# tfmagi_setup_create_backup_character = {
+#     save_scope_as = source_character
+
+#     if = {
+#         limit = {
+#             has_character_flag = tfmagi_cdeath_infant_option_flag
+#             tfmagi_exists_valid_county_not_capital = yes
+#         }
+#         random_sub_realm_county = {
+#             limit = {
+#                 OR = {
+#                     AND = {
+#                         title_province.has_holding_type = tribal_holding
+#                         root.government_has_flag = government_is_tribal
+#                     }
+#                     AND = {
+#                         title_province.has_holding_type = castle_holding
+#                         NOT = { root.government_has_flag = government_is_tribal }
+#                     }
+#                     AND = {
+#                         title_province.has_holding_type = church_holding
+#                         root.faith.has_doctrine_parameter = allowed_holding_type_church_holding
+#                     }
+#                     AND = {
+#                         title_province.has_holding_type = city_holding
+#                         root.government_has_flag = government_is_administrative
+#                     }
+#                 }
+#             }
+#             title_province = {
+#                 save_scope_as = minor_holding_for_infant
+#             }
+#         }
+#         create_character = {
+#             template = tfmagi_new_form_infant
+#             dynasty_house = root.house
+#             location = scope:minor_holding_for_infant
+#             gender = root
+#             save_scope_as = adventurer
+#         }
+#     }
+#     else_if = {
+#         limit = {
+#             has_character_flag = tfmagi_cdeath_admin_option_flag
+#         }
+#         create_character = {
+#             template = tfmagi_new_form_infant
+#             dynasty_house = root.house
+#             location = root.capital_province
+#             gender = root
+#             save_scope_as = adventurer
+#         }
+#     }
+#     else = {
+#         remove_character_flag = tfmagi_cdeath_infant_option_flag # remove flag if no valid barony found (unlikely)
+#         create_character = {
+#             template = tfmagi_new_form_youth
+#             dynasty_house = root.house
+#             location = root.capital_province
+#             gender = root
+#             save_scope_as = adventurer
+#         }
+#     }
+    
+#     scope:adventurer = {
+#         add_trait = bastard
+#         add_gold = 50
+#         set_variable = {
+#             name = tfmagi_progenitor_character
+#             value = root
+#         }
+
+#         if = {
+#             limit = {
+#                 scope:source_character.has_character_flag = tfmagi_cdeath_infant_option_flag
+#             }
+#             get_title = scope:minor_holding_for_infant.county
+#             scope:source_character = {
+#                 laamp_switch_playable_character_effect = { NEW_CHARACTER = scope:adventurer }
+#             }
+#         }
+#         else_if = {
+#             limit = {
+#                 scope:source_character.has_character_flag = tfmagi_cdeath_admin_option_flag
+#             }
+#             scope:source_character = {
+#                 # random_held_title = {
+#                 #     limit = {
+#                 #         is_noble_family_title = yes
+#                 #     }
+#                 #     save_scope_as = family_title
+#                 #     scope:adventurer = { get_title = scope:family_title }
+#                 # }
+#                 laamp_switch_playable_character_effect = { NEW_CHARACTER = scope:adventurer }
+#                 scope:adventurer = {
+#                     create_cadet_branch = yes
+#                     create_noble_family_effect = yes
+#                 }
+#             }
+#         }
+#         else_if = {
+#             limit = {
+#                 scope:source_character.has_character_flag = tfmagi_cdeath_landless_option_flag
+#             }
+#             create_landless_adventurer_title_effect = {
+#                 REASON = flag:voluntary
+#                 FLAVOR_CHAR = scope:adventurer
+#             }
+#             scope:source_character = {
+#                 primary_heir = {
+#                     save_scope_as = heir
+#                 }
+#                 scope:adventurer = {
+#                     set_variable = {
+#                         name = tfmagi_heir_character
+#                         value = scope:heir
+#                     }
+#                 }
+#                 laamp_switch_playable_character_effect = { NEW_CHARACTER = scope:adventurer }
+#             }
+#         }
+#         trigger_event = {
+#             id = tfmagi_spell_events.2
+#             days = 1
+#         }
+#     }
+# }

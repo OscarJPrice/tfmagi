@@ -1,0 +1,8 @@
+﻿tfmagi_magic_target = {
+    texture = "gfx/interface/icons/character_interactions/tfmagi_icon_magic_reticle.dds"
+    parent = character_interaction
+}
+
+tfmagi_spell = {
+    texture = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_mana_hand.dds"
+}

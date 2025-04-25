@@ -1,0 +1,9 @@
+﻿tfmagi_deific = {
+	texture = "gfx/interface/icons/tfmagi_misc/game_concept_deific.dds"
+	parent = men_at_arms
+}
+
+tfmagi_titan = {
+	texture = "gfx/interface/icons/regimenttypes/tfmagi_golem_solid.dds"
+	parent = men_at_arms
+}

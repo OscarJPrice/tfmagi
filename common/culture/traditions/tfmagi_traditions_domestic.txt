@@ -1,0 +1,82 @@
+﻿
+tradition_tfmagi_cosmopolitan_tolerance = {
+	category = regional
+	layers = {
+		0 = diplo
+		1 = mediterranean
+		4 = greeting.dds
+	}
+
+	is_shown = {
+		always = yes
+	}
+
+	can_pick = {
+		PREV = {
+			OR = {
+				any_vassal_or_below = {
+					count >= 3
+					primary_title.tier >= tier_county
+					culture.has_cultural_tradition = tradition_tfmagi_cosmopolitan_tolerance
+				}
+				liege ?= {
+					culture.has_cultural_tradition = tradition_tfmagi_cosmopolitan_tolerance
+				}
+			}
+		}
+	}
+
+	parameters = {
+		tfmagi_can_undertake_minority_investments = yes
+		cheaper_to_hybridize = yes
+		easier_to_hybridize = yes
+	}
+
+	character_modifier = {
+		general_opinion = 10
+		ignore_different_faith_opinion = yes
+	}
+
+	ai_will_do = {
+		value = 400
+	}
+}
+
+tradition_tfmagi_magic_society = {
+    
+	layers = {
+		0 = learning
+		1 = western
+		4 = tfmagi_magic_city.dds
+	}	
+
+	is_shown = {
+		has_cultural_tradition = tradition_tfmagi_mages
+	}
+
+	can_pick = {
+		has_cultural_tradition = tradition_tfmagi_mages
+	}
+
+    parameters  = {
+        tfmagi_get_more_random_innovations = yes
+        tfmagi_get_mage_maa_2 = yes
+        tfmagi_get_mage_maa_3 = yes
+        tfmagi_get_magic_society_special_buildings = yes
+        improved_weapon_inspiration = yes
+        tfmagi_children_randomly_become_mages = yes
+    }
+
+	county_modifier = {
+		build_gold_cost = 0.1
+		build_speed = 0.2
+		development_growth = 0.3
+	}
+	
+	province_modifier = {
+		monthly_income = 0.4
+		fort_level = 1
+		supply_limit_mult = .5
+		epidemic_resistance = 20
+	}
+}

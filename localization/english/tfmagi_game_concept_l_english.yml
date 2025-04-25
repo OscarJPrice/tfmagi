@@ -1,0 +1,14 @@
+﻿l_english:
+ tfmagi_deific: "[tfmagi_deific|E]"
+ game_concept_tfmagi_deific: "Deific"
+ game_concept_tfmagi_deific_desc: "Term for those things which cannot be effectively countered by forces any less than divine."
+
+ tfmagi_titan: "[tfmagi_titan|E]"
+ game_concept_tfmagi_titan: "Titanic"
+ game_concept_tfmagi_titan_desc: "Those massive units which stomp across the battlefield with no heed for those underfoot."
+
+ game_concept_tfmagi_magic_target: "Magic Target"
+ game_concept_tfmagi_magic_target_desc: "Target for [tfmagi_spell|e]s that require one, by default the player character."
+
+ game_concept_tfmagi_spell: "Spell"
+ game_concept_tfmagi_spell_desc: "Arcane effects cast by a character bearing the [GetTrait('tfmagi_mage').GetName( GetNullCharacter )] [trait|e]."

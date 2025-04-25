@@ -1,0 +1,9 @@
+﻿l_english:
+ tfmagi_is_sick_tt: "This character has no illness [trait|E]"
+ tfmagi_is_injured_tt: "This character has no wound [trait|E]"
+ tfmagi_is_disabled_tt: "This character has no disability [trait|E]"
+ tfmagi_has_any_non_max_physique_beauty_or_intellect_traits_tt: "This character already has perfected genetics"
+ tfmagi_can_be_wounded_tt: "This character already has the [GetTrait( 'wounded_3' ).GetName( GetNullCharacter )] [trait|E]"
+ tfmagi_focus_on_arcane_already_any_tt: "This character is not studying any esoteric paths."
+
+ tfmagi_has_mage_enhancement_modifier_tt: "This character already has the given augmentation."

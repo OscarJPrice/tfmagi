@@ -1,0 +1,28 @@
+﻿tfmagi_maa_spawn_infernal_band = {
+	custom_tooltip = tfmagi_maa_spawn_infernal_band_effect_desc
+	spawn_army = {
+		men_at_arms = {
+			type = tfmagi_infernal_warriors
+			stacks = 3
+		}
+		inheritable = no
+		uses_supply = no
+		location = this.location
+		name = tfmagi_infernal_band
+	}
+}
+
+tfmagi_maa_spawn_infernal_legion = {
+	custom_tooltip = tfmagi_maa_spawn_infernal_legion_effect_desc
+	spawn_army = {
+		men_at_arms = {
+			type = tfmagi_infernal_warriors
+			stacks = 10
+		}
+		inheritable = no
+		uses_supply = no
+		location = this.location
+		name = tfmagi_infernal_band
+	}
+}
+

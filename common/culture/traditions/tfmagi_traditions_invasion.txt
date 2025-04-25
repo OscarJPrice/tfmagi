@@ -1,0 +1,117 @@
+﻿
+tradition_tfmagi_voracious_adventurers = {
+	category = regional
+
+	layers = {
+		0 = diplo
+		1 = western
+		4 = fierce_independence.dds
+	}
+	
+	is_shown = {
+		always = yes
+	}
+
+	can_pick = {
+		PREV = {
+			OR = {
+				any_vassal_or_below = {
+					count >= 3
+					primary_title.tier >= tier_county
+					culture.has_cultural_tradition = tradition_tfmagi_voracious_adventurers
+				}
+				liege ?= {
+					culture.has_cultural_tradition = tradition_tfmagi_voracious_adventurers
+				}
+			}
+		}
+	}
+
+	parameters = {
+		unlock_tfmagi_veteran_adventurers = yes
+		can_host_joust_contests = yes
+		high_prowess_ignores_knight_restrictions = yes
+		craven_and_content_traits_looked_down_upon = yes
+		blademaster_trait_bonuses = yes
+		blademaster_traits_more_common = yes
+		wanderers_gain_extra_combat_skills = yes
+		can_travel_along_rivers = yes
+		unlock_voluntary_laampdom = yes
+	}
+
+	character_modifier = {
+		prowess_per_prestige_level = 1
+		accolade_glory_gain_mult = 0.1
+		mercenary_hire_cost_mult = -0.1
+		monthly_income = 0.2
+	}
+
+	cost = {
+		prestige = {
+			value = 10000
+		}
+	}
+
+	ai_will_do = {
+		value = 400
+	}
+}
+
+tradition_tfmagi_imperial_yoke = {
+	category = regional
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = tfmagi_imperious_sovreign.dds
+	}
+		
+	is_shown = {
+		always = yes
+	}
+
+	can_pick = {
+		PREV = {
+			OR = {
+				any_vassal_or_below = {
+					count >= 3
+					primary_title.tier >= tier_county
+					culture.has_cultural_tradition = tradition_tfmagi_imperial_yoke
+				}
+				liege ?= {
+					culture.has_cultural_tradition = tradition_tfmagi_imperial_yoke
+				}
+			}
+		}
+		
+	}
+
+	parameters = {
+		#unlock_imperial_buildings = yes
+		unlock_tfmagi_ceitii = yes
+		cannot_attack_allies = yes
+		facilitate_alliance_acceptance = yes
+		astute_diplomat_bonus = yes
+	}
+
+	character_modifier = {
+		stewardship_per_prestige_level = 1
+		diplomacy_per_prestige_level = 1
+		republic_government_opinion = 5
+		republic_government_tax_contribution_add = 0.1
+		republic_government_tax_contribution_add = 0.15
+	}
+
+	culture_modifier = {
+		culture_tradition_max_add = 1
+	}
+
+	cost = {
+		prestige = {
+			value = 10000
+		}
+	}
+
+	ai_will_do = {
+		value = 400
+	}
+}

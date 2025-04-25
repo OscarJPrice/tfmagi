@@ -1,0 +1,94 @@
+﻿can_cast_tfmagi_spell_trigger = {
+	is_imprisoned = no	
+}
+
+tfmagi_is_sick = {
+	custom_tooltip = {
+		text = tfmagi_is_sick_tt
+		OR = {
+			has_trait = ill
+			has_trait = pneumonic
+			has_trait = great_pox
+			has_trait = early_great_pox
+			has_trait = lovers_pox
+			has_trait = leper
+			has_trait = cancer
+			has_trait = consumption
+			has_trait = typhus
+			has_trait = bubonic_plague
+			has_trait = smallpox 
+			has_trait = measles
+			has_trait = dysentery
+			has_trait = ergotism
+			has_trait = gout_ridden
+			has_trait = sickly
+			has_trait = infirm
+			has_trait = incapable
+		}
+	}
+}
+
+tfmagi_is_injured = {
+	custom_tooltip = {
+		text = tfmagi_is_injured_tt
+		OR = {
+			has_trait = wounded_1
+			has_trait = wounded_2
+			has_trait = wounded_3
+		}
+	}
+}
+
+tfmagi_is_disabled = {
+	custom_tooltip = {
+		text = tfmagi_is_disabled_tt
+		OR = {
+			has_trait = maimed
+			has_trait = disfigured
+			has_trait = hunchbacked
+			has_trait = one_eyed
+			has_trait = one_legged
+			has_trait = scarred
+			has_trait = eunuch_1
+			has_trait = beardless_eunuch
+			has_trait = blind
+			has_trait = hunchbacked
+			has_trait = clubfooted
+			has_trait = lisping
+			has_trait = stuttering
+			has_trait = inbred
+			has_trait = weak
+			has_trait = dull
+			has_trait = impotent
+			has_trait = spindly
+			has_trait = wheezing
+			has_trait = bleeder
+		}
+	}
+}
+
+tfmagi_has_any_non_max_physique_beauty_or_intellect_traits = {
+	custom_tooltip = {
+		text = tfmagi_has_any_non_max_physique_beauty_or_intellect_traits_tt
+		OR = {
+			has_trait = beauty_bad_1
+			has_trait = beauty_bad_2
+			has_trait = beauty_bad_3
+			has_trait = intellect_bad_1
+			has_trait = intellect_bad_2
+			has_trait = intellect_bad_3
+			has_trait = physique_bad_1
+			has_trait = physique_bad_2
+			has_trait = physique_bad_3
+		}
+	}
+}
+
+tfmagi_can_be_wounded = {
+	custom_tooltip = {
+		text = tfmagi_can_be_wounded_tt
+		NOT = {
+			has_trait = wounded_3
+		}
+	}
+}

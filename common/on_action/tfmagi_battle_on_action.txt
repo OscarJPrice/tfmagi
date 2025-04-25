@@ -1,0 +1,60 @@
+﻿on_army_combat_finished = {
+	on_actions = {
+        tfmagi_stop_summoned_special_troops
+    }
+}
+tfmagi_stop_summoned_special_troops = {
+    effect = {
+        tfmagi_delete_maa_archmages_temp_summons = yes
+    }
+}
+
+
+on_army_enter_province = {
+    on_actions = {
+        tfmagi_start_summoned_special_troops
+    }
+}
+tfmagi_start_summoned_special_troops = {
+    effect = {
+        scope:army.location = {
+            county = { save_scope_as = battle_county }
+            every_army_in_location = {
+                limit = {
+                    is_army_in_combat = yes
+                }
+                tfmagi_maa_spawn_maa_archmages_temp_summons = {
+                    ARMY = this
+                }
+                if = {
+                    limit = {
+                        scope:battle_county.has_county_modifier = tfmagi_mage_defensiveness_modifier_03
+                    }
+                    tfmagi_maa_spawn_defensive_golems_temp_summons = {
+                        ARMY = this
+                        NUMBER = 3
+                    }
+                }
+                else_if = {
+                    limit = {
+                        scope:battle_county.has_county_modifier = tfmagi_mage_defensiveness_modifier_02
+                    }
+                    tfmagi_maa_spawn_defensive_golems_temp_summons = {
+                        ARMY = this
+                        NUMBER = 2
+                    }
+                }
+                else_if = {
+                    limit = {
+                        scope:battle_county.has_county_modifier = tfmagi_mage_defensiveness_modifier_01
+                    }
+                    tfmagi_maa_spawn_defensive_golems_temp_summons = {
+                        ARMY = this
+                        NUMBER = 1
+                    }
+                }
+            }
+            
+        }
+    }
+}

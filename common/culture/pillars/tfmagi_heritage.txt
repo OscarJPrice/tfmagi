@@ -1,0 +1,9 @@
+﻿tfmagi_heritage_selchus = {
+	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = tfmagi_heritage_selchus
+		}
+	}
+	audio_parameter = mena
+}

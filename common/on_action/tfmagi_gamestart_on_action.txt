@@ -1,0 +1,20 @@
+﻿
+tfmagi_on_game_start_innovations_add = {
+	effect = {
+		every_culture_global = {
+			limit = {
+				has_cultural_parameter = tfmagi_get_more_random_innovations
+			}
+			while = {
+				count = 12
+				add_random_innovation = yes
+			}
+		}
+	}
+}
+
+on_game_start = {
+	on_actions = {
+		tfmagi_on_game_start_innovations_add
+	}
+}

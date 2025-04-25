@@ -1,0 +1,348 @@
+﻿# This is here in case any arrogant mods decide to do away with the lists.
+
+tfmagi_name_list_sartan = { #outremer
+
+	cadet_dynasty_names = {
+		"dynn_Agapite"
+		{ "dynnp_d_" "dynn_Agot" }
+		{ "dynn_Aleman" }
+		{ "dynnp_d_" "dynn_Arsur" }
+		{ "dynnp_de" "dynn_Asca" }
+		{ "dynnp_de" "dynn_Avalon" }
+		"dynn_Babin"
+		{ "dynnp_de" "dynn_Baphe" }
+		"dynn_Barlais"
+		{ "dynnp_de" "dynn_Barut" }
+		"dynn_Beduin"
+		{ "dynnp_de" "dynn_Bessan" }
+		{ "dynnp_de" "dynn_la_Blanchegarde" }
+		{ "dynnp_de" "dynn_Blundeville" }
+		"dynn_Bonvoisin"
+		"dynn_Bossat"
+		"dynn_Boule"
+		{ "dynnp_de" "dynn_Bourg" }
+		"dynn_Brisebarre"
+		"dynn_Bromons"
+		{ "dynnp_de" "dynn_Bures" }
+		{ "dynnp_de" "dynn_Buriavis" }
+		{ "dynnp_de" "dynn_Calan" }
+		"dynn_Capreolus"
+		"dynn_Carpas"
+		"dynn_Carpenel"
+		"dynn_Caulis"
+		{ "dynnp_de" "dynn_Cayphas" }
+		{ "dynnp_de" "dynn_CE_sarE_e" }
+		"dynn_Chappe"
+		"dynn_Chivides"
+		"dynn_Contaren"
+		{ "dynnp_de" "dynn_Dineham" }
+		"dynn_Dorel"
+		"dynn_Ebriac"
+		"dynn_Escaface"
+		"dynn_Fabrice"
+		"dynn_Fahard"
+		"dynn_Farabel"
+		{ "dynnp_le" "dynn_Fauconnier" }
+		{ "dynnp_de" "dynn_Francleu" }
+		"dynn_Fremel"
+		"dynn_Galgari"
+		{ "dynnp_de" "dynn_Gandonuille" }
+		"dynn_Garners"
+		"dynn_Gauvain"
+		{ "dynnp_de" "dynn_Giblet" }
+		"dynn_Gorap"
+		{ "dynnp_de" "dynn_Gourri" }
+		{ "dynnp_de" "dynn_Gradonico" }
+		"dynn_Gregoras"
+		"dynn_Guonem"
+		{ "dynnp_de" "dynn_Guyenne" }
+		"dynn_Hazart"
+		{ "dynnp_de" "dynn_Hoveden" }
+		"dynn_Hundefel"
+		{ "dynnp_d_" "dynn_Ibelin" }
+		"dynn_Justinian"
+		{ "dynnp_de" "dynn_LanclE_e" }
+		{ "dynnp_le" "dynn_Larron" }
+		"dynn_Lector"
+		"dynn_Lengles"
+		{ "dynnp_de" "dynn_LiE_ron" }
+		"dynn_Lorgue"
+		{ "dynnp_de" "dynn_Lubec" }
+		"dynn_Maiopule"
+		{ "dynnp_de" "dynn_MaisiE_res" }
+		"dynn_Mansuer"
+		"dynn_Marmore"
+		"dynn_Marrain"
+		{ "dynnp_le" "dynn_Mesel" }
+		{ "dynnp_de" "dynn_Meulant" }
+		{ "dynnp_de" "dynn_Mirabel" }
+		{ "dynnp_de" "dynn_Montanis" }
+		{ "dynnp_de" "dynn_Montgisart" }
+		{ "dynnp_de" "dynn_Montolif" }
+		{ "dynnp_de" "dynn_Morabit" }
+		{ "dynnp_du" "dynn_Morf" }
+		"dynn_Moreim"
+		"dynn_Mustacon"
+		{ "dynnp_de" "dynn_Neelle" }
+		{ "dynnp_de" "dynn_NE_fin" }
+		{ "dynnp_de" "dynn_Neubourg" }
+		{ "dynnp_de" "dynn_Nores" }
+		{ "dynnp_de" "dynn_Orca" }
+		{ "dynnp_d_" "dynn_Oudegherst" }
+		"dynn_Pansat"
+		{ "dynnp_de" "dynn_PE_lichin" }
+		{ "dynnp_de" "dynn_Picquigny" }
+		{ "dynnp_de" "dynn_Plancy" }
+		"dynn_Podocator"
+		"dynn_Porcellet"
+		{ "dynnp_de" "dynn_PrE_monstrE_" }
+		"dynn_Pusterla"
+		{ "dynnp_de" "dynn_Qveden" }
+		"dynn_Radouf"
+		{ "dynnp_de" "dynn_Rameru" }
+		{ "dynnp_de" "dynn_Rames" }
+		{ "dynnp_le" "dynn_Rechin" }
+		"dynn_Revel"
+		"dynn_RhinotmE_te"
+		{ "dynnp_de" "dynn_Romery" }
+		{ "dynnp_de" "dynn_Rubaia" }
+		{ "dynnp_de" "dynn_Saint-Abraham" }
+		{ "dynnp_de" "dynn_Saint-Bertin" }
+		{ "dynnp_de" "dynn_Saint-Gilles" }
+		{ "dynnp_de" "dynn_Saint-Omer" }
+		{ "dynnp_de" "dynn_Saint-Paul" }
+		{ "dynnp_de" "dynn_Saint-Sauveur" }
+		{ "dynnp_de" "dynn_Saint_SE_pulcre" }
+		{ "dynnp_de" "dynn_Saint-Severin" }
+		{ "dynnp_de" "dynn_Sajette" }
+		{ "dynnp_de" "dynn_Salvaing" }
+		"dynn_Salvutius"
+		{ "dynnp_de" "dynn_Saplana" }
+		{ "dynnp_de" "dynn_Sarisbery" }
+		{ "dynnp_de" "dynn_Scolare" }
+		"dynn_Senzaver"
+		"dynn_Synclitique"
+		{ "dynnp_de" "dynn_Tabarie" }
+		"dynn_Talevas"
+		{ "dynnp_de" "dynn_Tenremonde" }
+		{ "dynnp_de" "dynn_Thorot" }
+		{ "dynnp_de" "dynn_TibE_riade" }
+		{ "dynnp_de" "dynn_Tinory" }
+		{ "dynnp_de" "dynn_Toron" }
+		{ "dynnp_de" "dynn_Tripoly" }
+		{ "dynnp_de" "dynn_Turbessel" }
+		{ "dynnp_de" "dynn_Turguolant" }
+		{ "dynnp_de" "dynn_Tyr" }
+		{ "dynnp_d_" "dynn_Usperg" }
+		"dynn_Vidans"
+		"dynn_Vital"
+		{ "dynnp_de" "dynn_Welves" }
+		{ "dynnp_d_" "dynn_Ysis" }
+		{ "dynnp_de" "dynn_Zerban" }
+		{ "dynnp_de" "dynn_Zimblet" }
+	}
+
+	dynasty_names = {
+		"dynn_Agapite"
+		{ "dynnp_d_" "dynn_Agot" }
+		{ "dynn_Aleman" }
+		{ "dynnp_d_" "dynn_Arsur" }
+		{ "dynnp_de" "dynn_Asca" }
+		{ "dynnp_de" "dynn_Avalon" }
+		"dynn_Babin"
+		{ "dynnp_de" "dynn_Baphe" }
+		"dynn_Barlais"
+		{ "dynnp_de" "dynn_Barut" }
+		"dynn_Beduin"
+		{ "dynnp_de" "dynn_Bessan" }
+		{ "dynnp_de" "dynn_la_Blanchegarde" }
+		{ "dynnp_de" "dynn_Blundeville" }
+		"dynn_Bonvoisin"
+		"dynn_Bossat"
+		"dynn_Boule"
+		{ "dynnp_de" "dynn_Bourg" }
+		"dynn_Brisebarre"
+		"dynn_Bromons"
+		{ "dynnp_de" "dynn_Bures" }
+		{ "dynnp_de" "dynn_Buriavis" }
+		{ "dynnp_de" "dynn_Calan" }
+		"dynn_Capreolus"
+		"dynn_Carpas"
+		"dynn_Carpenel"
+		"dynn_Caulis"
+		{ "dynnp_de" "dynn_Cayphas" }
+		{ "dynnp_de" "dynn_CE_sarE_e" }
+		"dynn_Chappe"
+		"dynn_Chivides"
+		"dynn_Contaren"
+		{ "dynnp_de" "dynn_Dineham" }
+		"dynn_Dorel"
+		"dynn_Ebriac"
+		"dynn_Escaface"
+		"dynn_Fabrice"
+		"dynn_Fahard"
+		"dynn_Farabel"
+		{ "dynnp_le" "dynn_Fauconnier" }
+		{ "dynnp_de" "dynn_Francleu" }
+		"dynn_Fremel"
+		"dynn_Galgari"
+		{ "dynnp_de" "dynn_Gandonuille" }
+		"dynn_Garners"
+		"dynn_Gauvain"
+		{ "dynnp_de" "dynn_Giblet" }
+		"dynn_Gorap"
+		{ "dynnp_de" "dynn_Gourri" }
+		{ "dynnp_de" "dynn_Gradonico" }
+		"dynn_Gregoras"
+		"dynn_Guonem"
+		{ "dynnp_de" "dynn_Guyenne" }
+		"dynn_Hazart"
+		{ "dynnp_de" "dynn_Hoveden" }
+		"dynn_Hundefel"
+		{ "dynnp_d_" "dynn_Ibelin" }
+		"dynn_Justinian"
+		{ "dynnp_de" "dynn_LanclE_e" }
+		{ "dynnp_le" "dynn_Larron" }
+		"dynn_Lector"
+		"dynn_Lengles"
+		{ "dynnp_de" "dynn_LiE_ron" }
+		"dynn_Lorgue"
+		{ "dynnp_de" "dynn_Lubec" }
+		"dynn_Maiopule"
+		{ "dynnp_de" "dynn_MaisiE_res" }
+		"dynn_Mansuer"
+		"dynn_Marmore"
+		"dynn_Marrain"
+		{ "dynnp_le" "dynn_Mesel" }
+		{ "dynnp_de" "dynn_Meulant" }
+		{ "dynnp_de" "dynn_Mirabel" }
+		{ "dynnp_de" "dynn_Montanis" }
+		{ "dynnp_de" "dynn_Montgisart" }
+		{ "dynnp_de" "dynn_Montolif" }
+		{ "dynnp_de" "dynn_Morabit" }
+		{ "dynnp_du" "dynn_Morf" }
+		"dynn_Moreim"
+		"dynn_Mustacon"
+		{ "dynnp_de" "dynn_Neelle" }
+		{ "dynnp_de" "dynn_NE_fin" }
+		{ "dynnp_de" "dynn_Neubourg" }
+		{ "dynnp_de" "dynn_Nores" }
+		{ "dynnp_de" "dynn_Orca" }
+		{ "dynnp_d_" "dynn_Oudegherst" }
+		"dynn_Pansat"
+		{ "dynnp_de" "dynn_PE_lichin" }
+		{ "dynnp_de" "dynn_Picquigny" }
+		{ "dynnp_de" "dynn_Plancy" }
+		"dynn_Podocator"
+		"dynn_Porcellet"
+		{ "dynnp_de" "dynn_PrE_monstrE_" }
+		"dynn_Pusterla"
+		{ "dynnp_de" "dynn_Qveden" }
+		"dynn_Radouf"
+		{ "dynnp_de" "dynn_Rameru" }
+		{ "dynnp_de" "dynn_Rames" }
+		{ "dynnp_le" "dynn_Rechin" }
+		"dynn_Revel"
+		"dynn_RhinotmE_te"
+		{ "dynnp_de" "dynn_Romery" }
+		{ "dynnp_de" "dynn_Rubaia" }
+		{ "dynnp_de" "dynn_Saint-Abraham" }
+		{ "dynnp_de" "dynn_Saint-Bertin" }
+		{ "dynnp_de" "dynn_Saint-Gilles" }
+		{ "dynnp_de" "dynn_Saint-Omer" }
+		{ "dynnp_de" "dynn_Saint-Paul" }
+		{ "dynnp_de" "dynn_Saint-Sauveur" }
+		{ "dynnp_de" "dynn_Saint_SE_pulcre" }
+		{ "dynnp_de" "dynn_Saint-Severin" }
+		{ "dynnp_de" "dynn_Sajette" }
+		{ "dynnp_de" "dynn_Salvaing" }
+		"dynn_Salvutius"
+		{ "dynnp_de" "dynn_Saplana" }
+		{ "dynnp_de" "dynn_Sarisbery" }
+		{ "dynnp_de" "dynn_Scolare" }
+		"dynn_Senzaver"
+		"dynn_Synclitique"
+		{ "dynnp_de" "dynn_Tabarie" }
+		"dynn_Talevas"
+		{ "dynnp_de" "dynn_Tenremonde" }
+		{ "dynnp_de" "dynn_Thorot" }
+		{ "dynnp_de" "dynn_TibE_riade" }
+		{ "dynnp_de" "dynn_Tinory" }
+		{ "dynnp_de" "dynn_Toron" }
+		{ "dynnp_de" "dynn_Tripoly" }
+		{ "dynnp_de" "dynn_Turbessel" }
+		{ "dynnp_de" "dynn_Turguolant" }
+		{ "dynnp_de" "dynn_Tyr" }
+		{ "dynnp_d_" "dynn_Usperg" }
+		"dynn_Vidans"
+		"dynn_Vital"
+		{ "dynnp_de" "dynn_Welves" }
+		{ "dynnp_d_" "dynn_Ysis" }
+		{ "dynnp_de" "dynn_Zerban" }
+		{ "dynnp_de" "dynn_Zimblet" }
+	}
+	
+	male_names = {
+		Albert Arnoul Amalric Andronic Antevel Auchin Adam Andri AlbE_ric Alain Augustin Ambroise Ansald Alexis Amelin Anfred Alixandre Alard Annibal AdE_mar Anselme Archambaud Arthur Anscatinus Alvar Antoine Attard Aldobrandin AmE_dE_e
+		Baudouin BoE_mond Bernart Balian Bertelemi Benjamin BrancalE_on Bouveret Bertrand Bonaplius Borrile Bengerius Baldric Baldin Basile Bonvassal Bovo Boniface Benoiet Burchard
+		Carles Conrad Constantin Constans Claude Climent Celsus Calaman Clarembald Chiarion Carreran Cosma Cyrille Caesareus Chrestien Christophe
+		Daniel DiomE_des Dreux Denys Daimbert Durand Dominic Davi
+		Eusthaices Eudes Estienne Estiennot Ebremar EugE_ne Engeler E_douard Engenraz Evrart Elinand Edwis Echard Egidius
+		Fouques FrE_dE_ric Florent Florin Foucher Filibert FranC_ois Fernand Fulcrand
+		Godefroi Galbert Guy Gervais Gabriel Gilles GE_dE_on Garnier Georges Girart GrE_mont Geldemar Garsias Gilduin Gaston Guillelme Guibert Gualon Guillelme-Jourdain Guillelme-Raymond Gislebert Garenton GrE_goire Guerric GaE_tan
+		Hugues Henri Honorius Humfroy Heymeri Humbert HE_lie Hector Hodradus HE_raclius Helyes Hercule
+		Isaac Isnard Itier
+		Jehan Justinien Josselin Julien Jourdain Jaques Julius Janus Jason Joscius Jotran
+		Lambert Livon LE_onard Loys Lancelot Lorenz Landulf Lazare Lucien Lutolf Liparit Lothaire Lucas
+		Manuel Marin Maurice Milon Miles Menassier Melior Mahuis Machaire Mahengot Michiel Marsile Maregnan Monachus Mainard Martin Marc
+		NicE_phore NicE_tas Nicolas Narjot Nevelet
+		Orderic Olivier Olric Oris Ogerius Oddet Omnebono Octave Odon Onfroi
+		Philippe PE_lage Pierre Plivain Payen Pons Paul PtolE_mE_e Phoebus Perrot Poppo Peregrinus Pancrace Paschal PhacE_rol
+		Quentin
+		Romuald Raymond Rainald Richart Raoul Rupin Reignarz Raymond-Rupin Rostang Rohart Roger Romain Roland Remi Rotres Rinzon Ribaldus
+		Symbatius Sembald Simon Sibo Sicard Scipion Scirro SE_joret Sanson Silvius Seguin Serlon Soibrand Seraphin Syfrid Salemon
+		Tancred Thomas Taphroc Turolt TiE_rri Tristan ThE_tore ThE_odoric Toustain Tramon Tybaut
+		Ubaud Urbain Ulric Ursion
+		Vivien Vincent Victor
+		Willebrand Wido Winemar Wautier Warmond Winric Walleran Wulfran
+		Yblin Ysembart
+		Zacarie
+	}
+	female_names = {
+		Alix AgnE_s Alberade AliE_nor Aveline Antonella AdE_le Anselle Appollonie Anne AdalaI_de Avice Agace Aiglantine Armesende Argentine Arda Ancelma
+		BE_atrix Bermonde Basilia Bienvenue Berthe Bigne Brigide Bonne Blanche Bruna Beneoite Bourjot Bourgine
+		Charlotte Constance Caternella Catherine CE_cile Celsa ChE_rubine Candelour Christine Claudia Constantia Covilla Clarice
+		DorothE_e Douce Dolet Dominica Donata Denise
+		EstE_fE_nie Eschive Estienette Ermelline Emma E_lizabeth E_melotte Eulalie EuphE_mie Electe Emmeline Edelinne Ermenjart Erembourc
+		Florence Florine FranC_oise Franqueite
+		Godivere Guiberge Geltide Genevieve Godchilde Guaille Gilla Guibourc
+		Hodierne Helvis Hermeline Hermengarde Hodierna HE_lE_ne Helissent
+		Isolde
+		Joye Jehanne Juliane Joette Jaqueline
+		Lucie Luciane Lijart
+		Mahaut ME_lisende Marfie Marie Marguerite Mathilde MagdelE_ne Mabile Magdaleine Michiele
+		Nicole
+		Orgueilleuse Orable Odula
+		Plaisance PenthE_silE_e Pavie Philippa Poitevine Petra Pentecouste
+		Raymond Richent Richeut Rogerete Rohez Romainne Rose
+		Sibylle Sophie Sanche Sabine Simone Susanna Sanceline Sedila Simonnete
+		ThE_odora ThE_ophanie Tiburge Torterelle Thomasse Tyfainne
+		Ursule Ulmote
+		Vivienne
+		Yolande Yvete Ysabel
+	}
+	dynasty_of_location_prefix = "dynnp_de"
+	grammar_transform = french
+
+	
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 60
+	mat_grf_name_chance = 10
+	father_name_chance = 10
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 60
+	mother_name_chance = 10
+}

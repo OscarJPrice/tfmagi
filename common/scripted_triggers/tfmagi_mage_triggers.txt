@@ -1,0 +1,88 @@
+﻿
+has_any_mage_quicken_modifier = {
+	custom_tooltip = {
+		text = tfmagi_has_mage_enhancement_modifier_tt
+		OR = {
+			has_character_modifier = tfmagi_mage_quicken_modifier_01
+			has_character_modifier = tfmagi_mage_quicken_modifier_02
+			has_character_modifier = tfmagi_mage_quicken_modifier_03
+			has_character_modifier = tfmagi_mage_quicken_modifier_04
+			has_character_modifier = tfmagi_mage_quicken_modifier_05
+		}
+	}
+}
+
+has_any_mage_strengthen_modifier = {
+	custom_tooltip = {
+		text = tfmagi_has_mage_enhancement_modifier_tt
+		OR = {
+			has_character_modifier = tfmagi_mage_strengthen_modifier_01
+			has_character_modifier = tfmagi_mage_strengthen_modifier_02
+			has_character_modifier = tfmagi_mage_strengthen_modifier_03
+			has_character_modifier = tfmagi_mage_strengthen_modifier_04
+			has_character_modifier = tfmagi_mage_strengthen_modifier_05
+		}
+	}
+}
+
+has_any_mage_acuity_modifier = {
+	custom_tooltip = {
+		text = tfmagi_has_mage_enhancement_modifier_tt
+		OR = {
+			has_character_modifier = tfmagi_mage_acuity_modifier_01
+			has_character_modifier = tfmagi_mage_acuity_modifier_02
+			has_character_modifier = tfmagi_mage_acuity_modifier_03
+			has_character_modifier = tfmagi_mage_acuity_modifier_04
+			has_character_modifier = tfmagi_mage_acuity_modifier_05
+		}
+    }
+}
+
+has_tfmagi_mana_amount_01 = {
+	has_trait_xp = {
+		trait = tfmagi_mage
+		track = tfmagi_mage_mana
+		value >= tfmagi_mana_cost_01
+	}
+}
+
+has_tfmagi_mana_amount_02 = {
+	has_trait_xp = {
+		trait = tfmagi_mage
+		track = tfmagi_mage_mana
+		value >= tfmagi_mana_cost_02
+	}
+}
+
+has_tfmagi_mana_amount_03 = {
+	has_trait_xp = {
+		trait = tfmagi_mage
+		track = tfmagi_mage_mana
+		value >= tfmagi_mana_cost_03
+	}
+}
+
+has_tfmagi_mana_amount_04 = {
+	has_trait_xp = {
+		trait = tfmagi_mage
+		track = tfmagi_mage_mana
+		value >= tfmagi_mana_cost_04
+	}
+}
+
+has_tfmagi_mana_amount_05 = {
+	has_trait_xp = {
+		trait = tfmagi_mage
+		track = tfmagi_mage_mana
+		value >= tfmagi_mana_cost_05
+	}
+}
+
+has_tfmagi_mana_amount_06 = {
+	has_trait_xp = {
+		trait = tfmagi_mage
+		track = tfmagi_mage_mana
+		value >= tfmagi_mana_cost_06
+	}
+}
+

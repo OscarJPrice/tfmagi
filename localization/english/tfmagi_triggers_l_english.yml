@@ -7,3 +7,9 @@
  tfmagi_focus_on_arcane_already_any_tt: "This character is not studying any esoteric paths."
 
  tfmagi_has_mage_enhancement_modifier_tt: "This character already has the given augmentation."
+ not_enough_diplomacy_tonic_tt: "You have no [tfmagi_mage_alteration_diplomacy_tonic|E]"
+ not_enough_stewarship_tonic_tt: "You have no [tfmagi_mage_alteration_stewardship_tonic|E]"
+ not_enough_martial_tonic_tt: "You have no [tfmagi_mage_alteration_martial_tonic|E]"
+ not_enough_intrigue_tonic_tt: "You have no [tfmagi_mage_alteration_intrigue_tonic|E]"
+ not_enough_learning_tonic_tt: "You have no [tfmagi_mage_alteration_learning_tonic|E]"
+ not_enough_stress_tonic_tt: "You have no [tfmagi_mage_alteration_stress_loss_tonic|E]"

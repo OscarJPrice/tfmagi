@@ -22,9 +22,23 @@ tfmagi_start_summoned_special_troops = {
             every_army_in_location = {
                 limit = {
                     is_army_in_combat = yes
-                }
-                tfmagi_maa_spawn_maa_archmages_temp_summons = {
-                    ARMY = this
+                    army_owner.is_at_war = yes
+                    scope:battle_county.barony.holder = {
+                        OR = {
+                            this = scope:army.army_owner
+                            any_liege_or_above = {
+                                OR = {
+                                    any_ally = {
+                                        this = scope:army.army_owner 
+                                    }
+                                    this = scope:army.army_owner
+                                }
+                            }
+                            any_ally = {
+                                this = scope:army.army_owner 
+                            }
+                        }
+                    }
                 }
                 if = {
                     limit = {

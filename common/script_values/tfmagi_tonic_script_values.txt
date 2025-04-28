@@ -1,0 +1,131 @@
+﻿# tfmagi_mage_mastery_levels = 0, 1, 2, 3, 4
+
+tfmagi_mage_tonic_diplomacy_num_value = { value = var:tfmagi_mage_tonic_diplomacy_num }
+tfmagi_mage_tonic_stewardship_num_value = { value = var:tfmagi_mage_tonic_stewardship_num }
+tfmagi_mage_tonic_martial_num_value = { value = var:tfmagi_mage_tonic_martial_num }
+tfmagi_mage_tonic_intrigue_num_value = { value = var:tfmagi_mage_tonic_intrigue_num }
+tfmagi_mage_tonic_learning_num_value = { value = var:tfmagi_mage_tonic_learning_num }
+tfmagi_mage_tonic_stress_num_value = { value = var:tfmagi_mage_tonic_stress_num }
+
+@mage_mastery_00 = 0
+@mage_mastery_01 = 1
+@mage_mastery_02 = 2
+@mage_mastery_03 = 3
+@mage_mastery_04 = 4
+
+@skill_bonus_mult = 2
+@skill_bonus_base = 3
+tfmagi_tonic_skill_bonus = {
+    value = tfmagi_mage_mastery_level
+    multiply = @skill_bonus_mult
+    add = @skill_bonus_base
+}
+tfmagi_tonic_skill_bonus_00 = @[skill_bonus_mult*mage_mastery_00+skill_bonus_base]
+tfmagi_tonic_skill_bonus_01 = @[skill_bonus_mult*mage_mastery_01+skill_bonus_base]
+tfmagi_tonic_skill_bonus_02 = @[skill_bonus_mult*mage_mastery_02+skill_bonus_base]
+tfmagi_tonic_skill_bonus_03 = @[skill_bonus_mult*mage_mastery_03+skill_bonus_base]
+tfmagi_tonic_skill_bonus_04 = @[skill_bonus_mult*mage_mastery_04+skill_bonus_base]
+
+@dur_mult = 1
+@dur_base = 2
+tfmagi_tonic_duration = {
+    value = tfmagi_mage_mastery_level
+    multiply = @dur_mult
+    add = @dur_base
+}
+tfmagi_tonic_duration_00 = @[dur_mult*mage_mastery_00+dur_base]
+tfmagi_tonic_duration_01 = @[dur_mult*mage_mastery_01+dur_base]
+tfmagi_tonic_duration_02 = @[dur_mult*mage_mastery_02+dur_base]
+tfmagi_tonic_duration_03 = @[dur_mult*mage_mastery_03+dur_base]
+tfmagi_tonic_duration_04 = @[dur_mult*mage_mastery_04+dur_base]
+
+@prestige_mult = 1.5
+@prestige_base = 2
+tfmagi_tonic_prestige = {
+    value = tfmagi_mage_mastery_level
+    multiply = @prestige_mult
+    add = @prestige_base
+}
+tfmagi_tonic_prestige_00 = @[prestige_mult*mage_mastery_00+prestige_base]
+tfmagi_tonic_prestige_01 = @[prestige_mult*mage_mastery_01+prestige_base]
+tfmagi_tonic_prestige_02 = @[prestige_mult*mage_mastery_02+prestige_base]
+tfmagi_tonic_prestige_03 = @[prestige_mult*mage_mastery_03+prestige_base]
+tfmagi_tonic_prestige_04 = @[prestige_mult*mage_mastery_04+prestige_base]
+
+@advantage_mult = 2
+@advantage_base = 5
+tfmagi_tonic_army_advantage = {
+    value = tfmagi_mage_mastery_level
+    multiply = @advantage_mult
+    add = @advantage_base
+}
+tfmagi_tonic_army_advantage_00 = @[advantage_mult*mage_mastery_00+advantage_base]
+tfmagi_tonic_army_advantage_01 = @[advantage_mult*mage_mastery_01+advantage_base]
+tfmagi_tonic_army_advantage_02 = @[advantage_mult*mage_mastery_02+advantage_base]
+tfmagi_tonic_army_advantage_03 = @[advantage_mult*mage_mastery_03+advantage_base]
+tfmagi_tonic_army_advantage_04 = @[advantage_mult*mage_mastery_04+advantage_base]
+
+@build_discount_mult = -0.1
+@build_discount_base = -0.1
+tfmagi_tonic_build_discount = {
+    value = tfmagi_mage_mastery_level
+    multiply = @build_discount_mult
+    add = @build_discount_base
+}
+tfmagi_tonic_build_discount_00 = @[build_discount_mult*mage_mastery_00+build_discount_base]
+tfmagi_tonic_build_discount_01 = @[build_discount_mult*mage_mastery_01+build_discount_base]
+tfmagi_tonic_build_discount_02 = @[build_discount_mult*mage_mastery_02+build_discount_base]
+tfmagi_tonic_build_discount_03 = @[build_discount_mult*mage_mastery_03+build_discount_base]
+tfmagi_tonic_build_discount_04 = @[build_discount_mult*mage_mastery_04+build_discount_base]
+
+@scheme_bonus_mult = 2
+@scheme_bonus_base = 5
+tfmagi_tonic_scheme_bonus = {
+    value = tfmagi_mage_mastery_level
+    multiply = @scheme_bonus_mult
+    add = @scheme_bonus_base
+}
+tfmagi_tonic_scheme_bonus_00 = @[scheme_bonus_mult*mage_mastery_00+scheme_bonus_base]
+tfmagi_tonic_scheme_bonus_01 = @[scheme_bonus_mult*mage_mastery_01+scheme_bonus_base]
+tfmagi_tonic_scheme_bonus_02 = @[scheme_bonus_mult*mage_mastery_02+scheme_bonus_base]
+tfmagi_tonic_scheme_bonus_03 = @[scheme_bonus_mult*mage_mastery_03+scheme_bonus_base]
+tfmagi_tonic_scheme_bonus_04 = @[scheme_bonus_mult*mage_mastery_04+scheme_bonus_base]
+
+@innovation_mult = 0.15
+@innovation_base = 0.2
+tfmagi_tonic_innovation_bonus = {
+    value = tfmagi_mage_mastery_level
+    multiply = @innovation_mult
+    add = @innovation_base
+}
+tfmagi_tonic_innovation_bonus_00 = @[innovation_mult*mage_mastery_00+innovation_base]
+tfmagi_tonic_innovation_bonus_01 = @[innovation_mult*mage_mastery_01+innovation_base]
+tfmagi_tonic_innovation_bonus_02 = @[innovation_mult*mage_mastery_02+innovation_base]
+tfmagi_tonic_innovation_bonus_03 = @[innovation_mult*mage_mastery_03+innovation_base]
+tfmagi_tonic_innovation_bonus_04 = @[innovation_mult*mage_mastery_04+innovation_base]
+
+@stress_remove_mult = -8
+@stress_remove_base = -25
+tfmagi_tonic_stress_removed = {
+    value = tfmagi_mage_mastery_level
+    multiply = @stress_remove_mult
+    add = @stress_remove_base
+}
+tfmagi_tonic_stress_removed_00 = @[stress_remove_mult*mage_mastery_00+stress_remove_base]
+tfmagi_tonic_stress_removed_01 = @[stress_remove_mult*mage_mastery_01+stress_remove_base]
+tfmagi_tonic_stress_removed_02 = @[stress_remove_mult*mage_mastery_02+stress_remove_base]
+tfmagi_tonic_stress_removed_03 = @[stress_remove_mult*mage_mastery_03+stress_remove_base]
+tfmagi_tonic_stress_removed_04 = @[stress_remove_mult*mage_mastery_04+stress_remove_base]
+
+@stress_reduction_mult = -0.05
+@stress_reduction_base = -0.15
+tfmagi_tonic_stress_reduction = {
+    value = tfmagi_mage_mastery_level
+    multiply = @stress_reduction_mult
+    add = @stress_reduction_base
+}
+tfmagi_tonic_stress_reduction_00 = @[stress_reduction_mult*mage_mastery_00+stress_reduction_base]
+tfmagi_tonic_stress_reduction_01 = @[stress_reduction_mult*mage_mastery_01+stress_reduction_base]
+tfmagi_tonic_stress_reduction_02 = @[stress_reduction_mult*mage_mastery_02+stress_reduction_base]
+tfmagi_tonic_stress_reduction_03 = @[stress_reduction_mult*mage_mastery_03+stress_reduction_base]
+tfmagi_tonic_stress_reduction_04 = @[stress_reduction_mult*mage_mastery_04+stress_reduction_base]

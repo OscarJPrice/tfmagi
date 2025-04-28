@@ -130,21 +130,25 @@
 				life_expectancy = 5 
 				prowess = 5
 				tfmagi_mage_mana_cost_multiplier_attrition_mult = tfmagi_mana_cost_multiplier_small
+				tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_gain_monthly_amount_small
 			}
 			tfmagi_mage_mastery_02 = { 
 				life_expectancy = 10 
 				prowess = 7
 				tfmagi_mage_mana_cost_multiplier_attrition_mult = tfmagi_mana_cost_multiplier_small
+				tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_gain_monthly_amount_small
 			}
 			tfmagi_mage_mastery_03 = { 
 				life_expectancy = 15 
 				prowess = 9
 				tfmagi_mage_mana_cost_multiplier_attrition_mult = tfmagi_mana_cost_multiplier_small
+				tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_gain_monthly_amount_small
 			}
 			tfmagi_mage_mastery_04 = { 
 				life_expectancy = 20 
 				prowess = 10
 				tfmagi_mage_mana_cost_multiplier_attrition_mult = tfmagi_mana_cost_multiplier_medium
+				tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_gain_monthly_amount_medium
 			}
 		}
 		tfmagi_mage_mana = {

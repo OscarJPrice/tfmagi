@@ -1,12 +1,36 @@
 ﻿add_tfmagi_mage_trait = {
     add_trait = tfmagi_mage
     add_to_global_variable_list = {
-        name = tfmagi_mage_global_list
+        name = tfmagi_mages_global_list
         target = this
     }
     set_variable = {
         name = tfmagi_mage_target
         value = this
+    }
+    set_variable = {
+        name = tfmagi_mage_tonic_diplomacy_num
+        value = 0
+    }
+    set_variable = {
+        name = tfmagi_mage_tonic_martial_num
+        value = 0
+    }
+    set_variable = {
+        name = tfmagi_mage_tonic_stewardship_num
+        value = 0
+    }
+    set_variable = {
+        name = tfmagi_mage_tonic_intrigue_num
+        value = 0
+    }
+    set_variable = {
+        name = tfmagi_mage_tonic_learning_num
+        value = 0
+    }
+    set_variable = {
+        name = tfmagi_mage_tonic_stress_num
+        value = 0
     }
 }
 
@@ -291,5 +315,82 @@ create_tfmagi_mage_golems_army = {
             location = this.location
             name = tfmagi_golem_army_name
         }
+    }
+}
+
+tfmagi_province_radial_effect_2 = {
+    $COUNTY$ = {
+        every_county_province = {
+            limit = {
+                $SCRIPTED_TRIGGER$ = yes
+            }
+            $SCRIPTED_EFFECT$ = yes
+        }
+        every_connected_county = {
+            every_county_province = {
+                limit = {
+                    $SCRIPTED_TRIGGER$ = yes
+                }
+                $SCRIPTED_EFFECT$ = yes
+            }
+        }
+    }
+}
+tfmagi_province_radial_effect_3 = {
+    $COUNTY$ = {
+        every_county_province = {
+            limit = {
+                $SCRIPTED_TRIGGER$ = yes
+            }
+            $SCRIPTED_EFFECT$ = yes
+        }
+        every_connected_county = {
+            every_county_province = {
+                limit = {
+                    $SCRIPTED_TRIGGER$ = yes
+                }
+                $SCRIPTED_EFFECT$ = yes
+            }
+            
+            every_connected_county = {
+                every_county_province = {
+                    limit = {
+                        $SCRIPTED_TRIGGER$ = yes
+                    }
+                    $SCRIPTED_EFFECT$ = yes
+                }
+            }
+        }
+    }
+}
+
+tfmagi_mage_elemental_winter_s_effect_1 = {
+    hidden_effect = {
+        remove_province_modifier = winter_mild_modifier
+    }
+    add_province_modifier = {
+        modifier = winter_mild_modifier
+        days = 180
+    }
+}
+tfmagi_mage_elemental_winter_s_effect_2 = {
+    hidden_effect = {
+        remove_province_modifier = winter_mild_modifier
+        remove_province_modifier = winter_normal_modifier
+    }
+    add_province_modifier = {
+        modifier = winter_normal_modifier
+        days = 180
+    }
+}
+tfmagi_mage_elemental_winter_s_effect_3 = {
+    hidden_effect = {
+        remove_province_modifier = winter_mild_modifier
+        remove_province_modifier = winter_normal_modifier
+        remove_province_modifier = winter_harsh_modifier
+    }
+    add_province_modifier = {
+        modifier = winter_harsh_modifier
+        days = 180
     }
 }

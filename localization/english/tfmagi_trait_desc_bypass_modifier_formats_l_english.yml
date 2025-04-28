@@ -22,6 +22,6 @@
  tfmagi_mage_planar_angelic_legion_cancel_negative_supply: ""
   
  tfmagi_mage_planar_enables_teleport_travel_option_cancel_negative_supply: "Enables the [GetTravelOption('tfmagi_mage_planar_teleport_travel_option').GetName] [travel_option|e]"
- tfmagi_summoned_golems_in_battle_supply_limit: "#I Golem#! [men_at_arms|e] gained on entering [battle|e] in [province]"
+ tfmagi_summoned_golems_in_battle_supply_limit: "Extra #I Golem#! [men_at_arms|e] in [battle|e] in this [province|e] when at [war|e]"
  tfmagi_mage_mana_cost_multiplier_attrition_mult: "[tfmagi_spell|E] mana cost"
  tfmagi_mage_mana_monthly_base_max_combat_roll: "Monthly [GetTrait( 'tfmagi_mage' ).GetTraitTrackByKey( 'tfmagi_mage_mana' ).GetName] gain"

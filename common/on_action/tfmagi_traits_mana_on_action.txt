@@ -6,14 +6,7 @@ tfmagi_traits_start_register = {
 				limit = {
 					has_trait = tfmagi_mage
 				}
-				add_to_global_variable_list = {
-					name = tfmagi_mage_global_list
-					target = this
-				}
-				set_variable = {
-					name = tfmagi_mage_target
-					value = this
-				}
+				add_tfmagi_mage_trait = yes
 			}
 		}
 	}
@@ -25,11 +18,9 @@ tfmagi_mages_ongoing = {
 			variable = tfmagi_mages_global_list
 			if = {
 				limit = {
-					OR = {
-						is_alive = no
-						NOT = {
-							has_trait = tfmagi_mage
-						}
+					NAND = {
+						is_alive = yes
+						has_trait = tfmagi_mage
 					}
 				}
 				remove_list_global_variable = {

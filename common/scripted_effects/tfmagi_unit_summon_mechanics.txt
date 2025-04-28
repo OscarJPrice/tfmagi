@@ -99,48 +99,41 @@ tfmagi_maa_spawn_defensive_golems_temp_summons = {
 	$ARMY$ = { save_scope_as = army }
 	scope:army.location = { save_scope_as = p_location }
 	scope:army.army_owner = {
-		if = {
-			limit = {
-				any_sub_realm_county = {
-					this = scope:p_location.county
+		random_list = {
+			33 = {
+				spawn_army = {
+					men_at_arms = {
+						type = tfmagi_summoned_golem_solid
+						stacks = { value = $NUMBER$ } 
+					}
+					inheritable = no
+					uses_supply = yes
+					location = scope:army.location
+					name = tfmagi_maa_defensive_summoned_force
 				}
 			}
-			random_list = {
-				33 = {
-					spawn_army = {
-						men_at_arms = {
-							type = tfmagi_summoned_golem_solid
-							stacks = { value = $NUMBER$ } 
-						}
-						inheritable = no
-						uses_supply = yes
-						location = scope:army.location
-						name = tfmagi_maa_defensive_summoned_force
+			33 = {
+				spawn_army = {
+					men_at_arms = {
+						type = tfmagi_summoned_golem_cold
+						stacks = { value = $NUMBER$ } 
 					}
+					inheritable = no
+					uses_supply = yes
+					location = scope:army.location
+					name = tfmagi_maa_defensive_summoned_force
 				}
-				33 = {
-					spawn_army = {
-						men_at_arms = {
-							type = tfmagi_summoned_golem_cold
-							stacks = { value = $NUMBER$ } 
-						}
-						inheritable = no
-						uses_supply = yes
-						location = scope:army.location
-						name = tfmagi_maa_defensive_summoned_force
+			}
+			33 = {
+				spawn_army = {
+					men_at_arms = {
+						type = tfmagi_summoned_golem_heat
+						stacks = { value = $NUMBER$ } 
 					}
-				}
-				33 = {
-					spawn_army = {
-						men_at_arms = {
-							type = tfmagi_summoned_golem_heat
-							stacks = { value = $NUMBER$ } 
-						}
-						inheritable = no
-						uses_supply = yes
-						location = scope:army.location
-						name = tfmagi_maa_defensive_summoned_force
-					}
+					inheritable = no
+					uses_supply = yes
+					location = scope:army.location
+					name = tfmagi_maa_defensive_summoned_force
 				}
 			}
 		}

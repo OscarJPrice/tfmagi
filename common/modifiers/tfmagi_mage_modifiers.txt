@@ -3,30 +3,35 @@ tfmagi_mage_quicken_modifier_01 = {
     icon = prowess_positive
     prowess = 4
     fertility = 0.15
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_quicken_modifier_02 = {
     icon = prowess_positive
     prowess = 6
     fertility = 0.2
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_quicken_modifier_03 = {
     icon = prowess_positive
     prowess = 8
     fertility = 0.3
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_quicken_modifier_04 = {
     icon = prowess_positive
     prowess = 10
     fertility = 0.4
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_quicken_modifier_05 = {
     icon = prowess_positive
     prowess = 12
     fertility = 0.5
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_strengthen_modifier_01 = {
@@ -34,6 +39,7 @@ tfmagi_mage_strengthen_modifier_01 = {
     prowess = 2
     health = 0.25
     negate_health_penalty_add = 0.5
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_strengthen_modifier_02 = {
@@ -41,6 +47,7 @@ tfmagi_mage_strengthen_modifier_02 = {
     prowess = 3
     health = 0.5
     negate_health_penalty_add = 1
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_strengthen_modifier_03 = {
@@ -48,6 +55,7 @@ tfmagi_mage_strengthen_modifier_03 = {
     prowess = 4
     health = .75
     negate_health_penalty_add = 1.5
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_strengthen_modifier_04 = {
@@ -55,6 +63,7 @@ tfmagi_mage_strengthen_modifier_04 = {
     prowess = 5
     health = 1
     negate_health_penalty_add = 2
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_strengthen_modifier_05 = {
@@ -62,8 +71,8 @@ tfmagi_mage_strengthen_modifier_05 = {
     prowess = 6
     health = 1.25
     negate_health_penalty_add = 2.5
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
-
 
 tfmagi_mage_acuity_modifier_01 = {
     icon = learning_positive
@@ -72,6 +81,7 @@ tfmagi_mage_acuity_modifier_01 = {
 	stewardship = 1
 	intrigue = 1
 	learning = 1
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_acuity_modifier_02 = {
@@ -81,6 +91,7 @@ tfmagi_mage_acuity_modifier_02 = {
 	stewardship = 2
 	intrigue = 2
 	learning = 2
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_acuity_modifier_03 = {
@@ -90,6 +101,7 @@ tfmagi_mage_acuity_modifier_03 = {
 	stewardship = 3
 	intrigue = 3
 	learning = 3
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_acuity_modifier_04 = {
@@ -99,6 +111,7 @@ tfmagi_mage_acuity_modifier_04 = {
 	stewardship = 4
 	intrigue = 4
 	learning = 4
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_acuity_modifier_05 = {
@@ -108,6 +121,7 @@ tfmagi_mage_acuity_modifier_05 = {
 	stewardship = 5
 	intrigue = 5
 	learning = 5
+    tfmagi_mage_mana_monthly_base_max_combat_roll = tfmagi_mana_loss_monthly_amount_medium
 }
 
 tfmagi_mage_planar_teleport_travel_modifier = {
@@ -144,18 +158,21 @@ tfmagi_mage_county_build_cost_modifier_03 = {
 tfmagi_mage_defensiveness_modifier_01 = {
     icon = estate_positive
     defender_holding_advantage = 5
+    hostile_raid_time = 1
     monthly_county_control_growth_add = 0.1
     tfmagi_summoned_golems_in_battle_supply_limit = 1
 }
 tfmagi_mage_defensiveness_modifier_02 = {
     icon = estate_positive
     defender_holding_advantage = 10
+    hostile_raid_time = 2
     monthly_county_control_growth_add = 0.3
     tfmagi_summoned_golems_in_battle_supply_limit = 2
 }
 tfmagi_mage_defensiveness_modifier_03 = {
     icon = estate_positive
     defender_holding_advantage = 20
+    hostile_raid_time = 3
     monthly_county_control_growth_add = 0.8
     tfmagi_summoned_golems_in_battle_supply_limit = 3
 }

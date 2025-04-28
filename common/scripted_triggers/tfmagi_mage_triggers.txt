@@ -38,51 +38,21 @@ has_any_mage_acuity_modifier = {
     }
 }
 
-has_tfmagi_mana_amount_01 = {
-	has_trait_xp = {
-		trait = tfmagi_mage
-		track = tfmagi_mage_mana
-		value >= tfmagi_mana_cost_01
+tfmagi_mage_elemental_winter_s_trigger_1 = {
+	NOR = {
+        has_province_modifier = winter_normal_modifier
+        has_province_modifier = winter_harsh_modifier
 	}
 }
 
-has_tfmagi_mana_amount_02 = {
-	has_trait_xp = {
-		trait = tfmagi_mage
-		track = tfmagi_mage_mana
-		value >= tfmagi_mana_cost_02
+tfmagi_mage_elemental_winter_s_trigger_2 = {
+	NOT = {
+        has_province_modifier = winter_harsh_modifier
 	}
 }
 
-has_tfmagi_mana_amount_03 = {
-	has_trait_xp = {
-		trait = tfmagi_mage
-		track = tfmagi_mage_mana
-		value >= tfmagi_mana_cost_03
-	}
+tfmagi_mage_elemental_winter_s_trigger_3 = {
+	always = yes
 }
 
-has_tfmagi_mana_amount_04 = {
-	has_trait_xp = {
-		trait = tfmagi_mage
-		track = tfmagi_mage_mana
-		value >= tfmagi_mana_cost_04
-	}
-}
-
-has_tfmagi_mana_amount_05 = {
-	has_trait_xp = {
-		trait = tfmagi_mage
-		track = tfmagi_mage_mana
-		value >= tfmagi_mana_cost_05
-	}
-}
-
-has_tfmagi_mana_amount_06 = {
-	has_trait_xp = {
-		trait = tfmagi_mage
-		track = tfmagi_mage_mana
-		value >= tfmagi_mana_cost_06
-	}
-}
 

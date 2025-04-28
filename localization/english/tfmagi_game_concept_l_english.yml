@@ -12,3 +12,24 @@
 
  game_concept_tfmagi_spell: "Spell"
  game_concept_tfmagi_spell_desc: "Arcane effects cast by a character bearing the [GetTrait('tfmagi_mage').GetName( GetNullCharacter )] [trait|e]."
+
+game_concept_tfmagi_mage_alteration_tonic: "Alteration Tonic"
+game_concept_tfmagi_mage_alteration_tonic_desc: "A single-use draught whose potency rises with the brewer's [GetTrait( 'tfmagi_mage' ).GetTraitTrackByKey('tfmagi_mage_mastery' ).GetName]. Each tonic grants #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_skill_bonus')|+0]#! to one skill, plus a themed secondary benefit."
+
+game_concept_tfmagi_mage_alteration_diplomacy_tonic: "Diplomat's Tonic"
+game_concept_tfmagi_mage_alteration_diplomacy_tonic_desc: "Adds #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_skill_bonus')|+0]#! [diplomacy|E] and monthly [prestige|E] gain of #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_prestige')|2]#! for #l [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_duration')|1]#! years."
+
+game_concept_tfmagi_mage_alteration_martial_tonic: "Marshal's Tonic"
+game_concept_tfmagi_mage_alteration_martial_tonic_desc: "Adds #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_skill_bonus')|+0]#! [martial|E] and [advantage|E] bonus of #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_army_advantage')|0]#! while commanding armies for #l [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_duration')|1]#! years."
+
+game_concept_tfmagi_mage_alteration_stewardship_tonic: "Steward's Tonic"
+game_concept_tfmagi_mage_alteration_stewardship_tonic_desc: "Adds #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_skill_bonus')|+0]#! [stewardship|E] and reduces [domain|E] construction costs by #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_build_discount')|%0]#! for #l [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_duration')|1]#! years."
+
+game_concept_tfmagi_mage_alteration_intrigue_tonic: "Schemer's Tonic"
+game_concept_tfmagi_mage_alteration_intrigue_tonic_desc: "Adds #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_skill_bonus')|+0]#! [intrigue|E] and increases hostile-scheme success by #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_scheme_bonus')|0]#! for #l [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_duration')|1]#! years."
+
+game_concept_tfmagi_mage_alteration_learning_tonic: "Scholar's Tonic"
+game_concept_tfmagi_mage_alteration_learning_tonic_desc: "Adds #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_skill_bonus')|+0]#! [learning|E] and boosts culture [innovation|E] growth by #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_innovation_bonus')|2]#! for #l [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_duration')|1]#! years."
+
+game_concept_tfmagi_mage_alteration_stress_loss_tonic: "Soothing Tonic"
+game_concept_tfmagi_mage_alteration_stress_loss_tonic_desc: "Instantly removes #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_stress_removed')|0]#! [stress|E] and lowers future stress gain by #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_stress_reduction')|%0]#! for #l [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_duration')|1]#! years."

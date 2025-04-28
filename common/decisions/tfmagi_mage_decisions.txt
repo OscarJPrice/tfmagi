@@ -539,28 +539,10 @@ tfmagi_elemental_winter_summon_decision = {
 				value = tfmagi_mana_cost_04
 			}
 			var:tfmagi_mage_target = {
-				location.county = {
-					every_county_province = {
-						hidden_effect = {
-							remove_province_modifier = winter_mild_modifier
-							remove_province_modifier = winter_normal_modifier
-						}
-						add_province_modifier = {
-							modifier = winter_normal_modifier
-							days = 180
-						}
-					}
-					every_connected_county = {
-						every_county_province = {
-							hidden_effect = {
-								remove_province_modifier = winter_mild_modifier
-							}
-							add_province_modifier = {
-								modifier = winter_mild_modifier
-								days = 180
-							}
-						}
-					}
+				tfmagi_province_radial_effect_2 = {
+					COUNTY = location.county
+					SCRIPTED_EFFECT = tfmagi_mage_elemental_winter_s_effect_1
+					SCRIPTED_TRIGGER = tfmagi_mage_elemental_winter_s_trigger_1
 				}
 			}
 		}
@@ -1355,6 +1337,206 @@ tfmagi_mage_alteration_basic_alchemy_decision = { #TODO
 		reference = "gfx/interface/illustrations/decisions/tfmagi_blue_alchemy.dds"
 	}
 	decision_group_type = tfmagi_mage_decisions
+	sort_order = 100
+
+	is_shown = {
+		has_trait = tfmagi_mage
+		has_trait_xp = {
+			trait = tfmagi_mage
+			track = tfmagi_mage_conjuration
+			value >= tfmagi_mage_conjuration_01
+		}
+	}
+
+	is_valid = {
+		has_trait_xp = {
+			trait = tfmagi_mage 
+			track = tfmagi_mage_mana
+			value >= { subtract = tfmagi_mana_cost_02 }
+		}
+		gold >= 50
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "TFMAGI_CHOOSE_MAGE_TONIC"
+		show_from_start = yes
+
+		item = {
+			value = tfmagi_mage_conjuration_diplomacy_tonic
+			is_shown = {
+				always = yes
+			}
+			is_valid = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value >= { subtract = tfmagi_mana_cost_02 }
+				}
+				gold >= 50
+			}
+			current_description = tfmagi_mage_conjuration_diplomacy_tonic_tooltip
+			localization = tfmagi_mage_conjuration_diplomacy_tonic_loc
+			icon = "gfx/interface/icons/message_feed/diplomacy_skill_temp.dds"
+		}
+		item = {
+			value = tfmagi_mage_conjuration_martial_tonic
+			is_shown = {
+				always = yes
+			}
+			is_valid = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value >= { subtract = tfmagi_mana_cost_02 }
+				}
+				gold >= 50
+			}
+			current_description = tfmagi_mage_conjuration_martial_tonic_tooltip
+			localization = tfmagi_mage_conjuration_martial_tonic_loc
+			icon = "gfx/interface/icons/icon_skill_martial.dds"
+		}
+		item = {
+			value = tfmagi_mage_conjuration_stewardship_tonic
+			is_shown = {
+				always = yes
+			}
+			is_valid = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value >= { subtract = tfmagi_mana_cost_02 }
+				}
+				gold >= 50
+			}
+			current_description = tfmagi_mage_conjuration_stewardship_tonic_tooltip
+			localization = tfmagi_mage_conjuration_stewardship_tonic_loc
+			icon = "gfx/interface/icons/icon_skill_stewardship.dds"
+		}
+		item = {
+			value = tfmagi_mage_conjuration_intrigue_tonic
+			is_shown = {
+				always = yes
+			}
+			is_valid = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value >= { subtract = tfmagi_mana_cost_02 }
+				}
+				gold >= 50
+			}
+			current_description = tfmagi_mage_conjuration_intrigue_tonic_tooltip
+			localization = tfmagi_mage_conjuration_intrigue_tonic_loc
+			icon = "gfx/interface/icons/icon_skill_intrigue.dds"
+		}
+		item = {
+			value = tfmagi_mage_conjuration_learning_tonic
+			is_shown = {
+				always = yes
+			}
+			is_valid = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value >= { subtract = tfmagi_mana_cost_02 }
+				}
+				gold >= 50
+			}
+			current_description = tfmagi_mage_conjuration_learning_tonic_tooltip
+			localization = tfmagi_mage_conjuration_learning_tonic_loc
+			icon = "gfx/interface/icons/icon_skill_learning.dds"
+		}
+		item = {
+			value = tfmagi_mage_conjuration_stress_loss_tonic
+			is_shown = {
+				always = yes
+			}
+			is_valid = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value >= { subtract = tfmagi_mana_cost_02 }
+				}
+				gold >= 50
+			}
+			current_description = tfmagi_mage_conjuration_stress_loss_tonic_tooltip
+			localization = tfmagi_mage_conjuration_stress_loss_tonic_loc
+			icon = "gfx/interface/icons/stress/icon_stress_loss.dds"
+		}
+	} 
+
+	effect = {
+		if = {
+			limit = { scope:tfmagi_mage_conjuration_diplomacy_tonic = yes }
+			change_variable = {
+				name = tfmagi_mage_tonic_diplomacy_num
+				add = 1
+			}
+			custom_tooltip = tfmagi_mage_conjuration_diplomacy_tonic_tooltip
+			remove_short_term_gold = 50
+		}
+		else_if = {
+			limit = { scope:tfmagi_mage_conjuration_stewardship_tonic = yes }
+			change_variable = {
+				name = tfmagi_mage_tonic_stewardship_num
+				add = 1
+			}
+			custom_tooltip = tfmagi_mage_conjuration_stewardship_tonic_tooltip
+			remove_short_term_gold = 50
+
+		}
+		else_if = {
+			limit = { scope:tfmagi_mage_conjuration_martial_tonic = yes }
+			change_variable = {
+				name = tfmagi_mage_tonic_martial_num
+				add = 1
+			}
+			custom_tooltip = tfmagi_mage_conjuration_martial_tonic_tooltip
+			remove_short_term_gold = 50
+		}
+		else_if = {
+			limit = { scope:tfmagi_mage_conjuration_intrigue_tonic = yes }
+			change_variable = {
+				name = tfmagi_mage_tonic_intrigue_num
+				add = 1
+			}
+			custom_tooltip = tfmagi_mage_conjuration_intrigue_tonic_tooltip
+			remove_short_term_gold = 50
+		}
+		else_if = {
+			limit = { scope:tfmagi_mage_conjuration_learning_tonic = yes }
+			change_variable = {
+				name = tfmagi_mage_tonic_learning_num
+				add = 1
+			}
+			custom_tooltip = tfmagi_mage_conjuration_learning_tonic_tooltip
+			remove_short_term_gold = 50
+		}
+		else_if = {
+			limit = { scope:tfmagi_mage_conjuration_stress_loss_tonic = yes }
+			change_variable = {
+				name = tfmagi_mage_tonic_stress_num
+				add = 1
+			}
+			custom_tooltip = tfmagi_mage_conjuration_stress_loss_tonic_tooltip
+			remove_short_term_gold = 50
+		}
+		
+		add_trait_xp = {
+			trait = tfmagi_mage
+			track = tfmagi_mage_mana
+			value = tfmagi_mana_cost_02
+		}
+		add_trait_xp = {
+			trait = tfmagi_mage
+			track = tfmagi_mage_mastery
+			value = tfmagi_xp_gain_medium
+		}
+
+	}
+
 
 }
 
@@ -1456,41 +1638,25 @@ tfmagi_mage_alteration_lead_to_gold_decision = {
 				value = 30
 				if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_04
-						}
+						tfmagi_mage_mastery_level >= 4
 					}
 					add = 60
 				}
 				else_if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_03
-						}
+						tfmagi_mage_mastery_level >= 3
 					}
 					add = 45
 				}
 				else_if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_02
-						}
+						tfmagi_mage_mastery_level >= 2
 					}
 					add = 30
 				}
 				else_if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_01
-						}
+						tfmagi_mage_mastery_level >= 1
 					}
 					add = 15
 				}
@@ -1509,41 +1675,25 @@ tfmagi_mage_alteration_lead_to_gold_decision = {
 				value = 60
 				if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_04
-						}
+						tfmagi_mage_mastery_level >= 4
 					}
 					add = 120
 				}
 				else_if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_03
-						}
+						tfmagi_mage_mastery_level >= 3
 					}
 					add = 90
 				}
 				else_if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_02
-						}
+						tfmagi_mage_mastery_level >= 2
 					}
 					add = 60
 				}
 				else_if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_01
-						}
+						tfmagi_mage_mastery_level >= 1
 					}
 					add = 30
 				}
@@ -1562,41 +1712,25 @@ tfmagi_mage_alteration_lead_to_gold_decision = {
 				value = 100
 				if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_04
-						}
+						tfmagi_mage_mastery_level >= 4
 					}
 					add = 200
 				}
 				else_if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_03
-						}
+						tfmagi_mage_mastery_level >= 3
 					}
 					add = 150
 				}
 				else_if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_02
-						}
+						tfmagi_mage_mastery_level >= 2
 					}
 					add = 100
 				}
 				else_if = {
 					limit = {
-						has_trait_xp = {
-							trait = tfmagi_mage
-							track = tfmagi_mage_mastery
-							value >= tfmagi_mage_mastery_01
-						}
+						tfmagi_mage_mastery_level >= 1
 					}
 					add = 50
 				}

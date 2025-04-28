@@ -1,0 +1,136 @@
+﻿# Diplomacy Tonic
+tfmagi_tonic_diplomacy_00 = {
+	diplomacy = tfmagi_tonic_skill_bonus_00
+	monthly_prestige = tfmagi_tonic_prestige_00
+}
+tfmagi_tonic_diplomacy_01 = {
+	diplomacy = tfmagi_tonic_skill_bonus_01
+	monthly_prestige = tfmagi_tonic_prestige_01
+}
+tfmagi_tonic_diplomacy_02 = {
+	diplomacy = tfmagi_tonic_skill_bonus_02
+	monthly_prestige = tfmagi_tonic_prestige_02
+}
+tfmagi_tonic_diplomacy_03 = {
+	diplomacy = tfmagi_tonic_skill_bonus_03
+	monthly_prestige = tfmagi_tonic_prestige_03
+}
+tfmagi_tonic_diplomacy_04 = {
+	diplomacy = tfmagi_tonic_skill_bonus_04
+	monthly_prestige = tfmagi_tonic_prestige_04
+}
+
+# Martial Tonic
+tfmagi_tonic_martial_00 = {
+	martial = tfmagi_tonic_skill_bonus_00
+	advantage = tfmagi_tonic_army_advantage_00
+}
+tfmagi_tonic_martial_01 = {
+	martial = tfmagi_tonic_skill_bonus_01
+	advantage = tfmagi_tonic_army_advantage_01
+}
+tfmagi_tonic_martial_02 = {
+	martial = tfmagi_tonic_skill_bonus_02
+	advantage = tfmagi_tonic_army_advantage_02
+}
+tfmagi_tonic_martial_03 = {
+	martial = tfmagi_tonic_skill_bonus_03
+	advantage = tfmagi_tonic_army_advantage_03
+}
+tfmagi_tonic_martial_04 = {
+	martial = tfmagi_tonic_skill_bonus_04
+	advantage = tfmagi_tonic_army_advantage_04
+}
+
+# Stewardship Tonic
+tfmagi_tonic_stewardship_00 = {
+	stewardship = tfmagi_tonic_skill_bonus_00
+	build_gold_cost = tfmagi_tonic_build_discount_00
+	holding_build_gold_cost = tfmagi_tonic_build_discount_00
+	domicile_build_gold_cost = tfmagi_tonic_build_discount_00
+}
+tfmagi_tonic_stewardship_01 = {
+	stewardship = tfmagi_tonic_skill_bonus_01
+	build_gold_cost = tfmagi_tonic_build_discount_01
+	holding_build_gold_cost = tfmagi_tonic_build_discount_01
+	domicile_build_gold_cost = tfmagi_tonic_build_discount_01
+}
+tfmagi_tonic_stewardship_02 = {
+	stewardship = tfmagi_tonic_skill_bonus_02
+	build_gold_cost = tfmagi_tonic_build_discount_02
+	holding_build_gold_cost = tfmagi_tonic_build_discount_02
+	domicile_build_gold_cost = tfmagi_tonic_build_discount_02
+}
+tfmagi_tonic_stewardship_03 = {
+	stewardship = tfmagi_tonic_skill_bonus_03
+	build_gold_cost = tfmagi_tonic_build_discount_03
+	holding_build_gold_cost = tfmagi_tonic_build_discount_03
+	domicile_build_gold_cost = tfmagi_tonic_build_discount_03
+}
+tfmagi_tonic_stewardship_04 = {
+	stewardship = tfmagi_tonic_skill_bonus_04
+	build_gold_cost = tfmagi_tonic_build_discount_04
+	holding_build_gold_cost = tfmagi_tonic_build_discount_04
+	domicile_build_gold_cost = tfmagi_tonic_build_discount_04
+}
+
+# Intrigue Tonic
+tfmagi_tonic_intrigue_00 = {
+	intrigue = tfmagi_tonic_skill_bonus_00
+	scheme_success_chance = tfmagi_tonic_scheme_bonus_00
+}
+tfmagi_tonic_intrigue_01 = {
+	intrigue = tfmagi_tonic_skill_bonus_01
+	scheme_success_chance = tfmagi_tonic_scheme_bonus_01
+}
+tfmagi_tonic_intrigue_02 = {
+	intrigue = tfmagi_tonic_skill_bonus_02
+	scheme_success_chance = tfmagi_tonic_scheme_bonus_02
+}
+tfmagi_tonic_intrigue_03 = {
+	intrigue = tfmagi_tonic_skill_bonus_03
+	scheme_success_chance = tfmagi_tonic_scheme_bonus_03
+}
+tfmagi_tonic_intrigue_04 = {
+	intrigue = tfmagi_tonic_skill_bonus_04
+	scheme_success_chance = tfmagi_tonic_scheme_bonus_04
+}
+
+# Learning Tonic
+tfmagi_tonic_learning_00 = {
+	learning = tfmagi_tonic_skill_bonus_00
+	cultural_head_fascination_add = tfmagi_tonic_innovation_bonus_00
+}
+tfmagi_tonic_learning_01 = {
+	learning = tfmagi_tonic_skill_bonus_01
+	cultural_head_fascination_add = tfmagi_tonic_innovation_bonus_01
+}
+tfmagi_tonic_learning_02 = {
+	learning = tfmagi_tonic_skill_bonus_02
+	cultural_head_fascination_add = tfmagi_tonic_innovation_bonus_02
+}
+tfmagi_tonic_learning_03 = {
+	learning = tfmagi_tonic_skill_bonus_03
+	cultural_head_fascination_add = tfmagi_tonic_innovation_bonus_03
+}
+tfmagi_tonic_learning_04 = {
+	learning = tfmagi_tonic_skill_bonus_04
+	cultural_head_fascination_add = tfmagi_tonic_innovation_bonus_04
+}
+
+# Stress Loss Tonic
+tfmagi_tonic_stress_loss_00 = {
+	stress_gain_mult = tfmagi_tonic_stress_reduction_00
+}
+tfmagi_tonic_stress_loss_01 = {
+	stress_gain_mult = tfmagi_tonic_stress_reduction_01
+}
+tfmagi_tonic_stress_loss_02 = {
+	stress_gain_mult = tfmagi_tonic_stress_reduction_02
+}
+tfmagi_tonic_stress_loss_03 = {
+	stress_gain_mult = tfmagi_tonic_stress_reduction_03
+}
+tfmagi_tonic_stress_loss_04 = {
+	stress_gain_mult = tfmagi_tonic_stress_reduction_04
+}

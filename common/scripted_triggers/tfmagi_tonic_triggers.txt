@@ -1,0 +1,37 @@
+﻿
+tfmagi_tonic_diplomacy_trigger = {
+	custom_tooltip = {
+		text = not_enough_diplomacy_tonic_tt
+		var:tfmagi_mage_tonic_diplomacy_num > 0
+	}
+}
+tfmagi_tonic_stewarship_trigger = {
+	custom_tooltip = {
+		text = not_enough_stewarship_tonic_tt
+		var:tfmagi_mage_tonic_stewarship_num > 0
+	}
+}
+tfmagi_tonic_martial_trigger = {
+	custom_tooltip = {
+		text = not_enough_martial_tonic_tt
+		var:tfmagi_mage_tonic_dmartial_num > 0
+	}
+}
+tfmagi_tonic_intrigue_trigger = {
+	custom_tooltip = {
+		text = not_enough_intrigue_tonic_tt
+		var:tfmagi_mage_tonic_intrigue_num > 0
+	}
+}
+tfmagi_tonic_learning_trigger = {
+	custom_tooltip = {
+		text = not_enough_learning_tonic_tt
+		var:tfmagi_mage_tonic_learning_num > 0
+	}
+}
+tfmagi_tonic_stress_trigger = {
+	custom_tooltip = {
+		text = not_enough_stress_tonic_tt
+		var:tfmagi_mage_tonic_stress_num > 0
+	}
+}

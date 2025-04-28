@@ -1,7 +1,7 @@
 ﻿tfmagi_mage_select_interaction = {
 	icon = tfmagi_icon_magic_reticle
 	interface_priority = 90000 #is this funny? 
-	category = interaction_category_diplomacy
+	category = interaction_category_personal
 	desc = tfmagi_mage_select_interaction_desc
 
 	is_shown = {

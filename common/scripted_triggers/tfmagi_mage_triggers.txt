@@ -56,3 +56,23 @@ tfmagi_mage_elemental_winter_s_trigger_3 = {
 }
 
 
+tfmagi_mage_elemental_seismic_s_trigger_1 = {
+	NOT = {
+		has_county_modifier = tfmagi_elemental_seismic_modifier_01
+	}
+}
+tfmagi_mage_elemental_seismic_s_trigger_2 = {
+	NOR = {
+		has_county_modifier = tfmagi_elemental_seismic_modifier_01
+		has_county_modifier = tfmagi_elemental_seismic_modifier_02
+	}
+}
+tfmagi_mage_elemental_seismic_s_trigger_3 = {
+	NOR = {
+		has_county_modifier = tfmagi_elemental_seismic_modifier_01
+		has_county_modifier = tfmagi_elemental_seismic_modifier_02
+		has_county_modifier = tfmagi_elemental_seismic_modifier_03
+	}
+}
+
+

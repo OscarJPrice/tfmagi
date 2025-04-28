@@ -1,0 +1,4 @@
+﻿tfmagi_death_impact_effects = {
+	public_knowledge = yes
+	icon = "death_murder.dds"
+}

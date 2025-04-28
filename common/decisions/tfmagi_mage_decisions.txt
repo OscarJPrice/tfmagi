@@ -147,6 +147,7 @@ tfmagi_elemental_remote_fire_attack_decision = {
 	}
 
 	is_valid = {
+		var:tfmagi_mage_target.is_alive = yes
 		has_trait_xp = {
 			trait = tfmagi_mage
 			track = tfmagi_mage_mana
@@ -313,6 +314,7 @@ tfmagi_elemental_call_impactor_decision = { #TODO
 	}
 
 	is_valid = {
+		var:tfmagi_mage_target.is_alive = yes
 		has_trait_xp = {
 			trait = tfmagi_mage
 			track = tfmagi_mage_mana
@@ -375,6 +377,105 @@ tfmagi_elemental_call_impactor_decision = { #TODO
 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_heat_03.dds"
 		} 
 	} 
+
+	effect = {
+		if = {
+			limit = {
+				scope:tfmagi_mage_elemental_call_impactor_small = yes
+			}
+			var:tfmagi_mage_target = {
+				location.county = {
+					every_county_province = {
+						every_character_in_location = {
+							random_list = {
+								15 = {
+									death = {
+										death_reason = tfmagi_death_impact_effects
+										killer = root
+									}
+								}
+								85 = { }
+							}
+						}
+						random_list = {
+							35 = {
+								destroy_random_building_variable_effect = yes
+								destroy_random_building_effect = yes
+							}
+							65 = { }
+						}
+					}
+					change_development_level = {-4 -1}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:tfmagi_mage_elemental_call_impactor_medium = yes
+			}
+			var:tfmagi_mage_target = {
+				location.county = {
+					every_county_province = {
+						every_character_in_location = {
+							random_list = {
+								35 = {
+									death = {
+										death_reason = tfmagi_death_impact_effects
+										killer = root
+									}
+								}
+								65 = { }
+							}
+						}
+						while = {
+							count = {2 3}
+							random_list = {
+								35 = {
+									destroy_random_building_variable_effect = yes
+									destroy_random_building_effect = yes
+								}
+								65 = { }
+							}
+						}
+					}
+					change_development_level = {-8 -3}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:tfmagi_mage_elemental_call_impactor_large = yes
+			}
+			var:tfmagi_mage_target = {
+				location.county = {
+					every_county_province = {
+						every_character_in_location = {
+							random_list = {
+								55 = {
+									death = {
+										death_reason = tfmagi_death_impact_effects
+										killer = root
+									}
+								}
+								45 = { }
+							}
+						}
+						while = {
+							count = {3 5}
+							random_list = {
+								35 = {
+									destroy_random_building_variable_effect = yes
+									destroy_random_building_effect = yes
+								}
+								65 = { }
+							}
+						}
+					}
+					change_development_level = {-24 -7}
+				}
+			}
+		}
+	}
 }
 
 tfmagi_elemental_seismic_calamity_decision = { #TODO
@@ -389,10 +490,16 @@ tfmagi_elemental_seismic_calamity_decision = { #TODO
 	}
 
 	is_valid = {
+		var:tfmagi_mage_target.is_alive = yes
 		has_trait_xp = {
 			trait = tfmagi_mage
 			track = tfmagi_mage_mana
 			value >= { subtract = tfmagi_mana_cost_04 }
+		}		
+		var:tfmagi_mage_target.location.county = {
+			NOT = {
+				has_county_modifier = tfmagi_elemental_seismic_modifier_03
+			}
 		}
 	}
 
@@ -413,6 +520,13 @@ tfmagi_elemental_seismic_calamity_decision = { #TODO
 					track = tfmagi_mage_mana
 					value >= { subtract = tfmagi_mana_cost_02 }
 				}
+				var:tfmagi_mage_target.location.county = {
+					NOR = {
+						has_county_modifier = tfmagi_elemental_seismic_modifier_01
+						has_county_modifier = tfmagi_elemental_seismic_modifier_02
+						has_county_modifier = tfmagi_elemental_seismic_modifier_03
+					}
+				}
 			}
 			current_description = tfmagi_mage_elemental_seismic_calamity_small_tooltip
 			localization = tfmagi_mage_elemental_seismic_calamity_small_loc
@@ -428,6 +542,12 @@ tfmagi_elemental_seismic_calamity_decision = { #TODO
 					trait = tfmagi_mage
 					track = tfmagi_mage_mana
 					value >= { subtract = tfmagi_mana_cost_03 }
+				}
+				var:tfmagi_mage_target.location.county = {
+					NOR = {
+						has_county_modifier = tfmagi_elemental_seismic_modifier_02
+						has_county_modifier = tfmagi_elemental_seismic_modifier_03
+					}
 				}
 			}
 			current_description = tfmagi_mage_elemental_seismic_calamity_medium_tooltip
@@ -445,470 +565,429 @@ tfmagi_elemental_seismic_calamity_decision = { #TODO
 					track = tfmagi_mage_mana
 					value >= { subtract = tfmagi_mana_cost_04 }
 				}
+				
+				var:tfmagi_mage_target.location.county = {
+					NOT = {
+						has_county_modifier = tfmagi_elemental_seismic_modifier_03
+					}
+				}
 			}
 			current_description = tfmagi_mage_elemental_seismic_calamity_large_tooltip
 			localization = tfmagi_mage_elemental_seismic_calamity_large_loc
 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_solid_03.dds"
 		} 
 	} 
-}
-
-tfmagi_elemental_winter_summon_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/tfmagi_cold_calamity.dds"
-	}
-	sort_order = 50
-	decision_group_type = tfmagi_mage_decisions
-
-	ai_potential = {
-		always = no
-	}
-
-	is_valid = {
-		has_trait_xp = {
-			trait = tfmagi_mage
-			track = tfmagi_mage_mana
-			value >= { subtract = tfmagi_mana_cost_04 }
-		}
-	}
-
-	widget = {
-		gui = "decision_view_widget_option_list_generic"
-		controller = decision_option_list_controller
-		decision_to_second_step_button = "TFMAGI_CHOOSE_MAGE_MEASURE"
-		show_from_start = yes
-
-		item = { #minor
-			value = tfmagi_mage_elemental_winter_summon_small
-			is_shown = {
-                always = yes
-			}
-			is_valid = {
-                has_trait_xp = {
-					trait = tfmagi_mage
-					track = tfmagi_mage_mana
-					value >= { subtract = tfmagi_mana_cost_02 }
-				}
-			}
-			current_description = tfmagi_mage_elemental_winter_summon_small_tooltip
-			localization = tfmagi_mage_elemental_winter_summon_small_loc
-			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_cold_01.dds"
-		} 
-		item = { #medium
-			value = tfmagi_mage_elemental_winter_summon_medium
-			is_shown = {
-                always = yes
-			}
-			is_valid = {
-                has_trait_xp = {
-					trait = tfmagi_mage
-					track = tfmagi_mage_mana
-					value >= { subtract = tfmagi_mana_cost_03 }
-				}
-			}
-			current_description = tfmagi_mage_elemental_winter_summon_medium_tooltip
-			localization = tfmagi_mage_elemental_winter_summon_medium_loc
-			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_cold_02.dds"
-		} 
-		item = { #large
-			value = tfmagi_mage_elemental_winter_summon_large
-			is_shown = {
-                always = yes
-			}
-			is_valid = {
-                has_trait_xp = {
-					trait = tfmagi_mage
-					track = tfmagi_mage_mana
-					value >= { subtract = tfmagi_mana_cost_04 }
-				}
-			}
-			current_description = tfmagi_mage_elemental_winter_summon_large_tooltip
-			localization = tfmagi_mage_elemental_winter_summon_large_loc
-			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_cold_03.dds"
-		} 
-	} 
 
 	effect = {
 		if = {
 			limit = {
-				scope:tfmagi_mage_elemental_winter_summon_small = yes
-			}
-			add_trait_xp = {
-				trait = tfmagi_mage 
-				track = tfmagi_mage_mana
-				value = tfmagi_mana_cost_04
+				scope:tfmagi_mage_elemental_seismic_calamity_small = yes
 			}
 			var:tfmagi_mage_target = {
 				tfmagi_province_radial_effect_2 = {
 					COUNTY = location.county
-					SCRIPTED_EFFECT = tfmagi_mage_elemental_winter_s_effect_1
-					SCRIPTED_TRIGGER = tfmagi_mage_elemental_winter_s_trigger_1
+					COUNTY_SCRIPTED_TRIGGER = tfmagi_mage_elemental_seismic_s_trigger_1
+					COUNTY_SCRIPTED_EFFECT = tfmagi_mage_elemental_seismic_s_effect_1
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				scope:tfmagi_mage_elemental_winter_summon_medium = yes
-			}
-			add_trait_xp = {
-				trait = tfmagi_mage 
-				track = tfmagi_mage_mana
-				value = tfmagi_mana_cost_05
+				scope:tfmagi_mage_elemental_seismic_calamity_medium = yes
 			}
 			var:tfmagi_mage_target = {
-				location.county = {
-					every_county_province = {
-						hidden_effect = {
-							remove_province_modifier = winter_mild_modifier
-							remove_province_modifier = winter_normal_modifier
-							remove_province_modifier = winter_harsh_modifier
-						}
-						add_province_modifier = {
-							modifier = winter_harsh_modifier
-							days = 180
-						}
-					}
-					every_connected_county = {
-						every_county_province = {
-							hidden_effect = {
-								remove_province_modifier = winter_mild_modifier
-								remove_province_modifier = winter_normal_modifier
-							}
-							add_province_modifier = {
-								modifier = winter_normal_modifier
-								days = 180
-							}
-						}
-						every_connected_county = {
-							limit = { NOR = { any_county_province = {
-									has_province_modifier = winter_harsh_modifier 
-									has_province_modifier = winter_normal_modifier
-							} } }
-							every_county_province = {
-								hidden_effect = {
-									remove_province_modifier = winter_mild_modifier
-								}
-								add_province_modifier = {
-									modifier = winter_mild_modifier
-									days = 180
-								}
-							}
-						}
-					}
+				tfmagi_province_radial_effect_3 = {
+					COUNTY = location.county
+					COUNTY_SCRIPTED_TRIGGER = tfmagi_mage_elemental_seismic_s_trigger_2
+					COUNTY_SCRIPTED_EFFECT = tfmagi_mage_elemental_seismic_s_effect_2
 				}
 			}
-
 		}
 		else_if = {
 			limit = {
-				scope:tfmagi_mage_elemental_winter_summon_large = yes
-			}
-			add_trait_xp = {
-				trait = tfmagi_mage 
-				track = tfmagi_mage_mana
-				value = tfmagi_mana_cost_06
+				scope:tfmagi_mage_elemental_seismic_calamity_large = yes
 			}
 			var:tfmagi_mage_target = {
-				location.county = {
-					every_county_province = {
-						hidden_effect = {
-							remove_province_modifier = winter_mild_modifier
-							remove_province_modifier = winter_normal_modifier
-							remove_province_modifier = winter_harsh_modifier
-						}
-						add_province_modifier = {
-							modifier = winter_harsh_modifier
-							days = 180
-						}
-					}
-					every_connected_county = {
-						every_county_province = {
-							hidden_effect = {
-								remove_province_modifier = winter_mild_modifier
-								remove_province_modifier = winter_normal_modifier
-								remove_province_modifier = winter_harsh_modifier
-							}
-							add_province_modifier = {
-								modifier = winter_harsh_modifier
-								days = 180
-							}
-						}
-						every_connected_county = {
-							limit = { NOT = { any_county_province = {
-									has_province_modifier = winter_harsh_modifier 
-							} } }
-							every_county_province = {
-								hidden_effect = {
-									remove_province_modifier = winter_mild_modifier
-									remove_province_modifier = winter_normal_modifier
-								}
-								add_province_modifier = {
-									modifier = winter_normal_modifier
-									days = 180
-								}
-							}
-							every_connected_county = {
-								limit = { NOR = { any_county_province = {
-										has_province_modifier = winter_harsh_modifier 
-										has_province_modifier = winter_normal_modifier
-								} } }
-								every_county_province = {
-									hidden_effect = {
-										remove_province_modifier = winter_mild_modifier
-									}
-									add_province_modifier = {
-										modifier = winter_mild_modifier
-										days = 180
-									}
-								}
-							}
-						}
-					}
+				tfmagi_province_radial_effect_4 = {
+					COUNTY = location.county
+					COUNTY_SCRIPTED_TRIGGER = tfmagi_mage_elemental_seismic_s_trigger_3
+					COUNTY_SCRIPTED_EFFECT = tfmagi_mage_elemental_seismic_s_effect_3
 				}
 			}
-
-		}
-		add_trait_xp = {
-			trait = tfmagi_mage
-			track = tfmagi_mage_mastery
-			value = tfmagi_xp_gain_large
 		}
 	}
 }
 
-tfmagi_mage_planar_sift_through_the_void_decision = { #TODO
-	ai_check_interval = 60
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/tfmagi_purple_magic.dds"
-	}
-	sort_order = 400
-	decision_group_type = tfmagi_mage_decisions
+# tfmagi_elemental_winter_summon_decision = {
+# 	picture = {
+# 		reference = "gfx/interface/illustrations/decisions/tfmagi_cold_calamity.dds"
+# 	}
+# 	sort_order = 50
+# 	decision_group_type = tfmagi_mage_decisions
 
-	is_valid = {
-		has_trait_xp = {
-			trait = tfmagi_mage 
-			track = tfmagi_mage_mana
-			value >= { subtract = tfmagi_mana_cost_01 }
-		}
-	}
+# 	ai_potential = {
+# 		always = no
+# 	}
 
-	is_shown = {
-		has_trait = tfmagi_mage
-		has_trait_xp = {
-			trait = tfmagi_mage
-			track = tfmagi_mage_planar
-			value >= tfmagi_mage_planar_01
-		}
-	}
+# 	is_valid = {
+# 		has_trait_xp = {
+# 			trait = tfmagi_mage
+# 			track = tfmagi_mage_mana
+# 			value >= { subtract = tfmagi_mana_cost_04 }
+# 		}
+# 	}
 
-	ai_potential = {
-		always = no
-	}
+# 	widget = {
+# 		gui = "decision_view_widget_option_list_generic"
+# 		controller = decision_option_list_controller
+# 		decision_to_second_step_button = "TFMAGI_CHOOSE_MAGE_MEASURE"
+# 		show_from_start = yes
 
-	widget = {
-		gui = "decision_view_widget_option_list_generic"
-		controller = decision_option_list_controller
-		decision_to_second_step_button = "TFMAGI_CHOOSE_MAGE_APPROACH"
-		show_from_start = yes
+# 		item = { #minor
+# 			value = tfmagi_mage_elemental_winter_summon_small
+# 			is_shown = {
+#                 always = yes
+# 			}
+# 			is_valid = {
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage
+# 					track = tfmagi_mage_mana
+# 					value >= { subtract = tfmagi_mana_cost_02 }
+# 				}
+# 			}
+# 			current_description = tfmagi_mage_elemental_winter_summon_small_tooltip
+# 			localization = tfmagi_mage_elemental_winter_summon_small_loc
+# 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_cold_01.dds"
+# 		} 
+# 		item = { #medium
+# 			value = tfmagi_mage_elemental_winter_summon_medium
+# 			is_shown = {
+#                 always = yes
+# 			}
+# 			is_valid = {
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage
+# 					track = tfmagi_mage_mana
+# 					value >= { subtract = tfmagi_mana_cost_03 }
+# 				}
+# 			}
+# 			current_description = tfmagi_mage_elemental_winter_summon_medium_tooltip
+# 			localization = tfmagi_mage_elemental_winter_summon_medium_loc
+# 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_cold_02.dds"
+# 		} 
+# 		item = { #large
+# 			value = tfmagi_mage_elemental_winter_summon_large
+# 			is_shown = {
+#                 always = yes
+# 			}
+# 			is_valid = {
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage
+# 					track = tfmagi_mage_mana
+# 					value >= { subtract = tfmagi_mana_cost_04 }
+# 				}
+# 			}
+# 			current_description = tfmagi_mage_elemental_winter_summon_large_tooltip
+# 			localization = tfmagi_mage_elemental_winter_summon_large_loc
+# 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_cold_03.dds"
+# 		} 
+# 	} 
 
-		item = { #minor
-			value = tfmagi_mage_planar_plumb_small
-			is_shown = {
-                always = yes
-			}
-			is_valid = {
-                has_trait_xp = {
-					trait = tfmagi_mage 
-					track = tfmagi_mage_mana
-					value >= { subtract = tfmagi_mana_cost_01 }
-				}
-			}
-			current_description = tfmagi_mage_planar_plumb_small_tooltip
-			localization = tfmagi_mage_planar_plumb_small_loc
-			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_01.dds"
-		} 
-		item = { #medium
-			value = tfmagi_mage_planar_plumb_medium
-			is_shown = {
-                always = yes
-			}
-			is_valid = {
-                has_trait_xp = {
-					trait = tfmagi_mage 
-					track = tfmagi_mage_mastery
-					value >= tfmagi_mage_mastery_02
-				}
-                has_trait_xp = {
-					trait = tfmagi_mage 
-					track = tfmagi_mage_mana
-					value >= { subtract = tfmagi_mana_cost_02 }
-				}
-			}
-			current_description = tfmagi_mage_planar_plumb_medium_tooltip
-			localization = tfmagi_mage_planar_plumb_medium_loc
-			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_02.dds"
-		} 
-		item = { #large
-			value = tfmagi_mage_planar_plumb_large
-			is_shown = {
-                always = yes
-			}
-			is_valid = {
-                has_trait_xp = {
-					trait = tfmagi_mage 
-					track = tfmagi_mage_mastery
-					value >= tfmagi_mage_mastery_03
-				}
-                has_trait_xp = {
-					trait = tfmagi_mage 
-					track = tfmagi_mage_mana
-					value >= { subtract = tfmagi_mana_cost_03 }
-				}
-			}
-			current_description = tfmagi_mage_planar_plumb_large_tooltip
-			localization = tfmagi_mage_planar_plumb_large_loc
-			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_03.dds"
-		} 
-	}
-}
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				scope:tfmagi_mage_elemental_winter_summon_small = yes
+# 			}
+# 			add_trait_xp = {
+# 				trait = tfmagi_mage 
+# 				track = tfmagi_mage_mana
+# 				value = tfmagi_mana_cost_04
+# 			}
+# 			var:tfmagi_mage_target = {
+# 				tfmagi_province_radial_effect_2 = {
+# 					COUNTY = location.county
+# 					SCRIPTED_EFFECT = tfmagi_mage_elemental_winter_s_effect_1
+# 					SCRIPTED_TRIGGER = tfmagi_mage_elemental_winter_s_trigger_1
+# 				}
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				scope:tfmagi_mage_elemental_winter_summon_medium = yes
+# 			}
+# 			add_trait_xp = {
+# 				trait = tfmagi_mage 
+# 				track = tfmagi_mage_mana
+# 				value = tfmagi_mana_cost_05
+# 			}
+# 			var:tfmagi_mage_target = {
+# 				tfmagi_province_radial_effect_3 = {
+# 					COUNTY = location.county
+# 					SCRIPTED_EFFECT = tfmagi_mage_elemental_winter_s_effect_2
+# 					SCRIPTED_TRIGGER = tfmagi_mage_elemental_winter_s_trigger_2
+# 				}
+# 			}
 
-tfmagi_mage_planar_teleport_decision = {
-	ai_check_interval = 60
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/tfmagi_purple_magic.dds"
-	}
-	sort_order = 420
-	decision_group_type = tfmagi_mage_decisions
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				scope:tfmagi_mage_elemental_winter_summon_large = yes
+# 			}
+# 			add_trait_xp = {
+# 				trait = tfmagi_mage 
+# 				track = tfmagi_mage_mana
+# 				value = tfmagi_mana_cost_06
+# 			}
+# 			var:tfmagi_mage_target = {
+# 				tfmagi_province_radial_effect_4 = {
+# 					COUNTY = location.county
+# 					SCRIPTED_EFFECT = tfmagi_mage_elemental_winter_s_effect_3
+# 					SCRIPTED_TRIGGER = tfmagi_mage_elemental_winter_s_trigger_3
+# 				}
+# 			}
 
-	is_shown = {
-		has_trait = tfmagi_mage
-		has_trait_xp = {
-			trait = tfmagi_mage
-			track = tfmagi_mage_planar
-			value >= tfmagi_mage_planar_02
-		}
-	}
+# 		}
+# 		add_trait_xp = {
+# 			trait = tfmagi_mage
+# 			track = tfmagi_mage_mastery
+# 			value = tfmagi_xp_gain_large
+# 		}
+# 	}
+# }
 
-	is_valid = {
-		has_trait_xp = {
-			trait = tfmagi_mage 
-			track = tfmagi_mage_mana
-			value >= { subtract = tfmagi_mana_cost_02 }
-		}
-	}
+# tfmagi_mage_planar_sift_through_the_void_decision = { #TODO
+# 	ai_check_interval = 60
+# 	picture = {
+# 		reference = "gfx/interface/illustrations/decisions/tfmagi_purple_magic.dds"
+# 	}
+# 	sort_order = 400
+# 	decision_group_type = tfmagi_mage_decisions
 
-	ai_potential = {
-		always = no
-	}
+# 	is_valid = {
+# 		has_trait_xp = {
+# 			trait = tfmagi_mage 
+# 			track = tfmagi_mage_mana
+# 			value >= { subtract = tfmagi_mana_cost_01 }
+# 		}
+# 	}
 
-	widget = {
-		gui = "decision_view_widget_option_list_generic"
-		controller = decision_option_list_controller
-		decision_to_second_step_button = "TFMAGI_CHOOSE_MAGE_AUGMENTATION"
-		show_from_start = yes
+# 	is_shown = {
+# 		has_trait = tfmagi_mage
+# 		has_trait_xp = {
+# 			trait = tfmagi_mage
+# 			track = tfmagi_mage_planar
+# 			value >= tfmagi_mage_planar_01
+# 		}
+# 	}
 
-		item = { #minor
-			value = tfmagi_mage_planar_teleport_small
-			is_shown = {
-                always = yes
-			}
-			is_valid = {
-                has_trait_xp = {
-					trait = tfmagi_mage
-					track = tfmagi_mage_mana
-					value >= { subtract = tfmagi_mana_cost_02 }
-				}
-			}
-			current_description = tfmagi_mage_planar_teleport_small_tooltip
-			localization = tfmagi_mage_planar_teleport_small_loc
-			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_01.dds"
-		} 
-		item = { #medium
-			value = tfmagi_mage_planar_teleport_medium
-			is_shown = {
-                always = yes
-			}
-			is_valid = {
-                has_trait_xp = {
-					trait = tfmagi_mage 
-					track = tfmagi_mage_mastery
-					value >= tfmagi_mage_mastery_02
-				}
-                has_trait_xp = {
-					trait = tfmagi_mage
-					track = tfmagi_mage_mana
-					value >= { subtract = tfmagi_mana_cost_03 }
-				}
-			}
-			current_description = tfmagi_mage_planar_teleport_medium_tooltip
-			localization = tfmagi_mage_planar_teleport_medium_loc
-			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_02.dds"
-		} 
-		item = { #large
-			value = tfmagi_mage_planar_teleport_large
-			is_shown = {
-                always = yes
-			}
-			is_valid = {
-                has_trait_xp = {
-					trait = tfmagi_mage 
-					track = tfmagi_mage_mastery
-					value >= tfmagi_mage_mastery_03
-				}
-                has_trait_xp = {
-					trait = tfmagi_mage
-					track = tfmagi_mage_mana
-					value >= { subtract = tfmagi_mana_cost_04 }
-				}
-			}
-			current_description = tfmagi_mage_planar_teleport_large_tooltip
-			localization = tfmagi_mage_planar_teleport_large_loc
-			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_03.dds"
-		} 
-	} 
-	effect = {
-		custom_tooltip = tfmagi_mage_planar_teleport_decision_tooltip
-        if = {
-            limit = { 
-				scope:tfmagi_mage_planar_teleport_small = yes
-			}
-			add_tfmagi_mage_planar_teleport_modifier = { TP_MODIFIER = tfmagi_mage_planar_teleport_travel_modifier }
-			add_trait_xp = {
-				trait = tfmagi_mage
-				track = tfmagi_mage_mana
-				value = tfmagi_mana_cost_01
-			}
-        }
-        else_if = {
-            limit = { 
-				scope:tfmagi_mage_planar_teleport_medium = yes
-			}
-			add_tfmagi_mage_planar_teleport_modifier = { TP_MODIFIER = tfmagi_mage_planar_teleport_army_modifier }
-			add_trait_xp = {
-				trait = tfmagi_mage
-				track = tfmagi_mage_mana
-				value = tfmagi_mana_cost_02
-			}
-        }
-        else_if = {
-            limit = { 
-				scope:tfmagi_mage_planar_teleport_large = yes
-			}
-			add_tfmagi_mage_planar_teleport_modifier = { TP_MODIFIER = tfmagi_mage_planar_teleport_army_tactical_modifier }
-			add_trait_xp = {
-				trait = tfmagi_mage
-				track = tfmagi_mage_mana
-				value = tfmagi_mana_cost_03
-			}
-        }
-		add_trait_xp = {
-			trait = tfmagi_mage
-			track = tfmagi_mage_mastery
-			value = tfmagi_xp_gain_small
-		}
-	}
+# 	ai_potential = {
+# 		always = no
+# 	}
 
-}
+# 	widget = {
+# 		gui = "decision_view_widget_option_list_generic"
+# 		controller = decision_option_list_controller
+# 		decision_to_second_step_button = "TFMAGI_CHOOSE_MAGE_APPROACH"
+# 		show_from_start = yes
+
+# 		item = { #minor
+# 			value = tfmagi_mage_planar_plumb_small
+# 			is_shown = {
+#                 always = yes
+# 			}
+# 			is_valid = {
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage 
+# 					track = tfmagi_mage_mana
+# 					value >= { subtract = tfmagi_mana_cost_01 }
+# 				}
+# 			}
+# 			current_description = tfmagi_mage_planar_plumb_small_tooltip
+# 			localization = tfmagi_mage_planar_plumb_small_loc
+# 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_01.dds"
+# 		} 
+# 		item = { #medium
+# 			value = tfmagi_mage_planar_plumb_medium
+# 			is_shown = {
+#                 always = yes
+# 			}
+# 			is_valid = {
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage 
+# 					track = tfmagi_mage_mastery
+# 					value >= tfmagi_mage_mastery_02
+# 				}
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage 
+# 					track = tfmagi_mage_mana
+# 					value >= { subtract = tfmagi_mana_cost_02 }
+# 				}
+# 			}
+# 			current_description = tfmagi_mage_planar_plumb_medium_tooltip
+# 			localization = tfmagi_mage_planar_plumb_medium_loc
+# 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_02.dds"
+# 		} 
+# 		item = { #large
+# 			value = tfmagi_mage_planar_plumb_large
+# 			is_shown = {
+#                 always = yes
+# 			}
+# 			is_valid = {
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage 
+# 					track = tfmagi_mage_mastery
+# 					value >= tfmagi_mage_mastery_03
+# 				}
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage 
+# 					track = tfmagi_mage_mana
+# 					value >= { subtract = tfmagi_mana_cost_03 }
+# 				}
+# 			}
+# 			current_description = tfmagi_mage_planar_plumb_large_tooltip
+# 			localization = tfmagi_mage_planar_plumb_large_loc
+# 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_03.dds"
+# 		} 
+# 	}
+# }
+
+# tfmagi_mage_planar_teleport_decision = {
+# 	ai_check_interval = 60
+# 	picture = {
+# 		reference = "gfx/interface/illustrations/decisions/tfmagi_purple_magic.dds"
+# 	}
+# 	sort_order = 420
+# 	decision_group_type = tfmagi_mage_decisions
+
+# 	is_shown = {
+# 		has_trait = tfmagi_mage
+# 		has_trait_xp = {
+# 			trait = tfmagi_mage
+# 			track = tfmagi_mage_planar
+# 			value >= tfmagi_mage_planar_02
+# 		}
+# 	}
+
+# 	is_valid = {
+# 		has_trait_xp = {
+# 			trait = tfmagi_mage 
+# 			track = tfmagi_mage_mana
+# 			value >= { subtract = tfmagi_mana_cost_02 }
+# 		}
+# 	}
+
+# 	ai_potential = {
+# 		always = no
+# 	}
+
+# 	widget = {
+# 		gui = "decision_view_widget_option_list_generic"
+# 		controller = decision_option_list_controller
+# 		decision_to_second_step_button = "TFMAGI_CHOOSE_MAGE_AUGMENTATION"
+# 		show_from_start = yes
+
+# 		item = { #minor
+# 			value = tfmagi_mage_planar_teleport_small
+# 			is_shown = {
+#                 always = yes
+# 			}
+# 			is_valid = {
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage
+# 					track = tfmagi_mage_mana
+# 					value >= { subtract = tfmagi_mana_cost_02 }
+# 				}
+# 			}
+# 			current_description = tfmagi_mage_planar_teleport_small_tooltip
+# 			localization = tfmagi_mage_planar_teleport_small_loc
+# 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_01.dds"
+# 		} 
+# 		item = { #medium
+# 			value = tfmagi_mage_planar_teleport_medium
+# 			is_shown = {
+#                 always = yes
+# 			}
+# 			is_valid = {
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage 
+# 					track = tfmagi_mage_mastery
+# 					value >= tfmagi_mage_mastery_02
+# 				}
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage
+# 					track = tfmagi_mage_mana
+# 					value >= { subtract = tfmagi_mana_cost_03 }
+# 				}
+# 			}
+# 			current_description = tfmagi_mage_planar_teleport_medium_tooltip
+# 			localization = tfmagi_mage_planar_teleport_medium_loc
+# 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_02.dds"
+# 		} 
+# 		item = { #large
+# 			value = tfmagi_mage_planar_teleport_large
+# 			is_shown = {
+#                 always = yes
+# 			}
+# 			is_valid = {
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage 
+# 					track = tfmagi_mage_mastery
+# 					value >= tfmagi_mage_mastery_03
+# 				}
+#                 has_trait_xp = {
+# 					trait = tfmagi_mage
+# 					track = tfmagi_mage_mana
+# 					value >= { subtract = tfmagi_mana_cost_04 }
+# 				}
+# 			}
+# 			current_description = tfmagi_mage_planar_teleport_large_tooltip
+# 			localization = tfmagi_mage_planar_teleport_large_loc
+# 			icon = "gfx/interface/icons/tfmagi_misc/tfmagi_mage_planar_03.dds"
+# 		} 
+# 	} 
+# 	effect = {
+# 		custom_tooltip = tfmagi_mage_planar_teleport_decision_tooltip
+#         if = {
+#             limit = { 
+# 				scope:tfmagi_mage_planar_teleport_small = yes
+# 			}
+# 			add_tfmagi_mage_planar_teleport_modifier = { TP_MODIFIER = tfmagi_mage_planar_teleport_travel_modifier }
+# 			add_trait_xp = {
+# 				trait = tfmagi_mage
+# 				track = tfmagi_mage_mana
+# 				value = tfmagi_mana_cost_01
+# 			}
+#         }
+#         else_if = {
+#             limit = { 
+# 				scope:tfmagi_mage_planar_teleport_medium = yes
+# 			}
+# 			add_tfmagi_mage_planar_teleport_modifier = { TP_MODIFIER = tfmagi_mage_planar_teleport_army_modifier }
+# 			add_trait_xp = {
+# 				trait = tfmagi_mage
+# 				track = tfmagi_mage_mana
+# 				value = tfmagi_mana_cost_02
+# 			}
+#         }
+#         else_if = {
+#             limit = { 
+# 				scope:tfmagi_mage_planar_teleport_large = yes
+# 			}
+# 			add_tfmagi_mage_planar_teleport_modifier = { TP_MODIFIER = tfmagi_mage_planar_teleport_army_tactical_modifier }
+# 			add_trait_xp = {
+# 				trait = tfmagi_mage
+# 				track = tfmagi_mage_mana
+# 				value = tfmagi_mana_cost_03
+# 			}
+#         }
+# 		add_trait_xp = {
+# 			trait = tfmagi_mage
+# 			track = tfmagi_mage_mastery
+# 			value = tfmagi_xp_gain_small
+# 		}
+# 	}
+
+# }
 
 tfmagi_mage_conjuration_aid_construction_decision = {
 	ai_check_interval = 60
@@ -928,6 +1007,7 @@ tfmagi_mage_conjuration_aid_construction_decision = {
 	}
 
 	is_valid = {
+		var:tfmagi_mage_target.is_alive = yes
 		has_trait_xp = {
 			trait = tfmagi_mage 
 			track = tfmagi_mage_mana
@@ -1209,6 +1289,7 @@ tfmagi_mage_conjuration_create_fortifications_decision = {
 	}
 
 	is_valid = {
+		var:tfmagi_mage_target.is_alive = yes
 		has_trait_xp = {
 			trait = tfmagi_mage 
 			track = tfmagi_mage_mana
@@ -1763,6 +1844,7 @@ tfmagi_mage_alteration_mend_flesh_decision = {
 	}
 
 	is_valid = {
+		var:tfmagi_mage_target.is_alive = yes
 		var:tfmagi_mage_target = {
 			OR = {
 				has_trait = scarred
@@ -2520,6 +2602,7 @@ tfmagi_mage_alteration_genome_decision = {
 
 
 	is_valid = {
+		var:tfmagi_mage_target.is_alive = yes
 		has_trait_xp = {
 			trait = tfmagi_mage
 			track = tfmagi_mage_mana
@@ -3481,11 +3564,11 @@ tfmagi_decision_experiment = {
 
 	effect = {
 		add_tfmagi_mage_trait = yes
-		add_trait_xp = {
-			trait = tfmagi_mage
-			track = tfmagi_mage_planar
-			value = 100
-		}
+		# add_trait_xp = {
+		# 	trait = tfmagi_mage
+		# 	track = tfmagi_mage_planar
+		# 	value = 100
+		# }
 		add_trait_xp = {
 			trait = tfmagi_mage
 			track = tfmagi_mage_elemental

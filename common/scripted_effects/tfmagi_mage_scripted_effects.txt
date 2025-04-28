@@ -320,44 +320,68 @@ create_tfmagi_mage_golems_army = {
 
 tfmagi_province_radial_effect_2 = {
     $COUNTY$ = {
-        every_county_province = {
-            limit = {
-                $SCRIPTED_TRIGGER$ = yes
+        if = {
+            limit = { 
+                $COUNTY_SCRIPTED_TRIGGER$ = yes 
             }
-            $SCRIPTED_EFFECT$ = yes
+            $COUNTY_SCRIPTED_EFFECT$ = yes
         }
         every_connected_county = {
-            every_county_province = {
-                limit = {
-                    $SCRIPTED_TRIGGER$ = yes
-                }
-                $SCRIPTED_EFFECT$ = yes
+            limit = { 
+                $COUNTY_SCRIPTED_TRIGGER$ = yes 
             }
+            $COUNTY_SCRIPTED_EFFECT$ = yes
         }
     }
 }
 tfmagi_province_radial_effect_3 = {
     $COUNTY$ = {
-        every_county_province = {
-            limit = {
-                $SCRIPTED_TRIGGER$ = yes
+        if = {
+            limit = { 
+                $COUNTY_SCRIPTED_TRIGGER$ = yes 
             }
-            $SCRIPTED_EFFECT$ = yes
+            $COUNTY_SCRIPTED_EFFECT$ = yes
         }
         every_connected_county = {
-            every_county_province = {
-                limit = {
-                    $SCRIPTED_TRIGGER$ = yes
-                }
-                $SCRIPTED_EFFECT$ = yes
+            limit = { 
+                $COUNTY_SCRIPTED_TRIGGER$ = yes 
             }
+            $COUNTY_SCRIPTED_EFFECT$ = yes
             
             every_connected_county = {
-                every_county_province = {
-                    limit = {
-                        $SCRIPTED_TRIGGER$ = yes
+                limit = { 
+                    $COUNTY_SCRIPTED_TRIGGER$ = yes 
+                }
+                $COUNTY_SCRIPTED_EFFECT$ = yes
+            }
+        }
+    }
+}
+tfmagi_province_radial_effect_4 = {
+    $COUNTY$ = {
+        if = {
+            limit = { 
+                $COUNTY_SCRIPTED_TRIGGER$ = yes 
+            }
+            $COUNTY_SCRIPTED_EFFECT$ = yes
+        }
+        every_connected_county = {
+            limit = { 
+                $COUNTY_SCRIPTED_TRIGGER$ = yes 
+            }
+            $COUNTY_SCRIPTED_EFFECT$ = yes
+            
+            every_connected_county = {
+                limit = { 
+                    $COUNTY_SCRIPTED_TRIGGER$ = yes 
+                }
+                $COUNTY_SCRIPTED_EFFECT$ = yes
+            
+                every_connected_county = {
+                    limit = { 
+                        $COUNTY_SCRIPTED_TRIGGER$ = yes 
                     }
-                    $SCRIPTED_EFFECT$ = yes
+                    $COUNTY_SCRIPTED_EFFECT$ = yes
                 }
             }
         }
@@ -392,5 +416,71 @@ tfmagi_mage_elemental_winter_s_effect_3 = {
     add_province_modifier = {
         modifier = winter_harsh_modifier
         days = 180
+    }
+}
+tfmagi_mage_elemental_seismic_s_effect_1 = {
+    hidden_effect = {
+        remove_county_modifier = tfmagi_elemental_seismic_modifier_01
+    }
+    add_county_modifier = {
+        modifier = tfmagi_elemental_seismic_modifier_01
+        years = 2
+    }
+    change_development_level = {-7 -2}
+    every_county_province = {
+        random_list = {
+            35 = {
+                destroy_random_building_variable_effect = yes
+                destroy_random_building_effect = yes
+            }
+            65 = { }
+        }
+    }
+}
+tfmagi_mage_elemental_seismic_s_effect_2 = {
+    hidden_effect = {
+        remove_county_modifier = tfmagi_elemental_seismic_modifier_01
+        remove_county_modifier = tfmagi_elemental_seismic_modifier_02
+    }
+    add_county_modifier = {
+        modifier = tfmagi_elemental_seismic_modifier_02
+        years = 4
+    }
+    change_development_level = {-18 -9}
+    every_county_province = {
+        while = {
+            count = {2 3}
+            random_list = {
+                35 = {
+                    destroy_random_building_variable_effect = yes
+                    destroy_random_building_effect = yes
+                }
+                65 = { }
+            }
+        }
+    }
+}
+tfmagi_mage_elemental_seismic_s_effect_3 = {
+    hidden_effect = {
+        remove_county_modifier = tfmagi_elemental_seismic_modifier_01
+        remove_county_modifier = tfmagi_elemental_seismic_modifier_02
+        remove_county_modifier = tfmagi_elemental_seismic_modifier_03
+    }
+    add_county_modifier = {
+        modifier = tfmagi_elemental_seismic_modifier_03
+        years = 8
+    }
+    change_development_level = {-36 -18}
+    every_county_province = {
+        while = {
+            count = {5 3}
+            random_list = {
+                35 = {
+                    destroy_random_building_variable_effect = yes
+                    destroy_random_building_effect = yes
+                }
+                65 = { }
+            }
+        }
     }
 }

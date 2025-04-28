@@ -53,6 +53,13 @@
  tfmagi_mage_defensiveness_modifier_03: "Major Arcane Defensive Emplacements"
  tfmagi_mage_defensiveness_modifier_03_desc: "Defense in the county is benefitting from the aid of arcane forces." 
 
+ tfmagi_elemental_seismic_modifier_01: "Minor Seismic Aftereffects"
+ tfmagi_elemental_seismic_modifier_01_desc: "This [county|e] suffers from the aftereffects of an intense earthquake."
+ tfmagi_elemental_seismic_modifier_02: "Major Seismic Aftereffects"
+ tfmagi_elemental_seismic_modifier_02_desc: "This [county|e] suffers from the aftereffects of a particularly intense earthquake."
+ tfmagi_elemental_seismic_modifier_03: "Massive Seismic Aftereffects"
+ tfmagi_elemental_seismic_modifier_03_desc: "This [county|e] suffers from the aftereffects of a massively intense earthquake."
+
  tfmagi_mage_elemental_disable_fire_attack_ritual_modifier: "[GetDecisionWithKey('tfmagi_elemental_remote_fire_attack_decision').GetName] Exhaustion"
  tfmagi_mage_elemental_disable_fire_attack_ritual_modifier_desc: "The use of the [GetDecisionWithKey('tfmagi_elemental_remote_fire_attack_decision').GetName] [decision|e] requires time before reuse."
 

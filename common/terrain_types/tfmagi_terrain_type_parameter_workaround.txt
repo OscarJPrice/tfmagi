@@ -7,6 +7,7 @@
 
 tfmagi_mage_mana_cost_multiplier = {}
 tfmagi_mage_mana_monthly_base = {}
+tfmagi_mage_mastery_monthly_base = {}
 
 tfmagi_enable_mage_augment_self_decision = {}
 tfmagi_mage_remote_harm_with_fire = {}
@@ -24,11 +25,11 @@ tfmagi_mage_golems = {}
 tfmagi_mage_aid_construction = {}
 tfmagi_mage_artificer = {}
 			
-tfmagi_mage_planar_sift_through_the_void = {}
-tfmagi_mage_planar_teleport_armies = {}
-tfmagi_mage_planar_establish_demiplane = {}
-tfmagi_mage_planar_angelic_legion = {}
-tfmagi_mage_planar_ascend = {}
+# tfmagi_mage_planar_sift_through_the_void = {}
+# tfmagi_mage_planar_teleport_armies = {}
+# tfmagi_mage_planar_establish_demiplane = {}
+# tfmagi_mage_planar_angelic_legion = {}
+# tfmagi_mage_planar_ascend = {}
 
 tfmagi_summoned_golems_in_battle = {}
 tfmagi_mage_planar_enables_teleport_travel_option = {}

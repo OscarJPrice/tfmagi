@@ -34,6 +34,11 @@ tfmagi_mages_ongoing = {
 					track = tfmagi_mage_mana
 					value = tfmagi_mana_gain_monthly_amount
 				}
+				add_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value = tfmagi_mastery_gain_monthly
+				}
 			}
 			
 		}

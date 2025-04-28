@@ -108,23 +108,23 @@
 		# tfmagi_divination = {
 
 		# }
-		tfmagi_mage_planar = {
-			tfmagi_mage_planar_01 = {
-				tfmagi_mage_planar_sift_through_the_void_cancel_negative_supply = yes
-			}
-			tfmagi_mage_planar_02 = {
-				tfmagi_mage_planar_teleport_armies_cancel_negative_supply = yes
-			}
-			tfmagi_mage_planar_03 = {
-				tfmagi_mage_planar_establish_demiplane_cancel_negative_supply = yes
-			}
-			tfmagi_mage_planar_04 = {
-				tfmagi_mage_planar_ascend_cancel_negative_supply = yes
-			}
-			tfmagi_mage_planar_05 = {
-				tfmagi_mage_planar_angelic_legion_cancel_negative_supply = yes
-			}
-		}
+		# tfmagi_mage_planar = {
+		# 	tfmagi_mage_planar_01 = {
+		# 		tfmagi_mage_planar_sift_through_the_void_cancel_negative_supply = yes
+		# 	}
+		# 	tfmagi_mage_planar_02 = {
+		# 		tfmagi_mage_planar_teleport_armies_cancel_negative_supply = yes
+		# 	}
+		# 	tfmagi_mage_planar_03 = {
+		# 		tfmagi_mage_planar_establish_demiplane_cancel_negative_supply = yes
+		# 	}
+		# 	tfmagi_mage_planar_04 = {
+		# 		tfmagi_mage_planar_ascend_cancel_negative_supply = yes
+		# 	}
+		# 	tfmagi_mage_planar_05 = {
+		# 		tfmagi_mage_planar_angelic_legion_cancel_negative_supply = yes
+		# 	}
+		# }
 		tfmagi_mage_mastery = {
 			tfmagi_mage_mastery_01 = {
 				life_expectancy = 5 

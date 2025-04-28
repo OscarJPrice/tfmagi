@@ -1,3 +1,16 @@
 ﻿l_english:
  tfmagi_mage_select_interaction: "Target"
  tfmagi_mage_select_interaction_desc: "Choose character as magic target"
+
+ tfmagi_mage_diplomacy_tonic_interaction: "Administer [tfmagi_mage_alteration_diplomacy_tonic|E]"
+ tfmagi_mage_diplomacy_tonic_interaction_desc: "Choose character to receive a [tfmagi_mage_alteration_diplomacy_tonic|E]"
+ tfmagi_mage_martial_tonic_interaction: "Administer [tfmagi_mage_alteration_martial_tonic|E]"
+ tfmagi_mage_martial_tonic_interaction_desc: "Choose character to receive a [tfmagi_mage_alteration_martial_tonic|E] "
+ tfmagi_mage_stewardship_tonic_interaction: "Administer [tfmagi_mage_alteration_stewardship_tonic|E]"
+ tfmagi_mage_stewardship_tonic_interaction_desc: "Choose character to receive a [tfmagi_mage_alteration_stewardship_tonic|E]"
+ tfmagi_mage_intrigue_tonic_interaction: "Administer [tfmagi_mage_alteration_intrigue_tonic|E]"
+ tfmagi_mage_intrigue_tonic_interaction_desc: "Choose character to receive a [tfmagi_mage_alteration_intrigue_tonic|E]"
+ tfmagi_mage_learning_tonic_interaction: "Administer [tfmagi_mage_alteration_learning_tonic|E]"
+ tfmagi_mage_learning_tonic_interaction_desc: "Choose character to receive a [tfmagi_mage_alteration_learning_tonic|E]"
+ tfmagi_mage_stress_loss_tonic_interaction: "Administer [tfmagi_mage_alteration_stress_loss_tonic|E]"
+ tfmagi_mage_stress_loss_tonic_interaction_desc: "Choose character to receive a [tfmagi_mage_alteration_stress_loss_tonic|E]"

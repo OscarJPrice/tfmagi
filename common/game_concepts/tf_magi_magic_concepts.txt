@@ -8,30 +8,30 @@ tfmagi_spell = {
 }
 
 tfmagi_mage_alteration_tonic = {
-    texture = "gfx/interface/icons/tfmagi_misc/potion_blue.dds"
+    texture = "gfx/interface/icons/character_interactions/tfmagi_potion_blue.dds"
 }
 
 tfmagi_mage_alteration_diplomacy_tonic = {
-    texture = "gfx/interface/icons/tfmagi_misc/potion_blue.dds"
+    texture = "gfx/interface/icons/character_interactions/tfmagi_potion_blue.dds"
     parent = tfmagi_mage_alteration_tonic
 }
 tfmagi_mage_alteration_martial_tonic = {
-    texture = "gfx/interface/icons/tfmagi_misc/potion_red.dds"
+    texture = "gfx/interface/icons/character_interactions/tfmagi_potion_red.dds"
     parent = tfmagi_mage_alteration_tonic
 }
 tfmagi_mage_alteration_stewardship_tonic = {
-    texture = "gfx/interface/icons/tfmagi_misc/potion_green.dds"
+    texture = "gfx/interface/icons/character_interactions/tfmagi_potion_green.dds"
     parent = tfmagi_mage_alteration_tonic
 }
 tfmagi_mage_alteration_intrigue_tonic = {
-    texture = "gfx/interface/icons/tfmagi_misc/potion_purple.dds"
+    texture = "gfx/interface/icons/character_interactions/tfmagi_potion_purple.dds"
     parent = tfmagi_mage_alteration_tonic
 }
 tfmagi_mage_alteration_learning_tonic = {
-    texture = "gfx/interface/icons/tfmagi_misc/potion_grey.dds"
+    texture = "gfx/interface/icons/character_interactions/tfmagi_potion_grey.dds"
     parent = tfmagi_mage_alteration_tonic
 }
 tfmagi_mage_alteration_stress_loss_tonic = {
-    texture = "gfx/interface/icons/tfmagi_misc/potion_orange.dds"
+    texture = "gfx/interface/icons/character_interactions/tfmagi_potion_orange.dds"
     parent = tfmagi_mage_alteration_tonic
 }

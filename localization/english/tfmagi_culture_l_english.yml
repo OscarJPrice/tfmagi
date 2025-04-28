@@ -1,11 +1,15 @@
 ﻿l_english:
  tfmagi_heritage_selchus_name: "Selchean"
  tfmagi_heritage_selchus_collective_noun: "Selcheans"
+ tfmagi_language_selchean_wind_tongue_name: "Selchean Wind-Tongue"
 
  tfmagi_sartan: "Sartan"
  tfmagi_sartan_prefix: "Sarta"
- tfmagi_language_sartan_name: "Sartan"
  tfmagi_sartan_collective_noun: "Sartans"
+
+ tfmagi_jalhaim: "Jamay"
+ tfmagi_jalhaim_prefix: "Jamayan"
+ tfmagi_jalhaim_collective_noun: "Jamayans"
 
  tradition_tfmagi_voracious_adventurers_name: "Questing Adventurers"
  tradition_tfmagi_voracious_adventurers_desc: "A culture of discovery thrives in these lands, where every child dreams of venturing out to find fortune in uncharted territories."

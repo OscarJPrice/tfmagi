@@ -1,0 +1,589 @@
+﻿tfmagi_mage_diplomacy_tonic_interaction = {
+	icon = tfmagi_potion_blue
+	interface_priority = 0
+	category = interaction_category_friendly
+	desc = tfmagi_mage_diplomacy_tonic_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			var:tfmagi_mage_tonic_diplomacy_num > 0
+		}
+	}
+
+	is_valid = { #this is for AI
+        scope:actor = {
+		    is_ai = no
+        }
+    }
+
+	on_accept = {
+		scope:actor = {
+			change_variable = { name = tfmagi_mage_tonic_diplomacy_num subtract = 1 }
+		}
+		if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_04 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_diplomacy_04
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_03 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_diplomacy_03
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_02 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_diplomacy_02
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_01 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_diplomacy_01
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else = {
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_diplomacy_00
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+}
+tfmagi_mage_martial_tonic_interaction = {
+	icon = tfmagi_potion_red
+	interface_priority = 0
+	category = interaction_category_friendly
+	desc = tfmagi_mage_martial_tonic_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			var:tfmagi_mage_tonic_martial_num > 0
+		}
+	}
+
+	is_valid = { #this is for AI
+        scope:actor = {
+		    is_ai = no
+        }
+    }
+
+	on_accept = {
+		scope:actor = {
+			change_variable = { name = tfmagi_mage_tonic_martial_num subtract = 1 }
+		}
+		if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_04 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_martial_04
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_03 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_martial_03
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_02 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_martial_02
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_01 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_martial_01
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else = {
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_martial_00
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+}
+tfmagi_mage_stewardship_tonic_interaction = {
+	icon = tfmagi_potion_green
+	interface_priority = 0
+	category = interaction_category_friendly
+	desc = tfmagi_mage_stewardship_tonic_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			var:tfmagi_mage_tonic_stewardship_num > 0
+		}
+	}
+
+	is_valid = { #this is for AI
+        scope:actor = {
+		    is_ai = no
+        }
+    }
+
+	on_accept = {
+		scope:actor = {
+			change_variable = { name = tfmagi_mage_tonic_stewardship_num subtract = 1 }
+		}
+		if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_04 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_stewardship_04
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_03 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_stewardship_03
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_02 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_stewardship_02
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_01 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_stewardship_01
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else = {
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_stewardship_00
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+}
+tfmagi_mage_intrigue_tonic_interaction = {
+	icon = tfmagi_potion_purple
+	interface_priority = 0
+	category = interaction_category_friendly
+	desc = tfmagi_mage_intrigue_tonic_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			var:tfmagi_mage_tonic_intrigue_num > 0
+		}
+	}
+
+	is_valid = { #this is for AI
+        scope:actor = {
+		    is_ai = no
+        }
+    }
+
+	on_accept = {
+		scope:actor = {
+			change_variable = { name = tfmagi_mage_tonic_intrigue_num subtract = 1 }
+		}
+		if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_04 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_intrigue_04
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_03 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_intrigue_03
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_02 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_intrigue_02
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_01 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_intrigue_01
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else = {
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_intrigue_00
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+}
+tfmagi_mage_learning_tonic_interaction = {
+	icon = tfmagi_potion_grey
+	interface_priority = 0
+	category = interaction_category_friendly
+	desc = tfmagi_mage_learning_tonic_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			var:tfmagi_mage_tonic_learning_num > 0
+		}
+	}
+
+	is_valid = { #this is for AI
+        scope:actor = {
+		    is_ai = no
+        }
+    }
+
+	on_accept = {
+		scope:actor = {
+			change_variable = { name = tfmagi_mage_tonic_learning_num subtract = 1 }
+		}
+		if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_04 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_learning_04
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_03 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_learning_03
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_02 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_learning_02
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_01 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_learning_01
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else = {
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_learning_00
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+}
+tfmagi_mage_stress_loss_tonic_interaction = {
+	icon = tfmagi_potion_grey
+	interface_priority = 0
+	category = interaction_category_friendly
+	desc = tfmagi_mage_stress_loss_tonic_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			var:tfmagi_mage_tonic_stress_loss_num > 0
+		}
+	}
+
+	is_valid = { #this is for AI
+        scope:actor = {
+		    is_ai = no
+        }
+    }
+
+	on_accept = {
+		scope:actor = {
+			change_variable = { name = tfmagi_mage_tonic_stress_loss_num subtract = 1 }
+		}
+		if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_04 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_stress_loss_04
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_03 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_stress_loss_03
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_02 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_stress_loss_02
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:actor.has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_01 
+				}
+			}
+				
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_stress_loss_01
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		else = {
+			scope:recipient = {
+				add_character_modifier = {
+					modifier = tfmagi_tonic_stress_loss_00
+					years = scope:actor.tfmagi_tonic_duration
+				}
+			}
+		}
+		scope:recipient = { add_stress = tfmagi_tonic_stress_removed }
+	}
+
+	auto_accept = yes
+}

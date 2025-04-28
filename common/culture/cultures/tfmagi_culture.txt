@@ -7,7 +7,7 @@ tfmagi_sartan = {
 
 	ethos = ethos_stoic
 	heritage = tfmagi_heritage_selchus
-	language = tfmagi_language_sartan
+	language = tfmagi_language_selchean_wind_tongue
 	martial_custom = martial_custom_equal
 
 	name_list = tfmagi_name_list_sartan
@@ -19,9 +19,9 @@ tfmagi_sartan = {
 		tradition_tfmagi_cosmopolitan_tolerance
 	}
 
-	coa_gfx = { byzantine_group_coa_gfx }
+	coa_gfx = { byzantine_group_coa_gfx iranian_group_coa_gfx }
 	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx iberian_muslim_clothing_gfx}
+	clothing_gfx = { byzantine_clothing_gfx iranian_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }
 
 
@@ -31,4 +31,25 @@ tfmagi_sartan = {
 		15 = caucasian_brown_hair
 		15 = caucasian_dark_hair
 	}	
+}
+
+tfmagi_jalhaim = {
+	ethos = ethos_bureaucratic
+	heritage = tfmagi_heritage_selchus
+	language = tfmagi_language_selchean_wind_tongue
+	martial_custom = martial_custom_male_only
+
+	color = {
+		255 153 102
+	}
+	coa_gfx = { arabic_group_coa_gfx iranian_group_coa_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { mena_clothing_gfx iberian_muslim_clothing_gfx iranian_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	
+	ethnicities = {
+		8 = arab
+		5 = mediterranean
+		5 = turkic_west
+	}
 }

@@ -14,7 +14,7 @@
  game_concept_tfmagi_spell_desc: "Arcane effects cast by a character bearing the [GetTrait('tfmagi_mage').GetName( GetNullCharacter )] [trait|e]."
 
 game_concept_tfmagi_mage_alteration_tonic: "Alteration Tonic"
-game_concept_tfmagi_mage_alteration_tonic_desc: "A single-use draught whose potency rises with the brewer's [GetTrait( 'tfmagi_mage' ).GetTraitTrackByKey('tfmagi_mage_mastery' ).GetName]. Each tonic grants #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_skill_bonus')|+0]#! to one skill, plus a themed secondary benefit."
+game_concept_tfmagi_mage_alteration_tonic_desc: "A single-use draught whose potency rises with the brewer's [GetTrait( 'tfmagi_mage' ).GetTraitTrackByKey('tfmagi_mage_mastery' ).GetName]. Most tonics grant #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_skill_bonus')|+0]#! to one skill, plus a themed secondary benefit."
 
 game_concept_tfmagi_mage_alteration_diplomacy_tonic: "Diplomat's Tonic"
 game_concept_tfmagi_mage_alteration_diplomacy_tonic_desc: "Adds #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_skill_bonus')|+0]#! [diplomacy|E] and monthly [prestige|E] gain of #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_prestige')|2]#! for #l [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_duration')|1]#! years."

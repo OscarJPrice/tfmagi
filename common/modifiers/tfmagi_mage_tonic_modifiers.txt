@@ -77,23 +77,28 @@ tfmagi_tonic_stewardship_04 = {
 # Intrigue Tonic
 tfmagi_tonic_intrigue_00 = {
 	intrigue = tfmagi_tonic_skill_bonus_00
-	scheme_success_chance = tfmagi_tonic_scheme_bonus_00
+	owned_hostile_scheme_success_chance_add = tfmagi_tonic_scheme_bonus_00
+	owned_personal_scheme_success_chance_add = tfmagi_tonic_scheme_bonus_00
 }
 tfmagi_tonic_intrigue_01 = {
 	intrigue = tfmagi_tonic_skill_bonus_01
-	scheme_success_chance = tfmagi_tonic_scheme_bonus_01
+	owned_hostile_scheme_success_chance_add = tfmagi_tonic_scheme_bonus_01
+	owned_personal_scheme_success_chance_add = tfmagi_tonic_scheme_bonus_01
 }
 tfmagi_tonic_intrigue_02 = {
 	intrigue = tfmagi_tonic_skill_bonus_02
-	scheme_success_chance = tfmagi_tonic_scheme_bonus_02
+	owned_hostile_scheme_success_chance_add = tfmagi_tonic_scheme_bonus_02
+	owned_personal_scheme_success_chance_add = tfmagi_tonic_scheme_bonus_02
 }
 tfmagi_tonic_intrigue_03 = {
 	intrigue = tfmagi_tonic_skill_bonus_03
-	scheme_success_chance = tfmagi_tonic_scheme_bonus_03
+	owned_hostile_scheme_success_chance_add = tfmagi_tonic_scheme_bonus_03
+	owned_personal_scheme_success_chance_add = tfmagi_tonic_scheme_bonus_03
 }
 tfmagi_tonic_intrigue_04 = {
 	intrigue = tfmagi_tonic_skill_bonus_04
-	scheme_success_chance = tfmagi_tonic_scheme_bonus_04
+	owned_hostile_scheme_success_chance_add = tfmagi_tonic_scheme_bonus_04
+	owned_personal_scheme_success_chance_add = tfmagi_tonic_scheme_bonus_04
 }
 
 # Learning Tonic

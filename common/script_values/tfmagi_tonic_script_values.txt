@@ -6,6 +6,8 @@ tfmagi_mage_tonic_martial_num_value = { value = var:tfmagi_mage_tonic_martial_nu
 tfmagi_mage_tonic_intrigue_num_value = { value = var:tfmagi_mage_tonic_intrigue_num }
 tfmagi_mage_tonic_learning_num_value = { value = var:tfmagi_mage_tonic_learning_num }
 tfmagi_mage_tonic_stress_num_value = { value = var:tfmagi_mage_tonic_stress_num }
+tfmagi_mage_immortality_elixir_num_value = { value = var:tfmagi_mage_immortality_elixir_num }
+tfmagi_mage_panacea_num_value = { value = var:tfmagi_mage_panacea_num }
 
 @mage_mastery_00 = 0
 @mage_mastery_01 = 1

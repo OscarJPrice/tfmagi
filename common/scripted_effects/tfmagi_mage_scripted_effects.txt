@@ -32,6 +32,14 @@
         name = tfmagi_mage_tonic_stress_num
         value = 0
     }
+    set_variable = {
+        name = tfmagi_mage_immortality_elixir_num
+        value = 0
+    }
+    set_variable = {
+        name = tfmagi_mage_panacea_num
+        value = 0
+    }
 }
 
 remove_tfmagi_mage_quicken_modifiers = {

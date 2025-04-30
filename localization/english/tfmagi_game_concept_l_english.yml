@@ -33,3 +33,9 @@ game_concept_tfmagi_mage_alteration_learning_tonic_desc: "Adds #g [GetPlayer.Mak
 
 game_concept_tfmagi_mage_alteration_stress_loss_tonic: "Soothing Tonic"
 game_concept_tfmagi_mage_alteration_stress_loss_tonic_desc: "Instantly removes #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_stress_removed')|0]#! [stress|E] and lowers future stress gain by #g [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_stress_reduction')|%0]#! for #l [GetPlayer.MakeScope.ScriptValue('tfmagi_tonic_duration')|1]#! years."
+
+game_concept_tfmagi_mage_alteration_panacea: "#G Panacea#!"
+game_concept_tfmagi_mage_alteration_panacea_desc: "Instantly removes most all negative health [traits|e]"
+
+game_concept_tfmagi_mage_alteration_immortality_elixir: "#g Elixir of Immortality#!"
+game_concept_tfmagi_mage_alteration_immortality_elixir_desc: "Adds the [GetTrait('immortal').GetName( GetNullCharacter )] [trait|e]"

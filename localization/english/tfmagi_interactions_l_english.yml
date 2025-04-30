@@ -14,3 +14,7 @@
  tfmagi_mage_learning_tonic_interaction_desc: "Choose character to receive a [tfmagi_mage_alteration_learning_tonic|E]"
  tfmagi_mage_stress_loss_tonic_interaction: "Administer [tfmagi_mage_alteration_stress_loss_tonic|E]"
  tfmagi_mage_stress_loss_tonic_interaction_desc: "Choose character to receive a [tfmagi_mage_alteration_stress_loss_tonic|E]"
+ tfmagi_mage_immortality_elixir_interaction: "Administer [tfmagi_mage_alteration_immortality_elixir|E]"
+ tfmagi_mage_immortality_elixir_interaction_desc: "Choose character to receive a [tfmagi_mage_alteration_immortality_elixir|E]"
+ tfmagi_mage_panacea_interaction: "Administer [tfmagi_mage_alteration_panacea|E]"
+ tfmagi_mage_panacea_interaction_desc: "Choose character to receive a [tfmagi_mage_alteration_panacea|E]"

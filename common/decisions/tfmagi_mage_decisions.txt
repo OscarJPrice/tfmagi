@@ -1445,7 +1445,7 @@ tfmagi_mage_alteration_basic_alchemy_decision = { #TODO
 		show_from_start = yes
 
 		item = {
-			value = tfmagi_mage_conjuration_diplomacy_tonic
+			value = tfmagi_mage_alteration_diplomacy_tonic
 			is_shown = {
 				always = yes
 			}
@@ -1457,12 +1457,12 @@ tfmagi_mage_alteration_basic_alchemy_decision = { #TODO
 				}
 				gold >= 50
 			}
-			current_description = tfmagi_mage_conjuration_diplomacy_tonic_tooltip
-			localization = tfmagi_mage_conjuration_diplomacy_tonic_loc
+			current_description = tfmagi_mage_alteration_diplomacy_tonic_tooltip
+			localization = tfmagi_mage_alteration_diplomacy_tonic_loc
 			icon = "gfx/interface/icons/message_feed/diplomacy_skill_temp.dds"
 		}
 		item = {
-			value = tfmagi_mage_conjuration_martial_tonic
+			value = tfmagi_mage_alteration_martial_tonic
 			is_shown = {
 				always = yes
 			}
@@ -1474,12 +1474,12 @@ tfmagi_mage_alteration_basic_alchemy_decision = { #TODO
 				}
 				gold >= 50
 			}
-			current_description = tfmagi_mage_conjuration_martial_tonic_tooltip
-			localization = tfmagi_mage_conjuration_martial_tonic_loc
+			current_description = tfmagi_mage_alteration_martial_tonic_tooltip
+			localization = tfmagi_mage_alteration_martial_tonic_loc
 			icon = "gfx/interface/icons/icon_skill_martial.dds"
 		}
 		item = {
-			value = tfmagi_mage_conjuration_stewardship_tonic
+			value = tfmagi_mage_alteration_stewardship_tonic
 			is_shown = {
 				always = yes
 			}
@@ -1491,12 +1491,12 @@ tfmagi_mage_alteration_basic_alchemy_decision = { #TODO
 				}
 				gold >= 50
 			}
-			current_description = tfmagi_mage_conjuration_stewardship_tonic_tooltip
-			localization = tfmagi_mage_conjuration_stewardship_tonic_loc
+			current_description = tfmagi_mage_alteration_stewardship_tonic_tooltip
+			localization = tfmagi_mage_alteration_stewardship_tonic_loc
 			icon = "gfx/interface/icons/icon_skill_stewardship.dds"
 		}
 		item = {
-			value = tfmagi_mage_conjuration_intrigue_tonic
+			value = tfmagi_mage_alteration_intrigue_tonic
 			is_shown = {
 				always = yes
 			}
@@ -1508,12 +1508,12 @@ tfmagi_mage_alteration_basic_alchemy_decision = { #TODO
 				}
 				gold >= 50
 			}
-			current_description = tfmagi_mage_conjuration_intrigue_tonic_tooltip
-			localization = tfmagi_mage_conjuration_intrigue_tonic_loc
+			current_description = tfmagi_mage_alteration_intrigue_tonic_tooltip
+			localization = tfmagi_mage_alteration_intrigue_tonic_loc
 			icon = "gfx/interface/icons/icon_skill_intrigue.dds"
 		}
 		item = {
-			value = tfmagi_mage_conjuration_learning_tonic
+			value = tfmagi_mage_alteration_learning_tonic
 			is_shown = {
 				always = yes
 			}
@@ -1525,12 +1525,12 @@ tfmagi_mage_alteration_basic_alchemy_decision = { #TODO
 				}
 				gold >= 50
 			}
-			current_description = tfmagi_mage_conjuration_learning_tonic_tooltip
-			localization = tfmagi_mage_conjuration_learning_tonic_loc
+			current_description = tfmagi_mage_alteration_learning_tonic_tooltip
+			localization = tfmagi_mage_alteration_learning_tonic_loc
 			icon = "gfx/interface/icons/icon_skill_learning.dds"
 		}
 		item = {
-			value = tfmagi_mage_conjuration_stress_loss_tonic
+			value = tfmagi_mage_alteration_stress_loss_tonic
 			is_shown = {
 				always = yes
 			}
@@ -1542,67 +1542,143 @@ tfmagi_mage_alteration_basic_alchemy_decision = { #TODO
 				}
 				gold >= 50
 			}
-			current_description = tfmagi_mage_conjuration_stress_loss_tonic_tooltip
-			localization = tfmagi_mage_conjuration_stress_loss_tonic_loc
+			current_description = tfmagi_mage_alteration_stress_loss_tonic_tooltip
+			localization = tfmagi_mage_alteration_stress_loss_tonic_loc
 			icon = "gfx/interface/icons/stress/icon_stress_loss.dds"
+		}
+		item = {
+			value = tfmagi_mage_alteration_immortality_elixir
+			is_shown = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_alteration
+					value = tfmagi_mage_alteration_04
+				}
+			}
+			is_valid = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value >= { subtract = tfmagi_mana_cost_05 }
+				}
+				gold >= 200
+			}
+			current_description = tfmagi_mage_alteration_immortality_elixir_tooltip
+			localization = tfmagi_mage_alteration_immortality_elixir_loc
+			icon = "gfx/interface/icons/traits/immortal.dds"
+		}
+		item = {
+			value = tfmagi_mage_alteration_panacea
+			is_shown = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_alteration
+					value = tfmagi_mage_alteration_04
+				}
+			}
+			is_valid = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value >= { subtract = tfmagi_mana_cost_04 }
+				}
+				gold >= 100
+			}
+			current_description = tfmagi_mage_alteration_panacea_tooltip
+			localization = tfmagi_mage_alteration_panacea_loc
+			icon = "gfx/interface/icons/modifiers/treatment_positive.dds"
 		}
 	} 
 
 	effect = {
 		if = {
-			limit = { scope:tfmagi_mage_conjuration_diplomacy_tonic = yes }
+			limit = { scope:tfmagi_mage_alteration_diplomacy_tonic = yes }
 			change_variable = {
 				name = tfmagi_mage_tonic_diplomacy_num
 				add = 1
 			}
-			custom_tooltip = tfmagi_mage_conjuration_diplomacy_tonic_tooltip
+			custom_tooltip = tfmagi_mage_alteration_diplomacy_tonic_tooltip
 			remove_short_term_gold = 50
 		}
 		else_if = {
-			limit = { scope:tfmagi_mage_conjuration_stewardship_tonic = yes }
+			limit = { scope:tfmagi_mage_alteration_stewardship_tonic = yes }
 			change_variable = {
 				name = tfmagi_mage_tonic_stewardship_num
 				add = 1
 			}
-			custom_tooltip = tfmagi_mage_conjuration_stewardship_tonic_tooltip
+			custom_tooltip = tfmagi_mage_alteration_stewardship_tonic_tooltip
 			remove_short_term_gold = 50
 
 		}
 		else_if = {
-			limit = { scope:tfmagi_mage_conjuration_martial_tonic = yes }
+			limit = { scope:tfmagi_mage_alteration_martial_tonic = yes }
 			change_variable = {
 				name = tfmagi_mage_tonic_martial_num
 				add = 1
 			}
-			custom_tooltip = tfmagi_mage_conjuration_martial_tonic_tooltip
+			custom_tooltip = tfmagi_mage_alteration_martial_tonic_tooltip
 			remove_short_term_gold = 50
 		}
 		else_if = {
-			limit = { scope:tfmagi_mage_conjuration_intrigue_tonic = yes }
+			limit = { scope:tfmagi_mage_alteration_intrigue_tonic = yes }
 			change_variable = {
 				name = tfmagi_mage_tonic_intrigue_num
 				add = 1
 			}
-			custom_tooltip = tfmagi_mage_conjuration_intrigue_tonic_tooltip
+			custom_tooltip = tfmagi_mage_alteration_intrigue_tonic_tooltip
 			remove_short_term_gold = 50
 		}
 		else_if = {
-			limit = { scope:tfmagi_mage_conjuration_learning_tonic = yes }
+			limit = { scope:tfmagi_mage_alteration_learning_tonic = yes }
 			change_variable = {
 				name = tfmagi_mage_tonic_learning_num
 				add = 1
 			}
-			custom_tooltip = tfmagi_mage_conjuration_learning_tonic_tooltip
+			custom_tooltip = tfmagi_mage_alteration_learning_tonic_tooltip
 			remove_short_term_gold = 50
 		}
 		else_if = {
-			limit = { scope:tfmagi_mage_conjuration_stress_loss_tonic = yes }
+			limit = { scope:tfmagi_mage_alteration_stress_loss_tonic = yes }
 			change_variable = {
 				name = tfmagi_mage_tonic_stress_num
 				add = 1
 			}
-			custom_tooltip = tfmagi_mage_conjuration_stress_loss_tonic_tooltip
+			custom_tooltip = tfmagi_mage_alteration_stress_loss_tonic_tooltip
 			remove_short_term_gold = 50
+		}
+		else_if = {
+			limit = { scope:tfmagi_mage_alteration_immortality_elixir = yes }
+			change_variable = {
+				name = tfmagi_mage_immortality_elixir_num
+				add = 1
+			}
+			add_trait_xp = {
+				trait = tfmagi_mage
+				track = tfmagi_mage_mana
+				value = {
+					value = tfmagi_mana_cost_04
+					subtract = tfmagi_mana_cost_02
+				}
+			}
+			custom_tooltip = tfmagi_mage_alteration_immortality_elixir_tooltip
+			remove_short_term_gold = 200
+		}
+		else_if = {
+			limit = { scope:tfmagi_mage_alteration_panacea = yes }
+			change_variable = {
+				name = tfmagi_mage_panacea_num
+				add = 1
+			}
+			add_trait_xp = {
+				trait = tfmagi_mage
+				track = tfmagi_mage_mana
+				value = {
+					value = tfmagi_mana_cost_05
+					subtract = tfmagi_mana_cost_02
+				}
+			}
+			custom_tooltip = tfmagi_mage_alteration_panacea_tooltip
+			remove_short_term_gold = 100
 		}
 		
 		add_trait_xp = {
@@ -1868,6 +1944,7 @@ tfmagi_mage_alteration_mend_flesh_decision = {
 				has_trait = wounded_1
 				has_trait = wounded_2
 				has_trait = wounded_3
+				has_trait = impotent
 			}
 		}
 
@@ -2316,6 +2393,29 @@ tfmagi_mage_alteration_mend_flesh_decision = {
 			localization = tfmagi_mage_alteration_mend_flesh_inbred_loc
 			icon = "gfx/interface/icons/traits/inbred.dds"
 		}
+		item = {
+			value = tfmagi_mage_alteration_mend_flesh_impotent
+			is_shown = {
+                var:tfmagi_mage_target = { 
+					has_trait = impotent
+				}
+			}
+			is_valid = {
+                has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value >= { subtract = tfmagi_mana_cost_02 }
+				}
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mastery
+					value >= tfmagi_mage_mastery_02
+				}
+			}
+			current_description = tfmagi_mage_alteration_mend_flesh_impotent_tooltip
+			localization = tfmagi_mage_alteration_mend_flesh_impotent_loc
+			icon = "gfx/interface/icons/traits/impotent.dds"
+		}
 
 	}
 
@@ -2573,6 +2673,18 @@ tfmagi_mage_alteration_mend_flesh_decision = {
 			}
 			add_trait_xp = { trait = tfmagi_mage track = tfmagi_mage_mana value = tfmagi_mana_cost_05 }
 		}
+		else_if = {
+			limit = {
+				scope:tfmagi_mage_alteration_mend_flesh_impotent = yes
+				var:tfmagi_mage_target = {
+					has_trait = impotent
+				}
+			}
+			var:tfmagi_mage_target = {
+				remove_trait = impotent
+			}
+			add_trait_xp = { trait = tfmagi_mage track = tfmagi_mage_mana value = tfmagi_mana_cost_02 }
+		}
 		add_trait_xp = {
 			trait = tfmagi_mage
 			track = tfmagi_mage_mastery
@@ -2602,7 +2714,17 @@ tfmagi_mage_alteration_genome_decision = {
 
 
 	is_valid = {
-		var:tfmagi_mage_target.is_alive = yes
+		var:tfmagi_mage_target = {
+			is_alive = yes
+			NOR = {
+				has_trait = beauty_good_3
+				has_trait = intellect_good_3
+				has_trait = physique_good_3
+				has_trait = fecund
+				has_trait = strong
+				has_trait = shrewd
+			}
+		}
 		has_trait_xp = {
 			trait = tfmagi_mage
 			track = tfmagi_mage_mana

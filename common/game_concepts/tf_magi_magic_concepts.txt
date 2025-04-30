@@ -35,3 +35,11 @@ tfmagi_mage_alteration_stress_loss_tonic = {
     texture = "gfx/interface/icons/character_interactions/tfmagi_potion_orange.dds"
     parent = tfmagi_mage_alteration_tonic
 }
+tfmagi_mage_alteration_panacea = {
+    texture = "gfx/interface/icons/character_interactions/tfmagi_panacea.dds"
+    parent = tfmagi_mage_alteration_tonic
+}
+tfmagi_mage_alteration_immortality_elixir = {
+    texture = "gfx/interface/icons/character_interactions/tfmagi_immortality_elixir.dds"
+    parent = tfmagi_mage_alteration_tonic
+}

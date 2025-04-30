@@ -8,7 +8,7 @@
  tfmagi_mage_lead_to_gold_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_alteration_lead_to_gold_decision').GetName] [decision|e]" 
  tfmagi_mage_genetic_trait_improve_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_alteration_genome_decision').GetName] [decision|e]"
  tfmagi_mage_mend_flesh_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_alteration_mend_flesh_decision').GetName] [decision|e]"
- tfmagi_mage_immortal_elixir_cancel_negative_supply: "Enables the #emp Elixir of#! #g Immortality#! option for the [GetDecisionWithKey('tfmagi_mage_alteration_basic_alchemy_decision').GetName] [decision|e]"
+ tfmagi_mage_immortal_elixir_cancel_negative_supply: "Enables the [tfmagi_mage_alteration_immortality_elixir|e] and [tfmagi_mage_alteration_panacea|e] options for the [GetDecisionWithKey('tfmagi_mage_alteration_basic_alchemy_decision').GetName] [decision|e]"
  
  tfmagi_mage_aid_construction_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_conjuration_aid_construction_decision').GetName] [decision|e]"
  tfmagi_mage_artificer_cancel_negative_supply: "Enables the [GetDecisionWithKey('tfmagi_mage_create_item_decision').GetName] [decision|e]"

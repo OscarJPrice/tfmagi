@@ -1,4 +1,322 @@
-﻿tfmagi_minority_investments_decision = {
+﻿tfmagi_gather_force_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_opening.dds" }
+	desc = tfmagi_gather_force_decision_desc
+	decision_group_type = tfmagi_decisions
+	selection_tooltip = tfmagi_gather_force_decision_tooltip
+	is_shown = {
+		culture = {
+			has_cultural_parameter = tfmagi_can_take_raise_cultural_troops_decision
+		}
+	}
+
+	is_valid = {
+		OR = {
+			AND = {
+				has_trait = ambitious
+				prestige_level >= 2
+			}
+			has_trait = conqueror
+			prestige_level >= 3
+		}
+	}
+
+	effect = {
+		custom_tooltip = tfmagi_gather_force_decision_tooltip
+		trigger_event = tfmagi_events.1
+	}
+
+	cost = {
+		prestige = 0
+		gold = 0
+	}
+
+	cooldown = { years = 15 }
+
+	ai_check_interval = 32
+
+	ai_potential = {
+		culture = {
+			has_cultural_parameter = tfmagi_can_take_raise_cultural_troops_decision
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# tfmagi_gather_force_interdimensional_conqueror_decision = {
+# 	picture = { reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_opening.dds" }
+# 	desc = tfmagi_gather_force_interdimensional_conqueror_decision_desc
+# 	decision_group_type = tfmagi_decisions
+# 	selection_tooltip = tfmagi_gather_force_interdimensional_conqueror_decision_tooltip
+# 	is_shown = {
+# 		has_trait_xp = {
+# 			trait = tfmagi_interdimensional_conqueror
+# 			track = tfmagi_interdimensional_conqueror_forces
+# 			value >= 10 
+# 		}
+# 	}
+# 	is_valid = {
+# 		has_trait_xp = {
+# 			trait = tfmagi_interdimensional_conqueror
+# 			track = tfmagi_interdimensional_conqueror_forces
+# 			value >= 10 
+# 		}
+# 	}
+
+# 	effect = {
+# 		custom_tooltip = tfmagi_gather_force_interdimensional_conqueror_decision_tooltip
+# 		trigger_event = tfmagi_events.3
+# 	}
+
+# 	cost = {
+# 		prestige = 0
+# 		gold = 0
+# 	}
+
+# 	cooldown = { years = 0 }
+
+# 	ai_check_interval = 32
+
+# 	ai_potential = {
+# 		has_trait_xp = {
+# 			trait = tfmagi_interdimensional_conqueror
+# 			track = tfmagi_interdimensional_conqueror_forces
+# 			value >= 10 
+# 		}
+# 	}
+	
+# 	ai_will_do = {
+# 		base = 100
+# 	}
+# }
+
+tfmagi_esotericism_exeurgy_summon_force_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/tfmagi_dark_summoning.dds" }
+	desc = tfmagi_esotericism_exeurgy_summon_force_decision_desc
+	decision_group_type = tfmagi_decisions
+	selection_tooltip = tfmagi_esotericism_exeurgy_summon_force_decision_tooltip
+	is_shown = {
+		has_trait_xp = {
+			trait = tfmagi_esotericist
+			track = tfmagi_esotericist_exeurgy
+			value >= 30 
+		}
+	}
+	is_valid = {
+		has_trait_xp = {
+			trait = tfmagi_esotericist
+			track = tfmagi_esotericist_exeurgy
+			value >= 30 
+		}
+		has_at_least_tfmagi_essence_level_3_trigger = yes
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "tfmagi_SUMMON_ARMY_CHOOSE_OPTION"
+		show_from_start = yes
+
+		item = { # Summon Medium Army
+			value = tfmagi_summon_medium
+			is_shown = {
+				has_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_exeurgy
+					value >= 30
+				}
+			}
+			is_valid = {
+				has_at_least_tfmagi_essence_level_3_trigger = yes
+			}
+			current_description = tfmagi_summon_medium_tooltip
+			localization = tfmagi_summon_medium_loc
+			icon = "gfx/interface/icons/trait_level_tracks/tfmagi_esotericist_exeurgy.dds"
+		} 
+		item = { # Summon Large Army
+			value = tfmagi_summon_large
+			is_shown = {
+				has_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_exeurgy
+					value >= 100
+				}
+			}
+			is_valid = {
+				has_at_least_tfmagi_essence_level_5_trigger = yes
+			}
+			current_description = tfmagi_summon_large_tooltip
+			localization = tfmagi_summon_large_loc
+			icon = "gfx/interface/icons/trait_level_tracks/tfmagi_esotericist_exeurgy.dds"
+		} 
+	}
+
+	effect = {
+		custom_tooltip = tfmagi_esotericism_exeurgy_summon_force_decision_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:tfmagi_summon_medium = yes
+				}
+				tfmagi_maa_spawn_infernal_band = yes
+				tfmagi_esotericist_essence_lose_three_levels = yes
+				add_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_exeurgy
+					value = 5
+				}
+				
+			}
+			else_if = {
+				limit = {
+					scope:tfmagi_summon_large = yes
+				}
+				tfmagi_maa_spawn_infernal_legion = yes
+				tfmagi_esotericist_essence_lose_five_levels = yes
+			}
+		}
+	}
+
+	ai_check_interval = 32
+
+	ai_potential = {
+		has_trait_xp = {
+			trait = tfmagi_esotericist
+			track = tfmagi_esotericist_exeurgy
+			value >= 30 
+		}
+		has_at_least_tfmagi_essence_level_2_trigger = yes
+	}
+	
+	ai_will_do = {
+		base = 100
+	}
+}
+
+
+tfmagi_pursue_esotericism_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds" }
+	desc = tfmagi_pursue_esotericism_decision_desc
+	decision_group_type = tfmagi_decisions
+	selection_tooltip = tfmagi_pursue_esotericism_decision_tooltip
+	is_shown = {
+		culture = {
+			has_cultural_parameter = access_to_esotericist_trait
+		}
+		NOT = {
+			has_trait = tfmagi_esotericist
+		}
+	}
+	is_valid = {
+		OR = {
+			
+			any_courtier = {
+				OR = {
+					has_trait = tfmagi_esotericist
+					AND = {
+						OR = {
+							has_trait = lifestyle_mystic
+							has_trait = scholar
+						}
+						learning >= 15
+					}
+				}
+			}
+			AND = { 
+				OR = {
+					has_trait = lifestyle_mystic
+					has_trait = scholar
+				}
+				learning >= 15
+			}
+		}
+
+	}
+
+	effect = {
+		custom_tooltip = tfmagi_pursue_esotericism_decision_tooltip
+		hidden_effect = {
+			tfmagi_give_esotericism = yes
+		}
+	}
+
+	cost = {
+		prestige = 0
+		gold = 0
+	}
+
+	cooldown = { years = 0 }
+
+	ai_check_interval = 32
+
+	ai_potential = {
+		culture = {
+			has_cultural_parameter = access_to_esotericist_trait
+		}
+		NOT = {
+			has_trait = tfmagi_esotericist
+		}
+	}
+	
+	ai_will_do = {
+		base = 100
+	}
+}
+
+tfmagi_assimilate_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds" }
+	desc = tfmagi_assimilate_decision_desc
+	decision_group_type = tfmagi_decisions
+	selection_tooltip = tfmagi_assimilate_decision_tooltip
+
+	is_shown = {
+		culture = {
+			has_cultural_parameter = tfmagi_can_take_easy_hybridize_decision
+		}
+	}
+
+	effect = {
+		custom_tooltip = tfmagi_assimilate_decision_tooltip
+		trigger_event = tfmagi_events.2
+	}
+
+	cost = {
+		prestige = 500
+	}
+
+	ai_check_interval = 32
+
+	ai_potential = {
+		culture.has_cultural_parameter = tfmagi_can_take_easy_hybridize_decision
+		OR = {
+			AND = {
+				is_landed = yes
+				age >= 45
+			}
+			AND = {
+				primary_title ?= {
+					is_landless_type_title = yes
+				}
+				prestige_level >= 4
+				NOR = {
+					has_trait = conqueror
+					has_trait = ambitious
+					has_trait = arrogant
+					has_trait = callous
+					is_landed = yes
+				}
+			}
+		}
+	}
+	
+	ai_will_do = {
+		base = 20
+	}
+}
+
+tfmagi_minority_investments_decision = {
 	picture = { reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_conciliation.dds" }
 	desc = tfmagi_minority_investments_decision_desc
 	decision_group_type = tfmagi_decisions
@@ -59,8 +377,204 @@
 	cooldown = { years = 15 }
 
 	ai_check_interval = 32
+
+	ai_potential = {
+		culture = {
+			has_cultural_parameter = tfmagi_can_take_raise_cultural_troops_decision
+		}
+	}
 	
 	ai_will_do = {
 		base = 100
 	}
+}
+
+tfmagi_focus_on_esotericism_decision = {
+	ai_check_interval = 60
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+	sort_order = 10
+	decision_group_type = tfmagi_decisions
+
+	is_shown = {
+		has_trait = tfmagi_esotericist
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "tfmagi_FOCUS_ON_ARCANE_CHOOSE_FOCUS"
+		show_from_start = yes
+
+		item = { # Thaumaturgy
+			value = tfmagi_focus_on_thaumaturgy
+			is_shown = {
+				has_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_thaumaturgy
+					value < 100
+				}
+			}
+			is_valid = {
+				NOT = {
+					has_character_modifier = tfmagi_learning_thaumaturgy_modifier
+				}
+			}
+			current_description = tfmagi_focus_on_thaumaturgy_tooltip
+			localization = tfmagi_focus_on_thaumaturgy_loc
+			icon = "gfx/interface/icons/trait_level_tracks/tfmagi_esotericist_thaumaturgy.dds"
+		} 
+		item = { # Deiurgy
+			value = tfmagi_focus_on_deiurgy
+			is_shown = {
+				has_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_deiurgy
+					value < 100
+				}
+			}
+			is_valid = {
+				NOT = {
+					has_character_modifier = tfmagi_learning_deiurgy_modifier
+				}
+			}
+			current_description = tfmagi_focus_on_deiurgy_tooltip
+			localization = tfmagi_focus_on_deiurgy_loc
+			icon = "gfx/interface/icons/trait_level_tracks/tfmagi_esotericist_deiurgy.dds"
+		} 
+		item = { # Exeurgy
+			value = tfmagi_focus_on_exeurgy
+			is_shown = {
+				has_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_exeurgy
+					value < 100
+				}
+			}
+			is_valid = {
+				NOT = {
+					has_character_modifier = tfmagi_learning_exeurgy_modifier
+				}
+			}
+			current_description = tfmagi_focus_on_exeurgy_tooltip
+			localization = tfmagi_focus_on_exeurgy_loc
+			icon = "gfx/interface/icons/trait_level_tracks/tfmagi_esotericist_exeurgy.dds"
+		} 
+		item = { # Increase Essence
+			value = tfmagi_focus_on_essence
+			is_shown = {
+				always = yes
+			}
+			is_valid = {
+				NOT = {
+					has_character_modifier = tfmagi_gathering_essence_modifier
+				}
+			}
+			current_description = tfmagi_focus_on_essence_tooltip
+			localization = tfmagi_focus_on_essence_loc
+			icon = "gfx/interface/icons/trait_level_tracks/tfmagi_esotericist_essence.dds"
+		} 
+		item = { # NILL
+			value = tfmagi_focus_on_nothing
+			is_shown = {
+				always = yes
+			}
+			is_valid = {
+				tfmagi_focus_on_arcane_already_any = yes
+			}
+			current_description = tfmagi_focus_on_nothing_tooltip
+			localization = tfmagi_focus_on_nothing_loc
+			icon = "gfx/interface/icons/icon_cheers.dds"
+		} 
+	}
+
+	effect = {
+		custom_tooltip = tfmagi_focus_on_arcane_decision_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:tfmagi_focus_on_thaumaturgy = yes
+				}
+				tfmagi_focus_on_esotericism_clear = yes
+				add_character_modifier = tfmagi_learning_thaumaturgy_modifier
+			}
+			else_if = {
+				limit = {
+					scope:tfmagi_focus_on_deiurgy = yes
+				}
+				tfmagi_focus_on_esotericism_clear = yes
+				add_character_modifier = tfmagi_learning_deiurgy_modifier
+			}
+			else_if = {
+				limit = {
+					scope:tfmagi_focus_on_exeurgy = yes
+				}
+				tfmagi_focus_on_esotericism_clear = yes
+				add_character_modifier = tfmagi_learning_exeurgy_modifier
+			}
+			else_if = {
+				limit = {
+					scope:tfmagi_focus_on_essence = yes	
+				}
+				tfmagi_focus_on_esotericism_clear = yes
+				add_character_modifier = tfmagi_gathering_essence_modifier
+			} 
+			else_if = {
+				limit = {
+					scope:tfmagi_focus_on_nothing = yes
+				}
+				tfmagi_focus_on_esotericism_clear = yes
+			}
+		}
+	}
+
+}
+
+tfmagi_project_to_cheat_death_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds" }
+	desc = tfmagi_project_to_cheat_death_decision_desc
+	decision_group_type = tfmagi_mage_decisions
+	selection_tooltip = tfmagi_project_to_cheat_death_decision_tooltip
+	is_shown = {
+		has_trait_xp = {
+			trait = tfmagi_mage
+			track = tfmagi_mage_planar
+			value >= tfmagi_mage_planar_05
+		}
+		NOT = {
+			has_character_modifier = tfmagi_fortified_soul_modifier
+		}
+	}
+
+	ai_potential = {
+		has_trait = tfmagi_esotericist
+		has_trait_xp = {
+			trait = tfmagi_esotericist
+			track = tfmagi_esotericist_deiurgy
+			value >= 100
+		}
+	}
+
+	is_valid = {
+		has_at_least_tfmagi_essence_level_5_trigger = yes
+	}
+
+	cost = {
+		piety = 2000
+		prestige = 2000
+	}
+
+	effect = {
+		custom_tooltip = tfmagi_project_to_cheat_death_decision_tooltip
+		trigger_event = tfmagi_spell_events.1
+	}
+
+	cooldown = { years = 0 }
+
+	ai_check_interval = 60
 }

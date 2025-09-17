@@ -139,6 +139,14 @@ tfmagi_mage_acuity_modifier_05 = {
     tfmagi_mage_mastery_monthly_base_max_combat_roll = tfmagi_xp_gain_monthly_small
 }
 
+
+tfmagi_fortified_soul_modifier = {
+    icon = flame_positive
+    stress_gain_mult = -0.10
+    stress_loss_mult = 0.10
+}
+
+
 tfmagi_mage_planar_teleport_travel_modifier = {
     icon = travel_positive
     tfmagi_mage_planar_enables_teleport_travel_option_cancel_negative_supply = yes
@@ -173,23 +181,26 @@ tfmagi_mage_county_build_cost_modifier_03 = {
 tfmagi_mage_defensiveness_modifier_01 = {
     icon = estate_positive
     defender_holding_advantage = 5
+    additional_fort_level = 1
     hostile_raid_time = 1
     monthly_county_control_growth_add = 0.1
-    tfmagi_summoned_golems_in_battle_supply_limit = 1
+    # tfmagi_summoned_golems_in_battle_supply_limit = 1
 }
 tfmagi_mage_defensiveness_modifier_02 = {
     icon = estate_positive
     defender_holding_advantage = 10
+    additional_fort_level = 4
     hostile_raid_time = 2
     monthly_county_control_growth_add = 0.3
-    tfmagi_summoned_golems_in_battle_supply_limit = 2
+    # tfmagi_summoned_golems_in_battle_supply_limit = 2
 }
 tfmagi_mage_defensiveness_modifier_03 = {
     icon = estate_positive
     defender_holding_advantage = 20
+    additional_fort_level = 10
     hostile_raid_time = 3
     monthly_county_control_growth_add = 0.8
-    tfmagi_summoned_golems_in_battle_supply_limit = 3
+    # tfmagi_summoned_golems_in_battle_supply_limit = 3
 }
 
 tfmagi_elemental_seismic_modifier_01 = {
@@ -207,3 +218,95 @@ tfmagi_elemental_seismic_modifier_03 = {
     build_speed = 2.4
     build_gold_cost = 1.2
 }
+
+tfmagi_learning_elemental_modifier = {
+	icon = learning_mixed
+    diplomacy = -3
+	martial = -3
+    stewardship = -3
+    intrigue = -3
+    learning = -5
+    tfmagi_mage_elemental_monthly_max_combat_roll = tfmagi_lifestyle_xp_gain_medium
+}
+
+tfmagi_learning_alteration_modifier = {
+	icon = learning_mixed
+    diplomacy = -3
+	martial = -3
+    stewardship = -3
+    intrigue = -3
+    learning = -5
+    tfmagi_mage_alteration_monthly_max_combat_roll = tfmagi_lifestyle_xp_gain_medium
+}
+
+tfmagi_learning_conjuration_modifier = {
+	icon = learning_mixed
+    diplomacy = -3
+	martial = -3
+    stewardship = -3
+    intrigue = -3
+    learning = -5
+    tfmagi_mage_conjuration_monthly_max_combat_roll = tfmagi_lifestyle_xp_gain_medium
+}
+
+
+tfmagi_learning_planar_modifier = {
+	icon = learning_mixed
+    diplomacy = -3
+	martial = -3
+    stewardship = -3
+    intrigue = -3
+    learning = -5
+    tfmagi_mage_planar_monthly_max_combat_roll = tfmagi_lifestyle_xp_gain_medium
+}
+
+tfmagi_gathering_mana_modifier = {
+    icon = learning_mixed
+    diplomacy = -4
+	martial = -4
+    stewardship = -4
+    intrigue = -4
+    learning = -4
+    stress_gain_mult = 0.30
+    stress_loss_mult = -0.30
+    tfmagi_mage_mana_gain_mult_multiplier_attrition_mult = tfmagi_mana_gain_mult_medium
+}
+
+tfmagi_learning_deiurgy_modifier = {
+	icon = learning_mixed
+    diplomacy = -3
+	martial = -3
+    stewardship = -3
+    intrigue = -3
+    learning = -5
+}
+
+tfmagi_learning_thaumaturgy_modifier = {
+	icon = learning_mixed
+    diplomacy = -2
+	martial = -2
+    stewardship = -2
+    intrigue = -2
+    learning = -4
+}
+
+tfmagi_learning_exeurgy_modifier = {
+	icon = learning_mixed
+    diplomacy = -3
+	martial = -3
+    stewardship = -3
+    intrigue = -3
+    learning = -5
+}
+
+tfmagi_gathering_essence_modifier = {
+    icon = learning_mixed
+    diplomacy = -4
+	martial = -4
+    stewardship = -4
+    intrigue = -4
+    learning = -4
+    stress_gain_mult = 0.30
+    stress_loss_mult = -0.30
+}
+

@@ -1,0 +1,147 @@
+﻿
+tfmagi_esotericist_essence_lost_level = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_essence
+					value >= tfmagi_essence_level_5
+				}
+			}
+			add_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_essence
+				value = tfmagi_essence_level_reduction_from_5
+			}
+		}
+		else_if = {
+			limit = {
+				has_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_essence
+					value >= tfmagi_essence_level_4
+				}
+			}
+			add_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_essence
+				value = tfmagi_essence_level_reduction_from_4
+			}
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_essence
+					value >= tfmagi_essence_level_3
+				}
+			}
+			add_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_essence
+				value = tfmagi_essence_level_reduction_from_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_essence
+					value >= tfmagi_essence_level_2
+				}
+			}
+			add_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_essence
+				value = tfmagi_essence_level_reduction_from_2
+			}
+		}
+		else_if = {
+			limit = {
+				has_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_essence
+					value >= tfmagi_essence_level_1
+				}
+			}
+			add_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_essence
+				value = tfmagi_essence_level_reduction_from_1
+			}
+		}
+	}
+}
+
+tfmagi_esotericist_essence_lose_one_level = {
+	custom_tooltip = tfmagi_esotericist_essence_lose_one_level_tooltip
+	tfmagi_esotericist_essence_lost_level = yes
+}
+
+tfmagi_esotericist_essence_lose_two_levels = {
+    custom_tooltip = tfmagi_esotericist_essence_lose_two_level_tooltip
+	tfmagi_esotericist_essence_lost_level = yes
+	tfmagi_esotericist_essence_lost_level = yes
+}
+
+tfmagi_esotericist_essence_lose_three_levels = {
+    custom_tooltip = tfmagi_esotericist_essence_lose_three_level_tooltip
+	tfmagi_esotericist_essence_lost_level = yes
+	tfmagi_esotericist_essence_lost_level = yes
+	tfmagi_esotericist_essence_lost_level = yes
+}
+
+tfmagi_esotericist_essence_lose_four_levels = {
+	custom_tooltip = tfmagi_esotericist_essence_lose_four_level_tooltip
+	tfmagi_esotericist_essence_lost_level = yes
+	tfmagi_esotericist_essence_lost_level = yes
+	tfmagi_esotericist_essence_lost_level = yes
+	tfmagi_esotericist_essence_lost_level = yes
+}
+
+tfmagi_esotericist_essence_lose_five_levels = {
+	custom_tooltip = tfmagi_esotericist_essence_lose_five_level_tooltip
+	tfmagi_esotericist_essence_lost_level = yes
+	tfmagi_esotericist_essence_lost_level = yes
+	tfmagi_esotericist_essence_lost_level = yes
+	tfmagi_esotericist_essence_lost_level = yes
+	tfmagi_esotericist_essence_lost_level = yes
+}
+
+tfmagi_give_esotericism = {
+	custom_tooltip = tfmagi_give_esotericism_tooltip
+	if = {
+		limit = {
+			NOT = {
+				has_trait = tfmagi_esotericist
+			}
+		}
+		add_trait = tfmagi_esotericist
+		add_to_global_variable_list = {
+			name = tfmagi_esotericists_global_list
+			target = THIS
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				is_target_in_global_variable_list = {
+					name = tfmagi_esotericists_global_list
+					target = THIS
+				}
+			}
+		}
+		add_to_global_variable_list = {
+			name = tfmagi_esotericists_global_list
+			target = THIS
+		}
+	}
+}
+
+tfmagi_focus_on_esotericism_clear = {
+	remove_character_modifier = tfmagi_learning_thaumaturgy_modifier
+	remove_character_modifier = tfmagi_learning_deiurgy_modifier
+	remove_character_modifier = tfmagi_learning_exeurgy_modifier
+	remove_character_modifier = tfmagi_gathering_essence_modifier
+}

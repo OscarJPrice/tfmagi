@@ -1,0 +1,48 @@
+﻿
+@tfmagi_essence_level_1 = 10
+@tfmagi_essence_level_2 = 25
+@tfmagi_essence_level_3 = 45
+@tfmagi_essence_level_4 = 70
+@tfmagi_essence_level_5 = 100
+
+@tfmagi_essence_level_reduction_from_5 = @[ tfmagi_essence_level_4 - tfmagi_essence_level_5 ]
+@tfmagi_essence_level_reduction_from_4 = @[ tfmagi_essence_level_3 - tfmagi_essence_level_4 ]
+@tfmagi_essence_level_reduction_from_3 = @[ tfmagi_essence_level_2 - tfmagi_essence_level_3 ]
+@tfmagi_essence_level_reduction_from_2 = @[ tfmagi_essence_level_1 - tfmagi_essence_level_2 ]
+@tfmagi_essence_level_reduction_from_1 = @[ tfmagi_essence_level_1*-1 ]
+
+tfmagi_essence_level_1 = @tfmagi_essence_level_1
+tfmagi_essence_level_2 = @tfmagi_essence_level_2
+tfmagi_essence_level_3 = @tfmagi_essence_level_3
+tfmagi_essence_level_4 = @tfmagi_essence_level_4
+tfmagi_essence_level_5 = @tfmagi_essence_level_5
+
+tfmagi_essence_level_reduction_from_5 = @tfmagi_essence_level_reduction_from_5
+tfmagi_essence_level_reduction_from_4 = @tfmagi_essence_level_reduction_from_4
+tfmagi_essence_level_reduction_from_3 = @tfmagi_essence_level_reduction_from_3
+tfmagi_essence_level_reduction_from_2 = @tfmagi_essence_level_reduction_from_2
+tfmagi_essence_level_reduction_from_1 = @tfmagi_essence_level_reduction_from_1
+
+@tfmagi_interdimensional_armies_level_1 = 10
+@tfmagi_interdimensional_armies_level_2 = 25
+@tfmagi_interdimensional_armies_level_3 = 45
+@tfmagi_interdimensional_armies_level_4 = 70
+@tfmagi_interdimensional_armies_level_5 = 100
+
+@tfmagi_interdimensional_armies_level_reduction_from_5 = @[ tfmagi_interdimensional_armies_level_4 - tfmagi_interdimensional_armies_level_5 ]
+@tfmagi_interdimensional_armies_level_reduction_from_4 = @[ tfmagi_interdimensional_armies_level_3 - tfmagi_interdimensional_armies_level_4 ]
+@tfmagi_interdimensional_armies_level_reduction_from_3 = @[ tfmagi_interdimensional_armies_level_2 - tfmagi_interdimensional_armies_level_3 ]
+@tfmagi_interdimensional_armies_level_reduction_from_2 = @[ tfmagi_interdimensional_armies_level_1 - tfmagi_interdimensional_armies_level_2 ]
+@tfmagi_interdimensional_armies_level_reduction_from_1 = @[ tfmagi_interdimensional_armies_level_1*-1 ]
+
+tfmagi_interdimensional_armies_level_1 = @tfmagi_interdimensional_armies_level_1
+tfmagi_interdimensional_armies_level_2 = @tfmagi_interdimensional_armies_level_2
+tfmagi_interdimensional_armies_level_3 = @tfmagi_interdimensional_armies_level_3
+tfmagi_interdimensional_armies_level_4 = @tfmagi_interdimensional_armies_level_4
+tfmagi_interdimensional_armies_level_5 = @tfmagi_interdimensional_armies_level_5
+
+tfmagi_interdimensional_armies_level_reduction_from_5 = @tfmagi_interdimensional_armies_level_reduction_from_5
+tfmagi_interdimensional_armies_level_reduction_from_4 = @tfmagi_interdimensional_armies_level_reduction_from_4
+tfmagi_interdimensional_armies_level_reduction_from_3 = @tfmagi_interdimensional_armies_level_reduction_from_3
+tfmagi_interdimensional_armies_level_reduction_from_2 = @tfmagi_interdimensional_armies_level_reduction_from_2
+tfmagi_interdimensional_armies_level_reduction_from_1 = @tfmagi_interdimensional_armies_level_reduction_from_1

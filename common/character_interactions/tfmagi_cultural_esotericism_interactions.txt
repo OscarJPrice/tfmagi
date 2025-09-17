@@ -1,0 +1,131 @@
+﻿# tfmagi_teach_esotericism_interaction = {
+# 	icon = icon_scheme_learn_language
+# 	interface_priority = 130
+# 	category = interaction_category_friendly
+# 	desc = tfmagi_teach_esotericism_interaction_desc
+
+# 	is_shown = {
+# 		scope:actor = {
+# 			has_trait_xp = {
+# 				trait = tfmagi_esotericist
+# 				track = tfmagi_esotericist_thaumaturgy
+# 				value >= 20
+# 			}
+# 			has_trait_xp = {
+# 				trait = tfmagi_esotericist
+# 				track = tfmagi_esotericist_deiurgy
+# 				value >= 20
+# 			}
+# 		}
+# 	}
+
+# 	is_valid = { #this is for AI
+#         scope:actor = {
+# 			has_trait_xp = {
+# 				trait = tfmagi_esotericist
+# 				track = tfmagi_esotericist_thaumaturgy
+# 				value >= 20
+# 			}
+# 			has_trait_xp = {
+# 				trait = tfmagi_esotericist
+# 				track = tfmagi_esotericist_deiurgy
+# 				value >= 20
+# 			}
+# 		}
+# 	}
+
+# 	on_accept = {
+# 		scope:actor = {
+# 			tfmagi_esotericist_essence_lose_two_levels = yes
+# 			add_trait_xp = {
+# 				trait = tfmagi_esotericist
+# 				track = tfmagi_esotericist_thaumaturgy
+# 				value = 5
+# 			}
+# 		}
+# 		scope:recipient = {
+# 			hidden_effect = {
+# 				tfmagi_cure_illness_effect = yes
+# 			}
+
+# 			send_interface_toast = {
+# 				type = event_toast_effect_neutral
+# 				title = tfmagi_character_interaction_cure.t
+# 				left_icon = scope:actor
+# 				custom_tooltip = tfmagi_character_interaction_cure.tt
+# 			}
+# 		}
+
+# 	}
+
+# 	auto_accept = yes
+
+# 	ai_will_do = {
+# 		base = 125
+		
+# 		modifier = { # Basic Filtering
+# 			factor = 0
+# 			scope:recipient = {
+# 				NOR = {
+# 					AND = { # injured lovers, friends and a liege should be considered
+# 						OR = {
+# 							scope:actor = {
+# 								any_liege_or_above = {
+# 									this = scope:recipient
+# 								}
+# 							}
+# 							has_secret_relation_lover = scope:actor
+# 							has_relation_lover = scope:actor
+# 							has_relation_soulmate = scope:actor
+# 							has_relation_friend = scope:actor
+# 							has_relation_best_friend = scope:actor
+# 						}
+# 					}
+# 					AND = { # Characters with the loyal trait more likely to [action] friends/lieges
+# 						OR = {
+# 							scope:actor.liege ?= this
+# 							has_relation_friend = scope:actor
+# 							has_relation_best_friend = scope:actor
+# 							is_allied_to = scope:actor
+# 							is_close_or_extended_family_of = scope:actor
+# 						}
+# 						scope:actor = {
+# 							ai_greed <= 0
+# 							has_trait = loyal
+# 						}
+# 					}
+# 					AND = { # Powerful vassals should be considered
+# 						is_powerful_vassal_of = scope:actor
+# 						opinion = {
+# 							target = scope:actor
+# 							value < 0
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+		
+# 		modifier = {
+# 			factor = 0.1
+# 			scope:recipient = {
+# 				opinion = {
+# 					target = scope:actor
+# 					value < 0
+# 				}
+# 				NAND = {
+# 					is_vassal_of = scope:actor
+# 					scope:actor = {
+# 						ai_rationality > 50
+# 					}
+# 				}
+# 			}
+# 		}
+		
+# 		modifier = {
+# 			factor = 0.1
+# 			scope:recipient = {
+# 				has_relation_rival = scope:actor
+# 			}
+# 		}
+# 	}
+# }

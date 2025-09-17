@@ -76,3 +76,11 @@ tfmagi_mage_elemental_seismic_s_trigger_3 = {
 }
 
 
+tfmagi_focus_on_arcane_already_any = {
+    OR = {
+        has_character_modifier = tfmagi_learning_elemental_modifier
+        has_character_modifier = tfmagi_learning_alteration_modifier
+        has_character_modifier = tfmagi_learning_conjuration_modifier
+        has_character_modifier = tfmagi_gathering_mana_modifier
+    }
+}

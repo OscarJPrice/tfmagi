@@ -1,8 +1,8 @@
-﻿on_army_combat_finished = {
-	on_actions = {
-        tfmagi_stop_summoned_special_troops
-    }
-}
+﻿# on_army_combat_finished = {
+# 	on_actions = {
+#         tfmagi_stop_summoned_special_troops
+#     }
+# }
 tfmagi_stop_summoned_special_troops = {
     effect = {
         tfmagi_delete_maa_archmages_temp_summons = yes
@@ -10,11 +10,11 @@ tfmagi_stop_summoned_special_troops = {
 }
 
 
-on_army_enter_province = {
-    on_actions = {
-        tfmagi_start_summoned_special_troops
-    }
-}
+# on_army_enter_province = {
+#     on_actions = {
+#         tfmagi_start_summoned_special_troops
+#     }
+# }
 tfmagi_start_summoned_special_troops = {
     effect = {
         scope:army.location = {

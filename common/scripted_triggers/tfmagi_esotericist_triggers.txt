@@ -1,0 +1,121 @@
+﻿
+has_at_least_tfmagi_essence_level_1_trigger = {
+	has_trait_xp = {
+		trait = tfmagi_esotericist
+		track = tfmagi_esotericist_essence
+		value >= tfmagi_essence_level_1
+	}
+}
+
+has_at_least_tfmagi_essence_level_2_trigger = {
+	has_trait_xp = {
+		trait = tfmagi_esotericist
+		track = tfmagi_esotericist_essence
+		value >= tfmagi_essence_level_2
+	}
+}
+
+has_at_least_tfmagi_essence_level_3_trigger = {
+	has_trait_xp = {
+		trait = tfmagi_esotericist
+		track = tfmagi_esotericist_essence
+		value >= tfmagi_essence_level_3
+	}
+}
+
+has_at_least_tfmagi_essence_level_4_trigger = {
+	has_trait_xp = {
+		trait = tfmagi_esotericist
+		track = tfmagi_esotericist_essence
+		value >= tfmagi_essence_level_4
+	}
+}
+
+has_at_least_tfmagi_essence_level_5_trigger = {
+	has_trait_xp = {
+		trait = tfmagi_esotericist
+		track = tfmagi_esotericist_essence
+		value >= tfmagi_essence_level_5
+	}
+}
+
+tfmagi_province_has_no_holding = {
+	has_holding = no
+}
+tfmagi_county_has_no_holding_province = {
+	any_county_province = {
+		tfmagi_province_has_no_holding = no
+	}
+}
+tfmagi_exists_no_holding_province = {
+	any_sub_realm_county = {
+		tfmagi_county_has_no_holding_province = yes
+	}
+}
+tfmagi_exists_no_holding_province_same_culture = {
+	any_sub_realm_county = {
+		culture = ROOT.culture
+		tfmagi_county_has_no_holding_province = yes
+	}
+}
+
+tfmagi_province_is_holdable_and_not_capital = {
+	OR = {
+		has_holding_type = castle_holding
+		AND = {
+			root.government_has_flag = government_is_tribal
+			has_holding_type = tribal_holding
+		}
+		AND = {
+			root.government_has_flag = government_is_administrative
+			has_holding_type = city_holding
+		}
+		AND = {
+			root.faith.has_doctrine_parameter = allowed_holding_type_church_holding
+			has_holding_type = church_holding
+		}
+	}
+	is_county_capital = no
+}
+tfmagi_county_has_holding_not_capital_and_holdable = {
+	any_county_province = {
+		tfmagi_province_is_holdable_and_not_capital = yes
+	}
+}
+tfmagi_exists_holding_not_capital_and_holdable = {
+	any_sub_realm_county = {
+		tfmagi_county_has_holding_not_capital_and_holdable = yes
+	}
+}
+
+tfmagi_exists_holding_not_capital_and_holdable_same_culture = {
+	any_sub_realm_county = {
+		culture = ROOT.culture
+		tfmagi_county_has_holding_not_capital_and_holdable = yes
+	}
+}
+
+tfmagi_exists_valid_county_not_capital = {
+	root = { 
+		any_sub_realm_county = {
+			OR = {
+				AND = {
+					title_province.has_holding_type = tribal_holding
+					root.government_has_flag = government_is_tribal
+				}
+				AND = {
+					title_province.has_holding_type = castle_holding
+					NOT = { root.government_has_flag = government_is_tribal }
+				}
+				AND = {
+					title_province.has_holding_type = church_holding
+					root.faith.has_doctrine_parameter = allowed_holding_type_church_holding
+				}
+				AND = {
+					title_province.has_holding_type = city_holding
+					root.government_has_flag = government_is_administrative
+				}
+			}
+		}
+	}
+}

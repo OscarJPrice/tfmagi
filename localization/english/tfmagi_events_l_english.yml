@@ -1,4 +1,5 @@
 ﻿l_english:
+
  tfmagi_events.1.t: "Raise a Great Force"
  tfmagi_events.1.desc: "We [ROOT.Char.GetCulture.GetCollectiveNounNoTooltip] are not prone to idleness. The fires of industry burn bright in the breast of those young and old. These spoiling warriors crave purpose, and I am positioned to provide just such a thing. \n\nMany will flock to my banners. \n\nFew will dare eschew my name.\n\nThe [ROOT.Char.GetCulture.GetCollectiveNounNoTooltip] call out, and house [ROOT.Char.GetHouse.GetName] answers!"
  tfmagi_events.1.a: "Gather the brave."

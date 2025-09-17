@@ -4,6 +4,16 @@ tfmagi_mage_mastery_02 = 50
 tfmagi_mage_mastery_03 = 75
 tfmagi_mage_mastery_04 = 100
 
+tfmagi_mana_loss_monthly_amount_small = -0.03
+tfmagi_mana_loss_monthly_amount_medium = -0.07
+tfmagi_mana_gain_monthly_amount_small = 0.4
+tfmagi_mana_gain_monthly_amount_medium = 0.8
+
+tfmagi_mana_gain_mult_medium = 2.0
+
+tfmagi_lifestyle_xp_gain_small = 0.3
+tfmagi_lifestyle_xp_gain_medium = 0.6
+
 tfmagi_mage_mastery_level = {
     value = 0
     if = {
@@ -47,12 +57,8 @@ tfmagi_mage_mastery_level = {
         add = 1
     }
 }
-tfmagi_mana_loss_monthly_amount_small = -0.03
-tfmagi_mana_loss_monthly_amount_medium = -0.07
-tfmagi_mana_gain_monthly_amount_small = 0.1
-tfmagi_mana_gain_monthly_amount_medium = 0.2
 
-tfmagi_mana_gain_monthly_amount = {
+tfmagi_mana_gain_monthly = {
     value = 0
     if = {
         limit = { has_trait = tfmagi_mage }
@@ -77,47 +83,19 @@ tfmagi_mana_gain_monthly_amount = {
         }
         if = {
             limit = { has_trait_xp = { trait = tfmagi_mage track = tfmagi_mage_mastery
-                value >= tfmagi_mage_mastery_01 
+                value >= tfmagi_mage_mastery_04 
             } }
             add = tfmagi_mana_gain_monthly_amount_medium
         }
 
         if = {
             limit = {
-                OR = {
-                    has_character_modifier = tfmagi_mage_quicken_modifier_01
-                    has_character_modifier = tfmagi_mage_quicken_modifier_02
-                    has_character_modifier = tfmagi_mage_quicken_modifier_03
-                    has_character_modifier = tfmagi_mage_quicken_modifier_04
-                    has_character_modifier = tfmagi_mage_quicken_modifier_05
-                }
+                has_character_modifier = tfmagi_gathering_mana_modifier
             }
-            add = tfmagi_mana_loss_monthly_amount_medium
+            multiply = tfmagi_mana_gain_mult_medium
         }
-        if = {
-            limit = {
-                OR = {
-                    has_character_modifier = tfmagi_mage_strengthen_modifier_01
-                    has_character_modifier = tfmagi_mage_strengthen_modifier_02
-                    has_character_modifier = tfmagi_mage_strengthen_modifier_03
-                    has_character_modifier = tfmagi_mage_strengthen_modifier_04
-                    has_character_modifier = tfmagi_mage_strengthen_modifier_05
-                }
-            }
-            add = tfmagi_mana_loss_monthly_amount_medium
-        }
-        if = {
-            limit = {
-                OR = {
-                    has_character_modifier = tfmagi_mage_acuity_modifier_01
-                    has_character_modifier = tfmagi_mage_acuity_modifier_02
-                    has_character_modifier = tfmagi_mage_acuity_modifier_03
-                    has_character_modifier = tfmagi_mage_acuity_modifier_04
-                    has_character_modifier = tfmagi_mage_acuity_modifier_05
-                }
-            }
-            add = tfmagi_mana_loss_monthly_amount_medium
-        }
+
+        add = tfmagi_total_mana_cost_monthly
 
         
     }
@@ -240,6 +218,56 @@ tfmagi_mastery_gain_monthly = {
             has_any_mage_strengthen_modifier = yes
         }
         add = tfmagi_xp_gain_monthly_small
+    }
+}
+
+tfmagi_academy_lifestyle_study_boost = {
+    value = 0
+    if = {
+		limit = { any_realm_province = {
+            has_building = tfmagi_magic_academy_01
+            } }
+        add = tfmagi_lifestyle_xp_gain_small
+    }
+    if = {
+		limit = { any_realm_province = {
+            has_building = tfmagi_magic_academy_02
+            } }
+        add = tfmagi_lifestyle_xp_gain_small
+    }
+}
+
+tfmagi_elemental_gain_monthly = {
+    value = 0
+    if = {
+        limit = { has_character_modifier = tfmagi_learning_elemental_modifier }
+        add = tfmagi_lifestyle_xp_gain_medium
+        add = tfmagi_academy_lifestyle_study_boost
+    }
+}
+tfmagi_alteration_gain_monthly = {
+    value = 0
+    if = {
+        limit = { has_character_modifier = tfmagi_learning_alteration_modifier }
+        add = tfmagi_lifestyle_xp_gain_medium
+        add = tfmagi_academy_lifestyle_study_boost
+    }
+}
+tfmagi_conjuration_gain_monthly = {
+    value = 0
+    if = {
+        limit = { has_character_modifier = tfmagi_learning_conjuration_modifier }
+        add = tfmagi_lifestyle_xp_gain_medium
+        add = tfmagi_academy_lifestyle_study_boost
+    }
+}
+
+tfmagi_planar_gain_monthly = {
+    value = 0
+    if = {
+        limit = { has_character_modifier = tfmagi_learning_planar_modifier }
+        add = tfmagi_lifestyle_xp_gain_medium
+        add = tfmagi_academy_lifestyle_study_boost
     }
 }
 

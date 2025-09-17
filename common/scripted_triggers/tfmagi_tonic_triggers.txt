@@ -32,6 +32,6 @@ tfmagi_tonic_learning_trigger = {
 tfmagi_tonic_stress_trigger = {
 	custom_tooltip = {
 		text = not_enough_stress_tonic_tt
-		var:tfmagi_mage_tonic_stress_num > 0
+		var:tfmagi_mage_tonic_stress_loss_num > 0
 	}
 }

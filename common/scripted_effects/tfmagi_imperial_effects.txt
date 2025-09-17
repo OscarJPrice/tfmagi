@@ -1,0 +1,35 @@
+﻿# create_beth_nahrain_scripted_effect = {
+# 	#Create Beth Nahrain
+# 	hidden_effect = {
+# 		every_held_title = { 
+# 			limit = {
+# 				tier = tier_empire
+# 			}
+# 			every_in_de_jure_hierarchy = {
+# 				limit = {
+# 					tier = tier_kingdom
+# 				}
+# 				set_de_jure_liege_title = title:e_beth_nahrain
+# 			}
+# 		}
+# 	}
+# }
+
+# promote_culture_tfmagi_effect = {
+# 	every_sub_realm_county = {
+# 		custom = promote_culture_beth_nahrain_modifier_custom_desc
+# 		limit = {
+# 			NOT = {
+# 				culture = { has_cultural_pillar = heritage_syriac }
+# 			}
+# 			title_province = { geographical_region = custom_beth_nahrain }
+# 		}
+# 		add_county_modifier = {
+# 			modifier = promote_culture_beth_nahrain_modifier
+# 		}
+# 	}
+	
+# 	every_vassal = {
+
+# 	}
+# }

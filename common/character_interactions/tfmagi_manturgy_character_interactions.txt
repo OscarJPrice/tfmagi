@@ -1,0 +1,130 @@
+﻿# tfmagi_inflict_mental_torment_interaction = {
+#     icon = tfmagi_icon_mind_control_bad
+#     interface_priority = 130
+# 	category = interaction_category_hostile 
+# 	desc = tfmagi_inflict_mental_torment_interaction_desc
+
+#     is_shown = {
+#         scope:actor = {
+#             can_cast_tfmagi_spell_trigger = yes
+#             has_trait_xp = {
+#                 trait = tfmagi_esotericist
+#                 track = tfmagi_esotericist_manturgy
+#                 value >= 30
+#             }
+#         }
+#         scope:recipient = {
+#             stress_level < 3
+#         }
+#     }
+
+#     is_valid = {
+#         scope:actor = {
+#             can_cast_tfmagi_spell_trigger = yes
+#             has_trait_xp = {
+#                 trait = tfmagi_esotericist
+#                 track = tfmagi_esotericist_manturgy
+#                 value >= 30
+#             }
+
+# 			has_trait_xp = {
+# 				trait = tfmagi_esotericist
+# 				track = tfmagi_esotericist_essence
+# 				value >= tfmagi_essence_level_1
+# 			}
+#         }
+#         scope:recipient = {
+#             stress_level < 3
+#         }
+#     }
+
+#     on_accept = {
+# 		scope:actor = {
+# 			tfmagi_esotericist_essence_lose_one_level = yes
+# 			add_trait_xp = {
+# 				trait = tfmagi_esotericist
+# 				track = tfmagi_esotericist_manturgy
+# 				value = 2
+# 			}
+# 		}
+# 		scope:recipient = {
+# 			hidden_effect = {
+# 				add_stress = 30
+# 			}
+# 			send_interface_toast = {
+# 				type = event_toast_effect_neutral
+# 				title = tfmagi_character_interaction_torment.t
+# 				left_icon = scope:actor
+# 				custom_tooltip = tfmagi_character_interaction_torment.tt
+# 			}
+# 		}
+# 	}
+
+#     auto_accept = yes
+
+# 	ai_will_do = {
+# 		base = -50
+
+# 		modifier = {
+# 			add = 100
+# 			scope:actor = {
+# 				opinion = {
+# 					target = scope:recipient
+# 					value <= very_high_negative_opinion
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			add = 50
+# 			scope:actor = {
+# 				opinion = {
+# 					target = scope:recipient
+# 					value <= medium_negative_opinion
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			add = -50
+# 			scope:actor = {
+# 				opinion = {
+# 					target = scope:recipient
+# 					value >= medium_positive_opinion
+# 				}
+# 			}
+# 		}
+
+# 		modifier = {
+# 			add = -100
+# 			scope:actor = {
+# 				opinion = {
+# 					target = scope:recipient
+# 					value >= very_high_positive_opinion
+# 				}
+# 			}
+# 		}
+
+# 		modifier = {
+# 			scope:recipient = {
+# 				is_spouse_of = scope:actor
+# 				NOR = {
+# 					has_relation_rival = scope:actor
+# 					has_relation_nemesis = scope:actor
+# 				}
+# 			}
+# 			add = -1000
+# 		}
+# 	}
+
+# }
+# tfmagi_relieve_mental_torment_interaction = {
+
+# }
+# tfmagi_inflict_mental_illness_interaction = {
+
+# }
+# tfmagi_cure_mental_illness_interaction = {
+
+# }
+# tfmagi_obtain_secret_interaction = {
+
+# }

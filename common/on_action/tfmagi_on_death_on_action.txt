@@ -1,0 +1,19 @@
+﻿
+tfmagi_on_death_on_action = {
+    effect = {
+        if = {
+            limit = {
+                has_character_modifier = tfmagi_fortified_soul_modifier
+            }
+            tfmagi_setup_create_backup_character = yes
+        }
+    }
+}
+
+
+on_death = {
+    on_actions = {
+        tfmagi_on_death_on_action
+    }
+}
+

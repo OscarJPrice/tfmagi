@@ -1,0 +1,690 @@
+﻿tfmagi_harm_interaction = {
+	icon = tfmagi_icon_point_red
+	interface_priority = 130
+	category = interaction_category_hostile 
+	desc = tfmagi_harm_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			can_cast_tfmagi_spell_trigger = yes
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value >= 10
+			}
+		}
+	}
+
+	is_valid = { #this is for AI
+		scope:actor = {
+			can_cast_tfmagi_spell_trigger = yes
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value >= 10
+			}
+
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_essence
+				value >= tfmagi_essence_level_1
+			}
+		}
+		scope:recipient = {
+			NOT = {
+				has_trait = wounded_3
+			}
+			is_at_same_location = scope:actor
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			tfmagi_esotericist_essence_lose_one_level = yes
+			add_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value = 3
+			}
+		}
+		scope:recipient = {
+			hidden_effect = {
+				tfmagi_inflict_wound_effect = yes
+			}
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = tfmagi_character_interaction_harm.t
+				left_icon = scope:actor
+				custom_tooltip = tfmagi_character_interaction_harm.tt
+			}
+		}
+
+	}
+
+	auto_accept = yes
+
+	ai_will_do = {
+		base = -50
+
+		modifier = {
+			add = 100
+			scope:actor = {
+				opinion = {
+					target = scope:recipient
+					value <= very_high_negative_opinion
+				}
+			}
+		}
+		modifier = {
+			add = 50
+			scope:actor = {
+				opinion = {
+					target = scope:recipient
+					value <= medium_negative_opinion
+				}
+			}
+		}
+		modifier = {
+			add = -50
+			scope:actor = {
+				opinion = {
+					target = scope:recipient
+					value >= medium_positive_opinion
+				}
+			}
+		}
+
+		modifier = {
+			add = -100
+			scope:actor = {
+				opinion = {
+					target = scope:recipient
+					value >= very_high_positive_opinion
+				}
+			}
+		}
+
+		modifier = {
+			scope:recipient = {
+				is_spouse_of = scope:actor
+				NOR = {
+					has_relation_rival = scope:actor
+					has_relation_nemesis = scope:actor
+				}
+			}
+			add = -1000
+		}
+	}
+}
+
+tfmagi_heal_interaction = {
+	icon = tfmagi_icon_green_hands
+	interface_priority = 130
+	category = interaction_category_friendly
+	desc = tfmagi_heal_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			can_cast_tfmagi_spell_trigger = yes
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value >= 30
+			}
+		}
+	}
+
+	is_valid = { #this is for AI
+		scope:actor = {
+			can_cast_tfmagi_spell_trigger = yes
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value >= 30
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_essence
+				value >= tfmagi_essence_level_1
+			}
+		}
+		scope:recipient = {
+			tfmagi_is_injured = yes
+			is_at_same_location = scope:actor
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			tfmagi_esotericist_essence_lose_one_level = yes
+			add_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value = 4
+			}
+		}
+		scope:recipient = {
+			hidden_effect = {
+				tfmagi_heal_injury_effect = yes
+			}
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = tfmagi_character_interaction_heal.t
+				left_icon = scope:actor
+				custom_tooltip = tfmagi_character_interaction_heal.tt
+			}
+		}
+
+	}
+
+	auto_accept = yes
+
+	ai_will_do = {
+		base = 100
+		
+		modifier = {
+			factor = 10
+			scope:recipient = {
+				is_primary_heir_of = scope:actor
+			}
+		}
+		modifier = {
+			factor = 2
+			scope:recipient = {
+				is_child_of = scope:actor
+			}
+		}
+
+		modifier = { # Basic Filtering
+			factor = 0
+			scope:recipient = {
+				NOR = {
+					AND = { # injured lovers, friends and a injured liege should be considered
+						OR = {
+							scope:actor = {
+								any_liege_or_above = {
+									this = scope:recipient
+								}
+							}
+							has_secret_relation_lover = scope:actor
+							has_relation_lover = scope:actor
+							has_relation_soulmate = scope:actor
+							has_relation_friend = scope:actor
+							has_relation_best_friend = scope:actor
+						}
+					}
+					AND = { # Characters with the loyal trait more likely to heal friends/lieges
+						OR = {
+							scope:actor.liege ?= this
+							has_relation_friend = scope:actor
+							has_relation_best_friend = scope:actor
+							is_allied_to = scope:actor
+							is_close_or_extended_family_of = scope:actor
+						}
+						scope:actor = {
+							ai_greed <= 0
+							has_trait = loyal
+						}
+					}
+					AND = { # Powerful vassals should be considered
+						is_powerful_vassal_of = scope:actor
+						opinion = {
+							target = scope:actor
+							value < 0
+						}
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				opinion = {
+					target = scope:actor
+					value < 0
+				}
+				NAND = {
+					is_vassal_of = scope:actor
+					scope:actor = {
+						ai_rationality > 50
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				has_relation_rival = scope:actor
+			}
+		}
+	}
+}
+
+tfmagi_cure_interaction = {
+	icon = tfmagi_icon_orange_hands
+	interface_priority = 130
+	category = interaction_category_friendly
+	desc = tfmagi_cure_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			can_cast_tfmagi_spell_trigger = yes
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value >= 50
+			}
+		}
+	}
+
+	is_valid = { #this is for AI
+		scope:actor = {
+			can_cast_tfmagi_spell_trigger = yes
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value >= 50
+			}
+		}
+	}
+
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_essence
+				value >= tfmagi_essence_level_2
+			}
+		}
+		scope:recipient = {
+			tfmagi_is_sick = yes
+			is_at_same_location = scope:actor
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			tfmagi_esotericist_essence_lose_two_levels = yes
+			add_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value = 5
+			}
+		}
+		scope:recipient = {
+			hidden_effect = {
+				tfmagi_cure_illness_effect = yes
+			}
+
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = tfmagi_character_interaction_cure.t
+				left_icon = scope:actor
+				custom_tooltip = tfmagi_character_interaction_cure.tt
+			}
+		}
+
+	}
+
+	auto_accept = yes
+
+	ai_will_do = {
+		base = 125
+		
+		modifier = { # Basic Filtering
+			factor = 0
+			scope:recipient = {
+				NOR = {
+					AND = { # injured lovers, friends and a liege should be considered
+						OR = {
+							scope:actor = {
+								any_liege_or_above = {
+									this = scope:recipient
+								}
+							}
+							has_secret_relation_lover = scope:actor
+							has_relation_lover = scope:actor
+							has_relation_soulmate = scope:actor
+							has_relation_friend = scope:actor
+							has_relation_best_friend = scope:actor
+						}
+					}
+					AND = { # Characters with the loyal trait more likely to [action] friends/lieges
+						OR = {
+							scope:actor.liege ?= this
+							has_relation_friend = scope:actor
+							has_relation_best_friend = scope:actor
+							is_allied_to = scope:actor
+							is_close_or_extended_family_of = scope:actor
+						}
+						scope:actor = {
+							ai_greed <= 0
+							has_trait = loyal
+						}
+					}
+					AND = { # Powerful vassals should be considered
+						is_powerful_vassal_of = scope:actor
+						opinion = {
+							target = scope:actor
+							value < 0
+						}
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				opinion = {
+					target = scope:actor
+					value < 0
+				}
+				NAND = {
+					is_vassal_of = scope:actor
+					scope:actor = {
+						ai_rationality > 50
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				has_relation_rival = scope:actor
+			}
+		}
+	}
+}
+
+tfmagi_mend_interaction = {
+	icon = tfmagi_icon_green_hands
+	interface_priority = 130
+	category = interaction_category_friendly
+	desc = tfmagi_gene_mod_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			can_cast_tfmagi_spell_trigger = yes
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value >= 75
+			}
+		}
+	}
+
+	is_valid = { #this is for AI
+		scope:actor = {
+			can_cast_tfmagi_spell_trigger = yes
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value >= 75
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_essence
+				value >= tfmagi_essence_level_3
+			}
+		}
+		scope:recipient = {
+			tfmagi_is_disabled = yes
+			is_at_same_location = scope:actor
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			tfmagi_esotericist_essence_lose_three_levels = yes
+
+			add_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value = 7
+			}
+		}
+		scope:recipient = {
+			hidden_effect = {
+				tfmagi_add_one_level_of_genetic_beauty_intellect_physique_effect = yes
+			}
+
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = tfmagi_character_interaction_gene_mod.t
+				left_icon = scope:actor
+				custom_tooltip = tfmagi_character_interaction_gene_mod.tt
+			}
+		}
+
+	}
+
+	auto_accept = yes
+
+	ai_will_do = {
+		base = 150
+		
+		modifier = { # Basic Filtering
+			factor = 0
+			scope:recipient = {
+				NOR = {
+					AND = { # injured lovers, friends and a injured liege should be considered
+						OR = {
+							scope:actor = {
+								any_liege_or_above = {
+									this = scope:recipient
+								}
+							}
+							has_secret_relation_lover = scope:actor
+							has_relation_lover = scope:actor
+							has_relation_soulmate = scope:actor
+							has_relation_friend = scope:actor
+							has_relation_best_friend = scope:actor
+						}
+					}
+					AND = { # Characters with the loyal trait more likely to heal friends/lieges
+						OR = {
+							scope:actor.liege ?= this
+							has_relation_friend = scope:actor
+							has_relation_best_friend = scope:actor
+							is_allied_to = scope:actor
+							is_close_or_extended_family_of = scope:actor
+						}
+						scope:actor = {
+							ai_greed <= 0
+							has_trait = loyal
+						}
+					}
+					AND = { # Powerful vassals should be considered
+						is_powerful_vassal_of = scope:actor
+						opinion = {
+							target = scope:actor
+							value < 0
+						}
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				opinion = {
+					target = scope:actor
+					value < 0
+				}
+				NAND = {
+					is_vassal_of = scope:actor
+					scope:actor = {
+						ai_rationality > 50
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				has_relation_rival = scope:actor
+			}
+		}
+	}
+}
+
+tfmagi_gene_mod_interaction = {
+	icon = tfmagi_icon_orange_hands
+	interface_priority = 140
+	category = interaction_category_friendly
+	desc = tfmagi_gene_mod_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			can_cast_tfmagi_spell_trigger = yes
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value >= 100
+			}
+		}
+		scope:recipient = {
+			NOR = {
+				has_trait = beauty_good_3
+				has_trait = intellect_good_3
+				has_trait = physique_good_3
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			can_cast_tfmagi_spell_trigger = yes
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_thaumaturgy
+				value >= 100
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = tfmagi_esotericist
+				track = tfmagi_esotericist_essence
+				value >= tfmagi_essence_level_4
+			}
+		}
+		scope:recipient = {
+			NOR = {
+				has_trait = beauty_good_3
+				has_trait = intellect_good_3
+				has_trait = physique_good_3
+			}
+			is_at_same_location = scope:actor
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			tfmagi_esotericist_essence_lose_four_levels = yes
+		}
+		scope:recipient = {
+			hidden_effect = {
+				tfmagi_add_one_level_of_genetic_beauty_intellect_physique_effect = yes
+			}
+
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = tfmagi_character_interaction_gene_mod.t
+				left_icon = scope:actor
+				custom_tooltip = tfmagi_character_interaction_gene_mod.tt
+			}
+		}
+
+	}
+
+	auto_accept = yes
+
+	ai_will_do = {
+		base = 175
+		
+		modifier = { # Basic Filtering
+			factor = 0
+			scope:recipient = {
+				NOR = {
+					AND = { # injured lovers, friends and a liege should be considered
+						OR = {
+							scope:actor = {
+								any_liege_or_above = {
+									this = scope:recipient
+								}
+							}
+							has_secret_relation_lover = scope:actor
+							has_relation_lover = scope:actor
+							has_relation_soulmate = scope:actor
+							has_relation_friend = scope:actor
+							has_relation_best_friend = scope:actor
+						}
+					}
+					AND = { # Characters with the loyal trait more likely to [action] friends/lieges
+						OR = {
+							scope:actor.liege ?= this
+							has_relation_friend = scope:actor
+							has_relation_best_friend = scope:actor
+							is_allied_to = scope:actor
+							is_close_or_extended_family_of = scope:actor
+						}
+						scope:actor = {
+							ai_greed <= 0
+							has_trait = loyal
+						}
+					}
+					AND = { # Powerful vassals should be considered
+						is_powerful_vassal_of = scope:actor
+						opinion = {
+							target = scope:actor
+							value < 0
+						}
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				opinion = {
+					target = scope:actor
+					value < 0
+				}
+				NAND = {
+					is_vassal_of = scope:actor
+					scope:actor = {
+						ai_rationality > 50
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				has_relation_rival = scope:actor
+			}
+		}
+	}
+}
+

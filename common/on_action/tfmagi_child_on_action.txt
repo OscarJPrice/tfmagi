@@ -1,0 +1,23 @@
+﻿tfmagi_child_mage_trait_add = {
+	effect = {
+		random_list = {
+			30 = {
+				if = {
+					limit = {
+						culture = { has_cultural_parameter = tfmagi_children_randomly_become_mages }
+					}
+					add_tfmagi_mage_trait = yes
+				}
+			}
+			70 = {
+				
+			}
+		}
+	}
+}
+
+on_15th_birthday = {
+	on_actions = {
+		tfmagi_child_mage_trait_add
+	}
+}

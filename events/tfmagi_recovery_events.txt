@@ -28,3 +28,4 @@ tfmagi_game_recovery_events.1 = {
         flavor = tfmagi_game_recovery_events.1.b.flavor
     }
 }
+

@@ -25,7 +25,8 @@
  tfmagi_maa_mages_02: "Warmagi"
  tfmagi_maa_mages_02_flavor: "Mages who have made war their profession, they are lethal at all ranges, and more than capable of tearing a horseman in half from a field away."
  tfmagi_maa_archmages: "Archmagi" 
- tfmagi_maa_archmages_flavor: "Profound masters of magic. #emp In battle, a unit will summon between #l 2#! and #l 3#! of any of [GetMaA('tfmagi_summoned_golem_heat').GetName], [GetMaA('tfmagi_summoned_golem_solid').GetName], [GetMaA('tfmagi_summoned_golem_cold').GetName], or [GetMaA('tfmagi_summoned_infernal_warriors').GetName]#!"
+ tfmagi_maa_archmages_flavor: "A walking calamity."
+#emp In battle, a unit will summon between #l 2#! and #l 3#! of any of [GetMaA('tfmagi_summoned_golem_heat').GetName], [GetMaA('tfmagi_summoned_golem_solid').GetName], [GetMaA('tfmagi_summoned_golem_cold').GetName], or [GetMaA('tfmagi_summoned_infernal_warriors').GetName]#!"
 
  tfmagi_golem_solid: "Stone Golems"
  tfmagi_golem_solid_flavor: "A [tfmagi_titan|E] humanoid wrought from stone and earth, a force of destruction anywhere they go, though less so when exposed or constrained."
@@ -33,6 +34,9 @@
  tfmagi_golem_heat_flavor: "[tfmagi_titan|E] masses of molten rock and obsidian, these golems excel at killing, though harsh frost can suppress their destructive nature."
  tfmagi_golem_cold: "Ice Golems"
  tfmagi_golem_cold_flavor: "[tfmagi_titan|E] humanoids wrought from ice and frost, a particularly fearsome foe in the dead of winter, where even the deepest wounds struggle to fell these golems."
+ tfmagi_golem_planar: "Planar Golems"
+ tfmagi_golem_planar_flavor: "[tfmagi_titan|E] humanoids wrought from esoteric dimensional forces and light alabaster, these golems sacrifice robustness for mobility, proving particularly adept in closing distance and lethal in chasing routing foes."
+
 
  tfmagi_summoned_golem_solid: "Summoned Stone Golems"
  tfmagi_summoned_golem_solid_flavor: "#emp These [GetMaA('tfmagi_summoned_golem_heat').GetName] were summoned temporarily.#!\nA [tfmagi_titan|E] humanoids wrought from stone and earth, a force of destruction anywhere they go, though less so when exposed or constrained."

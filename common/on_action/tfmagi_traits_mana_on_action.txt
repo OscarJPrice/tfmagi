@@ -29,15 +29,86 @@ tfmagi_mages_ongoing = {
 				}
 			}
 			else = {
+				if = {
+					limit = { 
+						has_trait_xp = {
+							trait = tfmagi_mage
+							track = tfmagi_mage_elemental
+							value = 100
+						}
+						has_character_modifier = tfmagi_learning_elemental_modifier
+					}
+					remove_character_modifier = tfmagi_learning_elemental_modifier
+				}
+				if = {
+					limit = { 
+						has_trait_xp = {
+							trait = tfmagi_mage
+							track = tfmagi_mage_conjuration
+							value = 100
+						}
+						has_character_modifier = tfmagi_learning_conjuration_modifier
+					}
+					remove_character_modifier = tfmagi_learning_conjuration_modifier
+				}
+				if = {
+					limit = { 
+						has_trait_xp = {
+							trait = tfmagi_mage
+							track = tfmagi_mage_alteration
+							value = 100
+						}
+						has_character_modifier = tfmagi_learning_alteration_modifier
+					}
+					remove_character_modifier = tfmagi_learning_alteration_modifier
+				}
+				if = {
+					limit = { 
+						has_trait_xp = {
+							trait = tfmagi_mage
+							track = tfmagi_mage_planar
+							value = 100
+						}
+						has_character_modifier = tfmagi_learning_planar_modifier
+					}
+					remove_character_modifier = tfmagi_learning_planar_modifier
+				}
 				add_trait_xp = {
 					trait = tfmagi_mage
 					track = tfmagi_mage_mana
-					value = tfmagi_mana_gain_monthly_amount
+					value = tfmagi_mana_gain_monthly
 				}
 				add_trait_xp = {
 					trait = tfmagi_mage
 					track = tfmagi_mage_mastery
 					value = tfmagi_mastery_gain_monthly
+				}
+				add_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_elemental
+					value = tfmagi_elemental_gain_monthly
+				}
+				add_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_alteration
+					value = tfmagi_alteration_gain_monthly
+				}
+				add_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_conjuration
+					value = tfmagi_conjuration_gain_monthly
+				}
+				add_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_planar
+					value = tfmagi_conjuration_gain_monthly
+				}
+				
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					tfmagi_mage_add_random_ai_experience = yes
 				}
 			}
 			
@@ -45,10 +116,109 @@ tfmagi_mages_ongoing = {
 	}
 }
 
+tfmagi_esotericist_ongoing = {
+	effect = {
+		every_in_global_list = {
+			variable = tfmagi_esotericists_global_list
+			if = {
+				limit = {
+					OR = {
+						is_alive = no
+						NOT = {
+							has_trait = tfmagi_esotericist
+						}
+					}
+				}
+				remove_list_global_variable = {
+					name = tfmagi_esotericists_global_list
+					target = THIS
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						has_character_modifier = tfmagi_gathering_essence_modifier
+					}
+					add_trait_xp = {
+						trait = tfmagi_esotericist
+						track = tfmagi_esotericist_essence
+						value = 1
+					}
+				}
+				add_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_essence
+					value = 1.5
+				}
+			}
+			if = {
+				limit = {
+					has_character_modifier = tfmagi_learning_thaumaturgy_modifier
+				}
+				add_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_thaumaturgy
+					value = 0.25
+				}
+				if = {
+					limit = {
+						has_trait_xp = {
+							trait = tfmagi_esotericist
+							track = tfmagi_esotericist_thaumaturgy
+							value >= 100
+						}
+					}
+					remove_character_modifier = tfmagi_learning_thaumaturgy_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = tfmagi_learning_exeurgy_modifier
+				}
+				add_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_exeurgy
+					value = 0.25
+				}
+				if = {
+					limit = {
+						has_trait_xp = {
+							trait = tfmagi_esotericist
+							track = tfmagi_esotericist_exeurgy
+							value >= 100
+						}
+					}
+					remove_character_modifier = tfmagi_learning_exeurgy_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = tfmagi_learning_deiurgy_modifier
+				}
+				add_trait_xp = {
+					trait = tfmagi_esotericist
+					track = tfmagi_esotericist_deiurgy
+					value = 0.25
+				}
+				if = {
+					limit = {
+						has_trait_xp = {
+							trait = tfmagi_esotericist
+							track = tfmagi_esotericist_deiurgy
+							value >= 100
+						}
+					}
+					remove_character_modifier = tfmagi_learning_deiurgy_modifier
+				}
+			}
+		}
+	}
+}
+
 tfmagi_traits_recursive_monthly = {
 	on_actions = {
 		tfmagi_mages_ongoing
-		
+		tfmagi_esotericist_ongoing
 		delay = { months = 1 }
 		tfmagi_traits_recursive_monthly
 	}

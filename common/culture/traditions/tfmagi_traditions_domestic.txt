@@ -1,4 +1,66 @@
-﻿
+﻿tradition_tfmagi_orthogonal_development = {
+	category = regional
+
+	layers = {
+		0 = intrigue
+		1 = western
+		4 = city2.dds
+	}
+	
+	is_shown = {
+		always = yes
+	}
+
+	can_pick = {
+		PREV = {
+			any_directly_owned_province = {
+				count >= 3
+				culture = {
+					has_cultural_tradition = tradition_tfmagi_orthogonal_development
+				}
+			}
+		}
+	}
+
+	parameters = {
+		unlock_tfmagi_bombard = yes
+		next_level_fortification = yes
+		can_travel_along_rivers = yes
+		tfmagi_get_random_innovations = yes
+	}
+
+	character_modifier = {
+		cultural_head_fascination_mult = -0.1
+	}
+
+	county_modifier = {
+		build_gold_cost = 0.1
+		build_speed = 0.2
+		development_growth = 0.3
+	}
+	
+	province_modifier = {
+		monthly_income = 0.4
+		fort_level = 1
+		supply_limit_mult = .5
+		epidemic_resistance = 20
+	}
+
+	culture_modifier = {
+		culture_tradition_max_add = 1
+	}
+
+	cost = {
+		prestige = {
+			value = 10000
+		}
+	}
+
+	ai_will_do = {
+		value = 400
+	}
+}
+
 tradition_tfmagi_cosmopolitan_tolerance = {
 	category = regional
 	layers = {
@@ -79,4 +141,39 @@ tradition_tfmagi_magic_society = {
 		supply_limit_mult = .5
 		epidemic_resistance = 20
 	}
+
 }
+
+tradition_tfmagi_wind_courts = {
+	layers = {
+		0 = diplo
+		1 = western
+		4 = tfmagi_two_talking.dds
+	}	
+	is_shown = {
+		always = no
+	}
+	can_pick = {
+		always = no
+	}
+	parameters = {
+		can_blind_prisoners = yes
+		allows_noble_family_adoption = yes
+		eunuch_trait_bonuses = yes
+		can_appoint_chief_eunuch = yes
+		ambitious_trait_more_common = yes
+		loyal_trait_more_common = yes
+ 		children_can_be_born_in_the_purple = yes
+		unlock_tfmagi_monotoii = yes
+	}
+
+	character_modifier = {
+		same_culture_opinion = 15
+		monthly_influence_mult = 0.1
+		monthly_court_grandeur_change_mult = 0.3
+		political_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
+		personal_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
+	}
+
+}
+

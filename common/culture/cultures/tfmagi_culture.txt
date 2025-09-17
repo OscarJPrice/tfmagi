@@ -1,4 +1,94 @@
 ﻿
+
+tfmagi_cadran = {
+	color = {
+		0.38 0.39 0.95
+	}
+	
+	ethos = ethos_stoic
+	heritage = tfmagi_heritage_selchus
+	language = tfmagi_language_wind_tongue
+	martial_custom = martial_custom_equal
+	traditions = {
+		# tradition_tfmagi_swords_from_afar
+		tradition_tfmagi_voracious_adventurers
+		tradition_tfmagi_mages
+		tradition_tfmagi_foreign_invaders
+		tradition_tfmagi_orthogonal_development
+	} 
+	
+	name_list = tfmagi_name_list_cadran
+	
+	coa_gfx = { frankish_group_coa_gfx }
+	building_gfx = { iberian_building_gfx }
+	clothing_gfx = { iberian_christian_clothing_gfx }
+	unit_gfx = { iberian_christian_unit_gfx }
+	
+	ethnicities = {
+		1 = caucasian_northern_brown_hair
+		2 = caucasian_northern_blond
+	}
+}
+
+tfmagi_hanea = {
+	color = {
+		0.75 0.5 0.2
+	}
+	
+	ethos = ethos_bureaucratic
+	heritage = tfmagi_heritage_selchus
+	language = tfmagi_language_wind_tongue
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_tfmagi_imperial_yoke
+		tradition_tfmagi_foreign_invaders
+		tradition_tfmagi_mages
+		tradition_tfmagi_orthogonal_development
+	} 
+	
+	name_list = tfmagi_name_list_hanean
+	
+	coa_gfx = { byzantine_group_coa_gfx }
+	building_gfx = { iberian_building_gfx }
+	clothing_gfx = { byzantine_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean_byzantine
+	}
+}
+
+tfmagi_baraigne = {
+	color = {
+		0.25 0.41 0.88
+	}
+	
+	ethos = ethos_courtly
+	heritage = tfmagi_heritage_selchus
+	language = tfmagi_language_wind_tongue
+	martial_custom = martial_custom_equal
+	traditions = {
+		tradition_tfmagi_bardic_heraldry
+		tradition_tfmagi_foreign_invaders
+		tradition_tfmagi_mages
+		tradition_tfmagi_orthogonal_development
+	}
+
+	name_list = tfmagi_name_list_baraigne
+
+	coa_gfx = { frankish_group_coa_gfx byzantine_group_coa_gfx  }
+	building_gfx = { iberian_building_gfx }
+	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+
+	ethnicities = {
+		10 = caucasian_blond
+		5 = caucasian_ginger
+		45 = caucasian_brown_hair
+		35 = caucasian_dark_hair
+	}	
+}
+
 tfmagi_sartan = {
 
 	color = {
@@ -7,19 +97,19 @@ tfmagi_sartan = {
 
 	ethos = ethos_stoic
 	heritage = tfmagi_heritage_selchus
-	language = tfmagi_language_selchean_wind_tongue
+	language = tfmagi_language_wind_tongue
 	martial_custom = martial_custom_equal
 
-	name_list = tfmagi_name_list_sartan
+	name_list = tfmagi_name_list_cadran
 
 	traditions = {
 		tradition_tfmagi_magic_society
 		tradition_tfmagi_mages
-		tradition_tfmagi_voracious_adventurers
+		tradition_tfmagi_imperial_yoke
 		tradition_tfmagi_cosmopolitan_tolerance
 	}
 
-	coa_gfx = { byzantine_group_coa_gfx iranian_group_coa_gfx }
+	coa_gfx = { byzantine_group_coa_gfx }
 	building_gfx = { iberian_building_gfx }
 	clothing_gfx = { byzantine_clothing_gfx iranian_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }
@@ -33,23 +123,37 @@ tfmagi_sartan = {
 	}	
 }
 
-tfmagi_jalhaim = {
-	ethos = ethos_bureaucratic
-	heritage = tfmagi_heritage_selchus
-	language = tfmagi_language_selchean_wind_tongue
-	martial_custom = martial_custom_male_only
+tfmagi_ilatica = {
 
 	color = {
-		255 153 102
+		0.7 0.21 0.88
 	}
-	coa_gfx = { arabic_group_coa_gfx iranian_group_coa_gfx }
-	building_gfx = { iranian_building_gfx }
-	clothing_gfx = { mena_clothing_gfx iberian_muslim_clothing_gfx iranian_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
-	
+
+	ethos = ethos_courtly
+	heritage = tfmagi_heritage_selchus
+	language = tfmagi_language_wind_tongue
+	martial_custom = martial_custom_equal
+
+	name_list = tfmagi_name_list_hanean
+
+	traditions = {
+		tradition_tfmagi_magic_society
+		tradition_tfmagi_mages
+		tradition_tfmagi_wind_courts
+		tradition_tfmagi_legacy_of_harda
+		tradition_tfmagi_foreign_invaders
+	}
+
+	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { iberian_building_gfx }
+	clothing_gfx = { byzantine_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+
+
 	ethnicities = {
-		8 = arab
-		5 = mediterranean
-		5 = turkic_west
-	}
+		85 = caucasian_blond
+		5 = caucasian_ginger
+		15 = caucasian_brown_hair
+		15 = caucasian_dark_hair
+	}	
 }

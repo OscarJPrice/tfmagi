@@ -5,7 +5,7 @@ tfmagi_mage_tonic_stewardship_num_value = { value = var:tfmagi_mage_tonic_stewar
 tfmagi_mage_tonic_martial_num_value = { value = var:tfmagi_mage_tonic_martial_num }
 tfmagi_mage_tonic_intrigue_num_value = { value = var:tfmagi_mage_tonic_intrigue_num }
 tfmagi_mage_tonic_learning_num_value = { value = var:tfmagi_mage_tonic_learning_num }
-tfmagi_mage_tonic_stress_num_value = { value = var:tfmagi_mage_tonic_stress_num }
+tfmagi_mage_tonic_stress_loss_num_value = { value = var:tfmagi_mage_tonic_stress_loss_num }
 tfmagi_mage_immortality_elixir_num_value = { value = var:tfmagi_mage_immortality_elixir_num }
 tfmagi_mage_panacea_num_value = { value = var:tfmagi_mage_panacea_num }
 
@@ -94,7 +94,7 @@ tfmagi_tonic_scheme_bonus_03 = @[scheme_bonus_mult*mage_mastery_03+scheme_bonus_
 tfmagi_tonic_scheme_bonus_04 = @[scheme_bonus_mult*mage_mastery_04+scheme_bonus_base]
 
 @innovation_mult = 0.15
-@innovation_base = 0.2
+@innovation_base = 0.4
 tfmagi_tonic_innovation_bonus = {
     value = tfmagi_mage_mastery_level
     multiply = @innovation_mult

@@ -1,0 +1,249 @@
+﻿namespace = tfmagi_events
+
+tfmagi_events.1 = {
+	type = character_event
+	title = tfmagi_events.1.t
+	desc = tfmagi_events.1.desc
+
+
+	theme = war
+
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = {
+		name = tfmagi_events.1.a
+		flavor = tfmagi_events.1.a.flavor
+
+		if = {
+			limit = {
+				culture = { has_cultural_parameter = unlock_tfmagi_ceitii }
+			}
+			if = {
+				limit = {
+					has_character_modifier = ai_extreme_conqueror_modifier
+				}
+				tfmagi_maa_spawn_hanea_effect_armageddon = yes
+			}
+			else_if = {
+				limit = {
+					has_trait = conqueror
+				}
+				tfmagi_maa_spawn_hanea_effect_apocalyptic = yes
+			}
+			else_if = {
+				limit = {
+					prestige_level >= 5
+				}
+				tfmagi_maa_spawn_hanea_effect_major = yes
+			}
+			else_if = {
+				limit = {
+					prestige_level >= 4
+				}
+				tfmagi_maa_spawn_hanea_effect_intermediate = yes
+			}
+			else = {
+				tfmagi_maa_spawn_hanea_effect_minor = yes
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					AND = {
+						has_cultural_parameter = unlock_tfmagi_veteran_campaigners
+						has_cultural_parameter = unlock_tfmagi_cavalry_outriders
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character_modifier = ai_extreme_conqueror_modifier
+				}
+				tfmagi_maa_spawn_cadra_effect_armageddon = yes
+			}
+			else_if = {
+				limit = {
+					has_trait = conqueror
+				}
+				tfmagi_maa_spawn_cadra_effect_apocalyptic = yes
+			}
+			else_if = {
+				limit = {
+					prestige_level >= 5
+				}
+				tfmagi_maa_spawn_cadra_effect_major = yes
+			}
+			else_if = {
+				limit = {
+					prestige_level >= 4
+				}
+				tfmagi_maa_spawn_cadra_effect_intermediate = yes
+			}
+			else = {
+				tfmagi_maa_spawn_cadra_effect_minor = yes
+			}
+			
+		}
+		else = {
+			if = {
+				limit = {
+					has_character_modifier = ai_extreme_conqueror_modifier
+				}
+				tfmagi_maa_spawn_neutral_effect_armageddon = yes
+			}
+			else_if = {
+				limit = {
+					has_trait = conqueror
+				}
+				tfmagi_maa_spawn_neutral_effect_apocalyptic = yes
+			}
+			else_if = {
+				limit = {
+					prestige_level >= 5
+				}
+				tfmagi_maa_spawn_neutral_effect_major = yes
+			}
+			else_if = {
+				limit = {
+					prestige_level >= 4
+				}
+				tfmagi_maa_spawn_neutral_effect_intermediate = yes
+			}
+			else = {
+				tfmagi_maa_spawn_neutral_effect_minor = yes
+			}
+		}
+	}
+
+}
+
+
+# effect = {
+# 	capital_county.title_province.culture = {save_scope_as = capital_culture}
+	
+# 	create_hybrid_culture = scope:capital_culture
+# 	root.culture = {
+# 		remove_culture_tradition = tradition_tfmagi_foreign_invaders
+# 	}
+# 	learn_language_of_culture = scope:capital_culture
+# }
+
+tfmagi_events.2 = {
+	type = character_event
+	title = tfmagi_events.2.t
+	desc = tfmagi_events.2.desc
+
+
+	theme = diplomacy
+
+	left_portrait = {
+		character = root
+		animation = dismissal
+	}
+
+	option = {
+		name = tfmagi_events.2.a
+		flavor = tfmagi_events.2.a.flavor
+
+		capital_county.title_province.culture = {save_scope_as = capital_culture}
+		
+		create_divergent_culture = yes
+		
+		root.culture = {
+			remove_culture_tradition = tradition_tfmagi_foreign_invaders
+			add_culture_tradition = tradition_tfmagi_cosmopolitan_tolerance
+
+			get_all_innovations_from = scope:capital_culture
+			
+			change_cultural_acceptance = {
+				target = scope:capital_culture
+				value =	50
+			}
+		}
+
+		scope:capital_culture = {
+			hidden_effect = {
+				while = {
+					count = { 2 3 }
+					random_tradition = {
+						limit = {
+							root.culture = {
+								NOT = {
+									has_cultural_tradition = prev
+								}
+							}
+						}
+						root.culture = {
+							add_culture_tradition = prev
+						}
+					}
+				}
+			}
+		}
+		learn_language_of_culture = scope:capital_culture
+	}
+
+}
+
+tfmagi_events.3 = {
+	type = character_event
+	title = tfmagi_events.3.t
+	desc = tfmagi_events.3.desc
+
+
+	theme = war
+
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = {
+		name = tfmagi_events.3.a
+		flavor = tfmagi_events.3.a.flavor
+		if = {
+			limit = {
+				always = no
+				# has_trait_xp = {
+				# 	trait = tfmagi_interdimensional_conqueror
+				# 	track = tfmagi_interdimensional_conqueror_forces
+				# 	value >= tfmagi_interdimensional_armies_level_1
+				# }
+			}
+			
+			if = {
+				limit = {
+					culture = { has_cultural_parameter = unlock_tfmagi_ceitii }
+				}
+				tfmagi_maa_spawn_hanea_effect_minor = yes
+			}
+			else_if = {
+				limit = {
+					culture = {
+						AND = {
+							has_cultural_parameter = unlock_tfmagi_veteran_campaigners
+							has_cultural_parameter = unlock_tfmagi_cavalry_outriders
+						}
+					}
+				}
+				tfmagi_maa_spawn_cadra_effect_minor = yes
+
+			}
+			else_if = {
+				limit = {
+					culture = {
+						has_cultural_parameter = unlock_tfmagi_hobereaux
+					}
+				}
+				tfmagi_maa_spawn_baraigne_effect_minor = yes
+			}
+			else = {
+				tfmagi_maa_spawn_neutral_effect_minor = yes
+			}
+		}
+
+	}
+}

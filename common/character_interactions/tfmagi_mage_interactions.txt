@@ -25,3 +25,138 @@
 
 	auto_accept = yes
 }
+
+tfmagi_bless_interaction = {
+
+	icon = tfmagi_icon_orange_hands
+	interface_priority = 90000 #is this funny? 
+	category = interaction_category_religion
+	desc = tfmagi_bless_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = tfmagi_mage
+				track = tfmagi_mage_planar
+				value >= tfmagi_mage_planar_01
+			}
+		}
+	}
+
+	is_valid = {
+		scope:actor = {
+			AND = {
+				has_trait_xp = {
+					trait = tfmagi_mage
+					track = tfmagi_mage_mana
+					value >= tfmagi_mana_cost_02
+				}
+				#this is for AI
+				is_ai = no
+			}
+        }
+    }
+
+	on_accept = {
+		scope:recipient = {
+			remove_character_modifier = tfmagi_blessed_ascended
+			remove_character_modifier = tfmagi_blessed_04
+			remove_character_modifier = tfmagi_blessed_03
+			remove_character_modifier = tfmagi_blessed_02
+			remove_character_modifier = tfmagi_blessed_01
+			remove_character_modifier = tfmagi_blessed_00
+		}
+		scope:actor = {
+			if = {
+				limit = {
+					scope:actor = {
+						has_character_flag = tfmagi_flag_ascendant
+					}
+				}
+				scope:recipient = {
+					add_character_modifier = tfmagi_blessed_ascended
+				}
+
+			}
+			else_if = {
+				limit = {
+					scope:actor = {
+						has_trait_xp = {
+							trait = tfmagi_mage
+							track = tfmagi_mage_mastery
+							value = tfmagi_mage_mastery_04
+						}
+					}
+				}
+				scope:recipient = {
+					add_character_modifier = tfmagi_blessed_04
+				}
+
+			}
+			else_if = {
+				limit = {
+					scope:actor = {
+						has_trait_xp = {
+							trait = tfmagi_mage
+							track = tfmagi_mage_mastery
+							value = tfmagi_mage_mastery_03
+						}
+					}
+				}
+				scope:recipient = {
+					add_character_modifier = tfmagi_blessed_03
+				}
+
+			}
+			else_if = {
+				limit = {
+					scope:actor = {
+						has_trait_xp = {
+							trait = tfmagi_mage
+							track = tfmagi_mage_mastery
+							value = tfmagi_mage_mastery_02
+						}
+					}
+				}
+				scope:recipient = {
+					add_character_modifier = tfmagi_blessed_02
+				}
+
+			}
+			else_if = {
+				limit = {
+					scope:actor = {
+						has_trait_xp = {
+							trait = tfmagi_mage
+							track = tfmagi_mage_mastery
+							value = tfmagi_mage_mastery_01
+						}
+					}
+				}
+				scope:recipient = {
+					add_character_modifier = tfmagi_blessed_01
+				}
+
+			}
+			else = {
+				scope:recipient = {
+					add_character_modifier = tfmagi_blessed_00
+				}
+
+			}
+			tfmagi_mage_lose_mana_level_03 = yes
+		}
+
+		scope:recipient = {
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = tfmagi_bless_toast.t
+				left_icon = scope:recipient
+				custom_tooltip = tfmagi_bless_toast.tt
+			}
+		}
+		
+	}
+
+	auto_accept = yes
+}

@@ -1,0 +1,27 @@
+tfmagi_magick_lifestyle = {
+	is_valid = {
+		culture.has_cultural_parameter = access_to_mysticism_lifestyle
+	}
+
+	is_valid_showing_failures_only = {
+		OR = { 
+			has_trait = scholar 
+			has_trait = lifestyle_mystic
+			has_trait = witch
+			any_secret = { secret_type = secret_witch }
+		}
+	}
+
+
+	is_highlighted = {
+		OR = {
+			has_trait = scholar 
+			has_trait = lifestyle_mystic
+			has_trait = witch
+			any_secret = { secret_type = secret_witch }
+		}
+	}
+
+	xp_per_level = 1000
+	base_xp_gain = 25
+}

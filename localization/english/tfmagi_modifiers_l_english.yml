@@ -1,4 +1,16 @@
 ﻿l_english:
+
+ tfmagi_learning_thaumaturgy_modifier: "Pursuing Thaumaturgy"
+ tfmagi_learning_thaumaturgy_modifier_desc: "This character is deeply invested in studying the deeper thaumaturgical truths of this world."
+ tfmagi_learning_deiurgy_modifier: "Pursuing Deiurgy"
+ tfmagi_learning_deiurgy_modifier_desc: "This character is deeply invested in studying the deeper deiurgic truths of the divine."
+ tfmagi_learning_exeurgy_modifier: "Pursuing Exeurgy"
+ tfmagi_focusing_exeurgy_modifier_desc: "This character is deeply invested in reaching out to other worlds."
+ tfmagi_gathering_essence_modifier: "Gathering Essence"
+ tfmagi_gathering_essence_modifier_desc: "This character is straining to accrue more [GetTrait( 'tfmagi_esotericist' ).GetTraitTrackByKey( 'tfmagi_esotericist_essence' ).GetName]."
+ tfmagi_fortified_soul_modifier: "Fortified Soul"
+ tfmagi_fortified_soul_modifier_desc: "This character has the ultimate exit plan, in case something interrupts their eternity."
+
  tfmagi_mage_quicken_modifier_01: "Subtle Quickening"
  tfmagi_mage_quicken_modifier_01_desc: "This character's reflexes and verve have been subtly enhanced."
  tfmagi_mage_quicken_modifier_02: "Minor Quickening"
@@ -60,8 +72,33 @@
  tfmagi_elemental_seismic_modifier_03: "Massive Seismic Aftereffects"
  tfmagi_elemental_seismic_modifier_03_desc: "This [county|e] suffers from the aftereffects of a massively intense earthquake."
 
- tfmagi_mage_elemental_disable_fire_attack_ritual_modifier: "[GetDecisionWithKey('tfmagi_elemental_remote_fire_attack_decision').GetName] Exhaustion"
- tfmagi_mage_elemental_disable_fire_attack_ritual_modifier_desc: "The use of the [GetDecisionWithKey('tfmagi_elemental_remote_fire_attack_decision').GetName] [decision|e] requires time before reuse."
+#  tfmagi_mage_elemental_disable_fire_attack_ritual_modifier: "[GetDecisionWithKey('tfmagi_elemental_remote_fire_attack_decision').GetName] Exhaustion"
+#  tfmagi_mage_elemental_disable_fire_attack_ritual_modifier_desc: "The use of the [GetDecisionWithKey('tfmagi_elemental_remote_fire_attack_decision').GetName] [decision|e] requires time before reuse."
 
  tfmagi_mage_alteration_disable_lead_to_gold_ritual_modifier: "[GetDecisionWithKey('tfmagi_mage_alteration_lead_to_gold_decision').GetName] Exhaustion"
  tfmagi_mage_alteration_disable_lead_to_gold_ritual_modifier_desc: "The use of the [GetDecisionWithKey('tfmagi_mage_alteration_lead_to_gold_decision').GetName] [decision|e] requires time before reuse."
+
+
+ tfmagi_learning_elemental_modifier: "Pursuing Elementalism"
+ tfmagi_learning_elemental_modifier_desc: "This character is deeply invested in studying the fickle yet violent nature of the elements."
+ tfmagi_learning_alteration_modifier: "Pursuing Alteration"
+ tfmagi_learning_alteration_modifier_desc: "This character is deeply invested in studying the fundamental truth of what is... and how to change that."
+ tfmagi_learning_conjuration_modifier: "Pursuing Conjuration"
+ tfmagi_focusing_conjuration_modifier_desc: "This character is experimenting with the creation of new matter."
+ tfmagi_learning_planar_modifier: "Pursuing Planar"
+ tfmagi_focusing_planar_modifier_desc: "This character is experimenting with other worlds."
+ tfmagi_gathering_mana_modifier: "Gathering Mana"
+ tfmagi_gathering_mana_modifier_desc: "This character is straining to accrue more [GetTrait( 'tfmagi_mage' ).GetTraitTrackByKey( 'tfmagi_mage_mana' ).GetName]."
+
+ tfmagi_blessed_ascended: "Ascendant Blessing"
+ tfmagi_blessed_ascended_desc: "This character has been divinely blessed by sublime energies."
+ tfmagi_blessed_04: "Legendary Blessing"
+ tfmagi_blessed_04_desc: "This character has been supremely blessed by sublime energies."
+ tfmagi_blessed_03: "Major Blessing"
+ tfmagi_blessed_03_desc: "This character has been massively blessed by sublime energies."
+ tfmagi_blessed_02: "Blessing"
+ tfmagi_blessed_02_desc: "This character has been blessed by sublime energies."
+ tfmagi_blessed_01: "Lesser Blessing"
+ tfmagi_blessed_01_desc: "This character has been somewhat blessed by sublime energies."
+ tfmagi_blessed_00: "Minor Blessing"
+ tfmagi_blessed_00_desc: "This character has been subtly blessed by sublime energies."

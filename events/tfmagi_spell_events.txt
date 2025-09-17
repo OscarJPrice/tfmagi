@@ -1,0 +1,86 @@
+﻿namespace = tfmagi_spell_events
+
+# setup for return from death
+tfmagi_spell_events.1 = {
+    type = character_event
+    title = tfmagi_spell_events.1.t
+    desc = tfmagi_spell_events.1.desc
+
+    theme = dread
+
+    left_portrait = {
+        character = root
+        animation = emotion_thinking_scepter
+    }
+
+    # option = {
+    #     trigger = {
+    #         government_has_flag = government_is_administrative
+    #     }
+    #     name = tfmagi_spell_events.1.c
+    #     flavor = tfmagi_spell_events.1.c.flavor
+    #     tfmagi_esotericist_essence_lose_three_levels = yes
+    #     add_character_modifier = tfmagi_fortified_soul_modifier
+    #     add_character_flag = tfmagi_cheat_death_admin_option_flag
+    # }
+    
+    # option = {
+    #     trigger = {
+    #         is_landless_adventurer = no
+    #         NOT = { government_has_flag = government_is_administrative }
+    #         tfmagi_exists_valid_county_not_capital = yes
+    #     }
+    #     name = tfmagi_spell_events.1.a
+    #     flavor = tfmagi_spell_events.1.a.flavor
+    #     tfmagi_esotericist_essence_lose_five_levels = yes
+    #     add_character_modifier = tfmagi_fortified_soul_modifier
+    #     add_character_flag = tfmagi_cheat_death_infant_option_flag
+    # }
+
+
+    option = {
+        trigger = {
+            always = yes
+        }
+        name = tfmagi_spell_events.1.b
+        flavor = tfmagi_spell_events.1.b.flavor
+        tfmagi_esotericist_essence_lose_four_levels = yes
+        add_character_modifier = tfmagi_fortified_soul_modifier
+        add_character_flag = tfmagi_cheat_death_landless_option_flag
+    }
+
+}
+
+# return from death
+tfmagi_spell_events.2 = {
+	type = character_event
+	title = tfmagi_spell_events.2.t
+	desc = tfmagi_spell_events.2.desc
+
+	theme = death
+	override_background = { reference = temple }
+
+	left_portrait = {
+		character = var:tfmagi_progenitor_character
+		animation = dead
+	}
+
+    right_portrait = {
+        character = root # root
+        animation = scheme
+    }
+
+	option = {
+		name = tfmagi_spell_events.2.a
+		flavor = tfmagi_spell_events.2.a.flavor
+	}
+
+    option = {
+        name = tfmagi_spell_events.2.b
+        flavor = tfmagi_spell_events.2.b.flavor
+        death = { killer = var:tfmagi_progenitor_character death_reason = death_mysterious }
+        # laamp_switch_playable_character_effect = {
+        #     NEW_CHARACTER = var:tfmagi_progenitor_character
+        # }
+    }
+}

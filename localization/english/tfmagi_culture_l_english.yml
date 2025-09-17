@@ -1,19 +1,61 @@
 ﻿l_english:
+ tfmagi_name_list_cadran: "Cadran"
+ tfmagi_name_list_hanean: "Hanean"
+ tfmagi_name_list_baraigne: "Baraignen"
+
  tfmagi_heritage_selchus_name: "Selchean"
  tfmagi_heritage_selchus_collective_noun: "Selcheans"
- tfmagi_language_selchean_wind_tongue_name: "Selchean Wind-Tongue"
+ tfmagi_language_wind_tongue_name: "Wind-Tongue"
+ tfmagi_name_list_selchus: "Selchean"
+ 
+
+ tfmagi_heritage_selchus_name: "Selchean"
+ tfmagi_heritage_selchus_collective_noun: "Selcheans"
+
+ tfmagi_cadran: "Cadran"
+ tfmagi_cadran_prefix: "Cadra"
+ tfmagi_cadran_collective_noun: "Cadrans"
+ tfmagi_language_cadran_name: "Cadran"
+
+ tfmagi_hanea: "Hanean"
+ tfmagi_hanea_prefix: "Haneo"
+ tfmagi_hanea_collective_noun: "Haneans"
+ tfmagi_language_hanea_name: "Hanean"
+
+ tfmagi_baraigne: "Baraignian"
+ tfmagi_baraigne_prefix: "Baraigne"
+ tfmagi_baraigne_collective_noun: "Baraignians"
+ tfmagi_language_baraigne_name: "Baraignian" 
 
  tfmagi_sartan: "Sartan"
  tfmagi_sartan_prefix: "Sarta"
  tfmagi_sartan_collective_noun: "Sartans"
 
- tfmagi_jalhaim: "Jamay"
- tfmagi_jalhaim_prefix: "Jamayan"
- tfmagi_jalhaim_collective_noun: "Jamayans"
+
+ tfmagi_ilatica: "Ilatican"
+ tfmagi_ilatica_prefix: "Ilatico"
+ tfmagi_ilatica_collective_noun: "Ilaticans"
+ tfmagi_ilatica_desc: "#size:15   The concept of an Ilatican only truly came into being following the conquest of Ilatica by Harda, once emperor of Selchus. It should come as some surprise then that of all the successor peoples of old Selchus, it was the Ilaticans themselves who best followed in their conqueror's footsteps.#"
+
+ tradition_tfmagi_swords_from_afar_name: "Swords from Afar"
+ tradition_tfmagi_swords_from_afar_desc: "This culture boasts a military system distinct from the rest of the world, with units and organizational methods developed independently of the prevailing global powers."
+ culture_parameter_unlock_tfmagi_cavalry_outriders: "Can recruit [GetMaA('tfmagi_cavalry_outriders').GetName] as [men_at_arms|e]"
+ culture_parameter_unlock_tfmagi_veteran_campaigners: "Can recruit [GetMaA('tfmagi_veteran_campaigners').GetName] as [men_at_arms|e]"
+ culture_parameter_unlock_tfmagi_veteran_adventurers: "Can recruit [GetMaA('tfmagi_veteran_adventurers').GetName] as [men_at_arms|e]"
 
  tradition_tfmagi_voracious_adventurers_name: "Questing Adventurers"
  tradition_tfmagi_voracious_adventurers_desc: "A culture of discovery thrives in these lands, where every child dreams of venturing out to find fortune in uncharted territories."
  culture_parameter_unlock_tfmagi_veteran_adventurers: "Can recruit [GetMaA('tfmagi_veteran_adventurers').GetName] as [men_at_arms|e]"
+
+ tradition_tfmagi_orthogonal_development_name: "Strange Wonders"
+ tradition_tfmagi_orthogonal_development_desc: "Advanced architecture and unusual structures populate the cities of this [culture|E], fostering uncommon prosperity."
+ culture_parameter_unlock_tfmagi_bombard: "Can recruit [GetMaA('tfmagi_bombard').GetName] as [men_at_arms|e]"
+ culture_parameter_tfmagi_get_random_innovations: "Gains access to several [innovations|E] on game start"
+
+ tradition_tfmagi_mystics_name: "Abstruse Mysticism"
+ tradition_tfmagi_mystics_desc: "Odd rituals, strange incantations, and hooded figures perform seemingly deific feats in these lands. Curing blindness, turning water into wine, and transmuting lead into gold are all vanishingly rare occurrences. But they do happen."
+ culture_parameter_access_to_mystic_lifestyle: "[GetTrait('lifestyle_mystic').GetName( GetNullCharacter )], [GetTrait('scholar').GetName( GetNullCharacter )] and [GetTrait('witch').GetName( GetNullCharacter )] (or its associated secret) provide access to the Magick [lifestyle|E] tree."
+ culture_parameter_access_to_esotericist_trait: "Enables [decision|E] to gain the [GetTrait( 'tfmagi_esotericist' ).GetName( GetNullCharacter )] [trait|E]"
 
  tradition_tfmagi_imperial_yoke_name: "Imperial Yoke"
  tradition_tfmagi_imperial_yoke_desc: "The remnants of the imperial structure that once governed this [culture|E] persist in many aspects of its current legal, administrative, and military practices."
@@ -26,7 +68,11 @@
 
  tradition_tfmagi_mages_name: "Mages"
  tradition_tfmagi_mages_desc: "These deific beings are not workers of the subtle arts. They work great feats of destruction, contruction, and restoration."
- culture_parameter_learn_to_be_mage: "Enables [decision|E] to gain the [GetTrait( 'tfmagi_mage' ).GetName( GetNullCharacter )] [trait|E]"
+ culture_parameter_tfmagi_learn_to_be_mage: "Enables [decision|E] to gain the [GetTrait( 'tfmagi_mage' ).GetName( GetNullCharacter )] [trait|E]"
+
+ tradition_tfmagi_bardic_heraldry_name: "Bardic Heraldry"
+ tradition_tfmagi_bardic_heraldry_desc: "Stories of brave knights inspire the young of the realm to seek glories only found in the field, a drive any enterprising ruler would be a fool not to answer."
+ culture_parameter_unlock_tfmagi_hobereaux: "Can recruit [GetMaA('tfmagi_hobereaux').GetName] as [men_at_arms|e]"
 
  tradition_tfmagi_magic_society_name: "Magic Society"
  tradition_tfmagi_magic_society_desc: "This society incorporates magic into the mundane aspects of life, creating vibrant hubs of architecture and prosperity."
@@ -34,6 +80,16 @@
  culture_parameter_tfmagi_get_mage_maa: "Can recruit [GetMaA('tfmagi_maa_mages_01').GetName] as [men_at_arms|e]"
  culture_parameter_tfmagi_get_mage_maa_2: "Can recruit [GetMaA('tfmagi_maa_mages_02').GetName] as [men_at_arms|e] if [GetModifier( 'prestige_level_4' ).GetNameWithTooltip|L] or with the [GetBuilding('tfmagi_magic_academy_01').GetName] [duchy_building|E]"
  culture_parameter_tfmagi_get_mage_maa_3: "Can recruit [GetMaA('tfmagi_maa_archmages').GetName] as [men_at_arms|e] with the [GetBuilding('tfmagi_magic_academy_02').GetName] [duchy_building|E]"
- culture_parameter_tfmagi_get_magic_society_special_buildings: "Unlocks the [GetBuilding('tfmagi_magic_academy_01').GetName] and [GetBuilding('tfmagi_magic_defenses_01').GetName] [duchy_buildings|E]"
+ culture_parameter_tfmagi_get_magic_society_special_buildings: "Unlocks the [GetBuilding('tfmagi_magic_academy_01').GetName] [duchy_building|E]" #and [GetBuilding('tfmagi_magic_defenses_01').GetName]
  culture_parameter_tfmagi_children_randomly_become_mages: "On reaching adolescence, [children|e] of this [culture|e] have a chance to gain the [GetTrait('tfmagi_mage').GetName( GetNullCharacter )] [trait|e]"
 
+ tradition_tfmagi_wind_courts_name: "Wind Courts"
+ tradition_tfmagi_wind_courts_desc: "A particularly complex series of social norms and practices binds the aristocracy, arising from the old Wind-Tongue courts of Sartan and carried forwards into the present."
+
+ tradition_tfmagi_legacy_of_harda_name: "Harda's Descendants"
+ tradition_tfmagi_legacy_of_harda_desc: "The great conqueror Harda's legacy is felt strongly in this people, and many of the brutal organizing ways of an older warlord era remain accepted an practiced."
+
+ tradition_tfmagi_cultural_darwinists_name: "Cultural Darwinists"
+ tradition_tfmagi_cultural_darwinists_desc: "An odd practice exists in these lands, where there is a fervor for taking the strengths of others and integrating them."
+ culture_parameter_tfmagi_demand_culture_convert: "Can demand [cultural|e] coversion by [interaction|e]"
+ culture_parameter_tfmagi_domain_sometimes_convert: "[domain|E] [counties|e] randomly covert to your [culture|e]"

@@ -1,6 +1,17 @@
 ﻿
+
+
 tfmagi_on_game_start_innovations_add = {
 	effect = {
+		every_culture_global = {
+			limit = {
+				has_cultural_parameter = tfmagi_get_random_innovations
+			}
+			while = {
+				count = 8
+				add_random_innovation = yes
+			}
+		}
 		every_culture_global = {
 			limit = {
 				has_cultural_parameter = tfmagi_get_more_random_innovations
@@ -10,6 +21,36 @@ tfmagi_on_game_start_innovations_add = {
 				add_random_innovation = yes
 			}
 		}
+	}
+}
+tfmagi_on_game_start_resources_add = {
+	effect = {
+		every_ruler = {
+			limit = {
+				culture = { has_cultural_parameter = tfmagi_extra_resources_on_start }
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_gold = 800
+				add_prestige = 2500
+				add_piety = 2500
+				trigger_event = tfmagi_events.1
+			}
+			else = {
+				add_gold = 200
+				add_prestige = 500
+				add_piety = 500
+				trigger_event = tfmagi_events.1
+			}
+		}
+	}
+}
+
+on_game_start_after_lobby = {
+	on_actions = {
+		tfmagi_on_game_start_resources_add
 	}
 }
 

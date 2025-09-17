@@ -1,0 +1,76 @@
+﻿l_english:
+ tfmagi_character_interaction_harm.t: "Harmed!"
+ tfmagi_character_interaction_harm.tt: "You gained a negative health trait."
+
+ tfmagi_character_interaction_heal.t: "Healed!"
+ tfmagi_character_interaction_heal.tt: "You lost a negative health trait."
+
+ tfmagi_character_interaction_mend.t: "Mended!"
+ tfmagi_character_interaction_mend.tt: "You lost a negative physique trait."
+
+ tfmagi_character_interaction_cure.t: "Cured!"
+ tfmagi_character_interaction_cure.tt: "You lost a disease trait."
+
+ tfmagi_character_interaction_gene_mod.t: "Genome Enhanced!"
+ tfmagi_character_interaction_gene_mod.tt: "You gained a positive genetic trait or lost a negative one."
+
+tfmagi_interaction_tonic_administer_diplo.t: "Lost [tfmagi_mage_alteration_diplomacy_tonic|E]"
+tfmagi_interaction_tonic_administer_diplo.tt: "You have administered a [tfmagi_mage_alteration_diplomacy_tonic|E]"
+
+tfmagi_interaction_tonic_administer_martial.t: "Lost [tfmagi_mage_alteration_martial_tonic|E]"
+tfmagi_interaction_tonic_administer_martial.tt: "You have administered a [tfmagi_mage_alteration_martial_tonic|E]"
+
+tfmagi_interaction_tonic_administer_stewardship.t: "Lost [tfmagi_mage_alteration_stewardship_tonic|E]"
+tfmagi_interaction_tonic_administer_stewardship.tt: "You have administered a [tfmagi_mage_alteration_stewardship_tonic|E]"
+
+tfmagi_interaction_tonic_administer_intrigue.t: "Lost [tfmagi_mage_alteration_intrigue_tonic|E]"
+tfmagi_interaction_tonic_administer_intrigue.tt: "You have administered a [tfmagi_mage_alteration_intrigue_tonic|E]"
+
+tfmagi_interaction_tonic_administer_learning.t: "Lost [tfmagi_mage_alteration_learning_tonic|E]"
+tfmagi_interaction_tonic_administer_learning.tt: "You have administered a [tfmagi_mage_alteration_learning_tonic|E]"
+
+tfmagi_interaction_tonic_administer_stress_loss.t: "Lost [tfmagi_mage_alteration_stress_loss_tonic|E]"
+tfmagi_interaction_tonic_administer_stress_loss.tt: "You have administered a [tfmagi_mage_alteration_stress_loss_tonic|E]"
+
+tfmagi_interaction_tonic_administer_panacea.t: "Lost [tfmagi_mage_alteration_panacea|E]"
+tfmagi_interaction_tonic_administer_panacea.tt: "You have administered a [tfmagi_mage_alteration_panacea|E]"
+
+tfmagi_interaction_tonic_administer_immortality_elixir.t: "Lost [tfmagi_mage_alteration_immortality_elixir|E]"
+tfmagi_interaction_tonic_administer_immortality_elixir.tt: "You have administered an [tfmagi_mage_alteration_immortality_elixir|E]"
+
+
+tfmagi_interaction_tonic_administer_diplo_recipient.t: "Received [tfmagi_mage_alteration_diplomacy_tonic|E]"
+tfmagi_interaction_tonic_administer_diplo_recipient.tt: "You have received the benefit of [tfmagi_mage_alteration_diplomacy_tonic|E]"
+
+tfmagi_interaction_tonic_administer_martial_recipient.t: "Received [tfmagi_mage_alteration_martial_tonic|E]"
+tfmagi_interaction_tonic_administer_martial_recipient.tt: "You have received the benefit of [tfmagi_mage_alteration_martial_tonic|E]"
+
+tfmagi_interaction_tonic_administer_stewardship_recipient.t: "Received [tfmagi_mage_alteration_stewardship_tonic|E]"
+tfmagi_interaction_tonic_administer_stewardship_recipient.tt: "You have received the benefit of [tfmagi_mage_alteration_stewardship_tonic|E]"
+
+tfmagi_interaction_tonic_administer_intrigue_recipient.t: "Received [tfmagi_mage_alteration_intrigue_tonic|E]"
+tfmagi_interaction_tonic_administer_intrigue_recipient.tt: "You have received the benefit of [tfmagi_mage_alteration_intrigue_tonic|E]"
+
+tfmagi_interaction_tonic_administer_learning_recipient.t: "Received [tfmagi_mage_alteration_learning_tonic|E]"
+tfmagi_interaction_tonic_administer_learning_recipient.tt: "You have received the benefit of [tfmagi_mage_alteration_learning_tonic|E]"
+
+tfmagi_interaction_tonic_administer_stress_loss_recipient.t: "Received [tfmagi_mage_alteration_stress_loss_tonic|E]"
+tfmagi_interaction_tonic_administer_stress_loss_recipient.tt: "You have received the benefit of [tfmagi_mage_alteration_stress_loss_tonic|E]"
+
+tfmagi_interaction_tonic_administer_panacea_recipient.t: "Received [tfmagi_mage_alteration_panacea|E]"
+tfmagi_interaction_tonic_administer_panacea_recipient.tt: "You have received the benefit of [tfmagi_mage_alteration_panacea|E]"
+
+tfmagi_interaction_tonic_administer_immortality_elixir_recipient.t: "Received [tfmagi_mage_alteration_immortality_elixir|E]"
+tfmagi_interaction_tonic_administer_immortality_elixir_recipient.tt: "You have received the benefit of [tfmagi_mage_alteration_immortality_elixir|E]"
+
+tfmagi_mana_lost_toast.t: "Mana Lost!"
+tfmagi_mana_lost_01_toast.tt: "You have lost [GetPlayer.MakeScope.ScriptValue('tfmagi_mana_cost_01')|-2]"
+tfmagi_mana_lost_02_toast.tt: "You have lost [GetPlayer.MakeScope.ScriptValue('tfmagi_mana_cost_02')|-2]"
+tfmagi_mana_lost_03_toast.tt: "You have lost [GetPlayer.MakeScope.ScriptValue('tfmagi_mana_cost_03')|-2]"
+tfmagi_mana_lost_04_toast.tt: "You have lost [GetPlayer.MakeScope.ScriptValue('tfmagi_mana_cost_04')|-2]"
+tfmagi_mana_lost_05_toast.tt: "You have lost [GetPlayer.MakeScope.ScriptValue('tfmagi_mana_cost_05')|-2]"
+tfmagi_mana_lost_06_toast.tt: "You have lost [GetPlayer.MakeScope.ScriptValue('tfmagi_mana_cost_06')|-2]"
+tfmagi_mana_lost_07_toast.tt: "You have lost [GetPlayer.MakeScope.ScriptValue('tfmagi_mana_cost_07')|-2]"
+
+tfmagi_bless_toast.t: "Blessed!"
+tfmagi_bless_toast.tt: "You have been blessed!"

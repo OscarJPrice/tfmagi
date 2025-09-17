@@ -1,0 +1,5 @@
+
+# tfmagi_vassal_accepts_conversion = {
+# 	$VASSAL_SCOPE = { save_scope_as = vassal }
+	
+# }

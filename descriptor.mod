@@ -1,4 +1,4 @@
-version="0.1"
+version="0.3"
 tags={
 	"Alternative History"
 	"Culture"
@@ -9,5 +9,5 @@ tags={
 	"Character Focuses"
 }
 name="The Foreign Magi"
-supported_version="1.15.0.2"
+supported_version="1.17.*"
 remote_file_id="3466475423"

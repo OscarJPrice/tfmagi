@@ -3,9 +3,28 @@
 #This fell horror is what is required of you if you want to display a ": yes" or a ": -50%" in a trait track 
 # color is not necessary, despite what cktiger might say
 
+#esotericist
+tfmagi_esotericist_thaumaturgy_heal = { }
+tfmagi_esotericist_thaumaturgy_harm = { }
+tfmagi_esotericist_thaumaturgy_cure = { }
+tfmagi_esotericist_thaumaturgy_mend = { }
+tfmagi_esotericist_thaumaturgy_gene_mod = { }
+tfmagi_esotericist_mantology_inflict_mental_torment = { }
+tfmagi_esotericist_mantology_relieve_mental_torment = { }
+tfmagi_esotericist_mantology_inflict_mental_illness = { }
+tfmagi_esotericist_mantology_cure_mental_illness = { }
+tfmagi_esotericist_mantology_obtain_secret = { }
+tfmagi_esotericist_exeurgy_action_small = { }
+tfmagi_esotericist_exeurgy_action_medium = { }
+tfmagi_esotericist_exeurgy_action_large = { }
+tfmagi_bypass_request_subjugation_force_tradition_req = { }
+tfmagi_esotericist_deiurgy_kill_death = { }
+
+
 #mage 
 
 tfmagi_mage_mana_cost_multiplier = {}
+tfmagi_mage_mana_gain_mult_multiplier = {}
 tfmagi_mage_mana_monthly_base = {}
 tfmagi_mage_mastery_monthly_base = {}
 
@@ -24,12 +43,19 @@ tfmagi_mage_erect_fortifications = {}
 tfmagi_mage_golems = {}
 tfmagi_mage_aid_construction = {}
 tfmagi_mage_artificer = {}
+
+tfmagi_mage_elemental_monthly = {}
+tfmagi_mage_alteration_monthly = {}
+tfmagi_mage_conjuration_monthly = {}
+tfmagi_mage_planar_monthly = {}
 			
-# tfmagi_mage_planar_sift_through_the_void = {}
-# tfmagi_mage_planar_teleport_armies = {}
-# tfmagi_mage_planar_establish_demiplane = {}
-# tfmagi_mage_planar_angelic_legion = {}
-# tfmagi_mage_planar_ascend = {}
+tfmagi_mage_planar_bless = {}
+tfmagi_mage_planar_teleport_armies = {}
+tfmagi_mage_planar_establish_demiplane = {}
+tfmagi_mage_planar_angelic_legion = {}
+tfmagi_mage_planar_ascend = {}
 
 tfmagi_summoned_golems_in_battle = {}
 tfmagi_mage_planar_enables_teleport_travel_option = {}
+
+tfmagi_gain_planar_forces = {}

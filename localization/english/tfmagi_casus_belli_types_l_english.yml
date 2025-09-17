@@ -1,0 +1,13 @@
+﻿l_english:
+ tfmagi_invasion_war: "Extant Invasion"
+ tfmagi_invasion_war_victory_desc_attacker: "You seize all titles within [defender.GetShortUINamePossessive] realm belonging [de_jure|E] to the target title, and all occupied counties outside it."
+
+ tfmagi_invasion_war_victory_desc: "[attacker.GetShortUIName|U] seizes all titles within [defender.GetShortUINamePossessive] realm belonging [de_jure|E] to the target title, and all occupied counties outside it."
+ tfmagi_invasion_war_victory_desc: "[attacker.GetShortUIName|U] seizes all titles within [defender.GetShortUINamePossessive] realm belonging [de_jure|E] to the target title, and all occupied counties outside it."
+ tfmagi_invasion_war_white_peace_desc_defender: "You keep your titles."
+ tfmagi_invasion_war_white_peace_desc: "[defender.GetShortUIName|U] keeps [defender.GetHerHis] titles."
+ tfmagi_invasion_war_warning_desc: "\n\n#X You may only attempt one Extant Invasion [war|E] against a [kingdom|E]-tier [title|E] per lifetime#!"
+
+ tfmagi_INVASION_WAR_NAME: "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Extant Invasion of [TITLE.GetBaseName]"
+ tfmagi_INVASION_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ tfmagi_INVASION_CB_NAME: "Extant Invasion of [kingdom|E]"

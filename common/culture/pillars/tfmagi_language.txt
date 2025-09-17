@@ -1,14 +1,14 @@
-﻿tfmagi_language_selchean_wind_tongue = {
+﻿tfmagi_language_wind_tongue = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = tfmagi_language_selchean_wind_tongue
+			LANGUAGE = tfmagi_language_wind_tongue
 		}
 	}
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = tfmagi_language_selchean_wind_tongue }
+			limit = { has_cultural_pillar = tfmagi_language_wind_tongue }
 			multiply = 10
 		}
 	}

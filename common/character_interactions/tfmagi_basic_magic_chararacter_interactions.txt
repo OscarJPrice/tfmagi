@@ -1,0 +1,96 @@
+﻿# tfmagi_inflict_magic_interaction = {
+# 	icon = tfmagi_icon_point_red
+# 	interface_priority = 130
+# 	category = interaction_category_hostile 
+# 	desc = tfmagi_harm_interaction_desc
+
+# 	is_shown = {
+# 		scope:actor = {
+# 			can_cast_tfmagi_spell_trigger = yes
+# 			has_trait_xp = {
+# 				trait = tfmagi_esotericist
+# 				track = tfmagi_esotericist_thaumaturgy
+# 				value >= 10
+# 			}
+# 		}
+# 	}
+
+# 	is_valid = {
+# 		scope:actor = {
+# 			can_cast_tfmagi_spell_trigger = yes
+# 			has_trait_xp = {
+# 				trait = tfmagi_esotericist
+# 				track = tfmagi_esotericist_thaumaturgy
+# 				value >= 10
+# 			}
+# 		}
+# 	}
+
+# 	is_valid_showing_failures_only = {
+# 		scope:actor = {
+# 			has_trait_xp = {
+# 				trait = tfmagi_esotericist
+# 				track = tfmagi_esotericist_essence
+# 				value >= tfmagi_essence_level_1
+# 			}
+# 		}
+# 	}
+
+# 	has_valid_target_showing_failures_only = {	
+# 		scope:recipient = {
+# 			is_at_same_location = scope:actor
+#             tfmagi_can_be_wounded = yes
+# 		}
+# 	}
+
+# 	on_accept = {
+#         scope:actor = {
+#             trigger_event = tfmagi_events.1
+#         }
+# 	}
+
+# 	auto_accept = yes
+
+# 	ai_will_do = {
+# 		base = -25
+
+# 		modifier = {
+# 			add = 100
+# 			scope:actor = {
+# 				opinion = {
+# 					target = scope:recipient
+# 					value <= very_high_negative_opinion
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			add = 50
+# 			scope:actor = {
+# 				opinion = {
+# 					target = scope:recipient
+# 					value <= medium_negative_opinion
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			add = -50
+# 			scope:actor = {
+# 				opinion = {
+# 					target = scope:recipient
+# 					value >= medium_positive_opinion
+# 				}
+# 			}
+# 		}
+
+# 		modifier = {
+# 			add = -100
+# 			scope:actor = {
+# 				opinion = {
+# 					target = scope:recipient
+# 					value >= very_high_positive_opinion
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+

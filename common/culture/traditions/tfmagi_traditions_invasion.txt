@@ -1,4 +1,148 @@
-﻿
+﻿tradition_tfmagi_swords_from_afar = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = western
+		4 = rider.dds
+	}
+	
+	is_shown = {
+		always = yes
+	}
+
+	can_pick = {
+		PREV = {
+			OR = {
+				any_vassal_or_below = {
+					count >= 3
+					primary_title.tier >= tier_county
+					culture.has_cultural_tradition = tradition_tfmagi_swords_from_afar
+				}
+				liege ?= {
+					culture.has_cultural_tradition = tradition_tfmagi_swords_from_afar
+				}
+			}
+		}
+	}
+	
+	parameters = {
+		unlock_tfmagi_veteran_campaigners = yes
+		unlock_tfmagi_cavalry_outriders = yes
+		formation_fighting_strategist = yes
+		can_host_joust_contests = yes
+	}
+
+	character_modifier = {
+		mercenary_hire_cost_mult = -0.1
+	}
+
+	culture_modifier = {
+		culture_tradition_max_add = 1
+	}
+	
+	cost = {
+		prestige = {
+			value = 10000
+		}
+	}
+}
+
+tradition_tfmagi_foreign_invaders = {
+	category = regional
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = swords.dds
+	}
+
+	is_shown = {
+		always = no
+	}
+
+	can_pick = {
+		always = no
+	}
+
+	can_pick_for_hybridization = {
+		always = no
+	}
+
+	parameters = {
+		tfmagi_cannot_carryover_tradition = yes
+		tfmagi_can_take_easy_hybridize_decision = yes
+		unlock_tfmagi_bombard = yes
+		tfmagi_can_take_raise_cultural_troops_decision = yes
+		tfmagi_enable_extant_invasion_once_per_lifetime = yes
+		tfmagi_extra_resources_on_start = yes
+		high_prowess_ignores_knight_restrictions = yes
+		unlock_voluntary_laampdom = yes
+	}
+
+	character_modifier = {
+		men_at_arms_limit = 2
+		men_at_arms_cap = 2
+		men_at_arms_maintenance = -0.33
+		levy_size = 0.25
+		general_opinion = -75
+		same_culture_opinion = 75
+		monthly_income = 3
+	}
+
+	ai_will_do = {
+		value = 400
+	}
+}
+
+tradition_tfmagi_bardic_heraldry = {
+	category = regional
+	layers = {
+		0 = martial
+		1 = western
+		4 = knight.dds
+	}
+
+	is_shown = {
+		always = yes
+	}
+
+	can_pick = {
+		PREV = {
+			OR = {
+				any_vassal_or_below = {
+					count >= 3
+					primary_title.tier >= tier_county
+					culture.has_cultural_tradition = tradition_tfmagi_bardic_heraldry
+				}
+				liege ?= {
+					culture.has_cultural_tradition = tradition_tfmagi_bardic_heraldry
+				}
+			}
+		}
+	}
+
+	parameters = {
+		unlock_tfmagi_hobereaux = yes
+		poet_trait_gives_bonuses = yes
+		poet_trait_more_common = yes
+		martial_education_more_valued = yes
+		prowess_traits_more_valued = yes
+		blademaster_trait_bonuses = yes
+		can_duel_rivals = yes
+		can_host_joust_contests = yes
+		knight_errant_trait_bonuses = yes
+		can_use_sparring_duel = yes
+	}
+
+	character_modifier = {
+		heavy_cavalry_damage_add = 10
+	}
+
+	ai_will_do = {
+		value = 400
+	}
+}
+
 tradition_tfmagi_voracious_adventurers = {
 	category = regional
 
@@ -91,6 +235,9 @@ tradition_tfmagi_imperial_yoke = {
 		cannot_attack_allies = yes
 		facilitate_alliance_acceptance = yes
 		astute_diplomat_bonus = yes
+		frontier_themes_borrow_neighbor_troops = yes
+		can_adopt_administrative_government_as_kingdom_tier = yes
+		allows_noble_family_adoption = yes
 	}
 
 	character_modifier = {
@@ -113,5 +260,75 @@ tradition_tfmagi_imperial_yoke = {
 
 	ai_will_do = {
 		value = 400
+	}
+}
+
+tradition_tfmagi_legacy_of_harda = {
+	category = regional
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = tfmagi_burning_city.dds
+	}
+
+	can_pick = {
+		always = no
+	}
+	is_shown = {
+		always = no
+	}
+
+	parameters = {
+		frontier_themes_borrow_neighbor_troops = yes
+		can_use_conquest_cbs = yes
+		cb_lower_prestige_level_requirement = yes
+		wounds_and_scars_give_bonuses = yes
+		guardians_can_transfer_commander_traits = yes
+		peasant_and_populist_factions_less_common = yes
+	}
+	character_modifier = {
+		heavy_infantry_max_size_add = 2
+		heavy_infantry_maintenance_mult = -0.2
+		county_opinion_add = -10
+		monthly_county_control_growth_factor = 0.2
+		revolting_siege_morale_loss_mult = 0.25
+	}
+	province_modifier = {
+		mountains_levy_size = 0.1
+		desert_mountains_levy_size = 0.1
+		mountains_supply_limit_mult = 0.25
+		desert_mountains_supply_limit_mult = 0.25
+	}
+
+}
+
+tradition_tfmagi_cultural_darwinists = {
+	category = regional
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = tfmagi_burning_city.dds
+	}
+
+	can_pick = {
+		always = no
+	}
+	is_shown = {
+		always = no
+	}
+
+	parameters = {
+		tfmagi_demand_culture_convert = yes
+		tfmagi_domain_sometimes_convert = yes
+		easier_to_hybridize = yes
+	}
+
+	character_modifier = {	
+		general_opinion = -10
+		same_culture_opinion = 30
+	}
+
+	culture_modifier = {
+		culture_tradition_max_add = 2
 	}
 }
